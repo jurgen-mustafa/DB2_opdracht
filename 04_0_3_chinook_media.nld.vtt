@@ -99,7 +99,7 @@ bij die explain?
 
 00:01:35.810 --> 00:01:38.048
 ja indeerdaad Arthur
-Analyze
+analyze
 
 00:01:40.706 --> 00:01:43.522
 dus dan krijg je een idee van de tijd
@@ -112,7 +112,7 @@ eigenlijk vrij snel is
 dus dat is hier 11 miliseconden
 
 00:01:51.368 --> 00:01:53.391
-ik denk dat alles onder ...
+ik denk dat alles onder...
 
 00:01:55.054 --> 00:02:00.304
 onze ogen werken bijvoorbeeld als je naar
@@ -177,7 +177,7 @@ even kijken
 dus dit was met een lateral
 
 00:03:03.699 --> 00:03:06.302
-dit is met een ...
+dit is met een...
 zonder lateral
 
 00:03:06.387 --> 00:03:08.243
@@ -200,7 +200,8 @@ of dat deze query de juiste query is
 hoe zou ik dat kunnen doen?
 
 00:03:25.498 --> 00:03:28.517
-dus euh .... die natural ok
+dus euh.... 
+die natural ok
 
 00:03:28.922 --> 00:03:32.383
 ik zie daar een paar dingen staan
@@ -383,14 +384,14 @@ niet korter zijn maar hoeveel dat er...
 dus zo moet je inderdaad deze query gaan aanpassen
 
 00:07:04.176 --> 00:07:05.803
-dus hoe kon je dat naakijken?
+dus hoe kon je dat nakijken?
 
 00:07:05.879 --> 00:07:09.256
 zoals ik daarstraks aan het uittellen
 stel je hebt die twee queries en je twijfelt
 
 00:07:09.409 --> 00:07:14.102
-je kan gewoonweg, das een dataset
+je kan gewoonweg, das een dataset,
 je kan deze twee datasets met elkaar vergelijken door
 
 00:07:14.625 --> 00:07:18.892
@@ -457,7 +458,7 @@ ik krijg hier een uitvoeringstijd van
 
 00:08:21.413 --> 00:08:25.772
 dus die uitvoeringstijd herriner ik mij is al meer 
-want daarstraks was het minder dan 50 miliseconde
+want daarstraks was het minder dan 50 miliseconden
 
 00:08:25.797 --> 00:08:29.407
 maar het plan 
@@ -498,7 +499,7 @@ hier zit ik aan 5000
 maar ik krijg hier wel...
 
 00:09:09.620 --> 00:09:12.247
-130 miliseconde waar ik hier 11 had
+130 miliseconden waar ik hier 11 had
 
 00:09:12.994 --> 00:09:16.562
 dus dat vind ik wel heel interessant
@@ -546,11 +547,11 @@ een kost van 211
 
 00:10:12.477 --> 00:10:18.668
 en een uitvoertijd van
-130 miliseconde
+130 miliseconden
 
 00:10:19.158 --> 00:10:26.589
 en bij de andere query hebben we 
-een kost van 5701 en 11 miliseconde
+een kost van 5701 en 11 miliseconden
 
 00:10:30.612 --> 00:10:35.191
 ja Ruben inderdaad dus het helpt misschien
