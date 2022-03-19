@@ -1,0 +1,253 @@
+WEBVTT
+
+STYLE
+::cue { color: red; }
+
+1
+00:00:00.000 --> 00:00:05.500
+Dus de vraag is: we hebben die Geolite
+We hebben daar indexen, eventueel die bestaan
+
+2
+00:00:05.500 --> 00:00:11.500
+De structuur van die tabellen, is er een verband tussen die tabellen?
+Als we een beetje weten hoe zit die in elkaar
+
+3
+00:00:11.500 --> 00:00:17.000
+Dan kunnen we gaan denken van, bepaalde query's kunnen we 
+dan gaan uitvoeren
+
+4
+00:00:17.000 --> 00:00:22.500
+Dus daarvoor heb ik natuurlijk een nieuwe connectie nodig
+
+5
+00:00:22.500 --> 00:00:26.000
+Dat gaat zijn op die poort 54321
+
+6
+00:00:32.500 --> 00:00:43.000
+Die geolite is een, die heb ik niet nodig,
+Dat is een gis databank als ik mij goed herinner
+
+7
+00:00:43.500 --> 00:00:51.000
+Ja, dus je connecteerd naar 54321 en dan naar gis databank
+
+8
+00:00:51.000 --> 00:00:55.000
+Dan hebben we hier die geolite
+
+9
+00:00:57.000 --> 00:01:07.000
+Onze tabellen, en dan zien we: het gaat in de tabel blokken 
+over een range en een locatie id, iprange
+
+10
+00:01:07.000 --> 00:01:18.000
+En bij locatie gaat het over meer informatie namelijk:
+een locatie id, dat land, die regio stad enzoverder
+
+11
+00:01:18.000 --> 00:01:26.000
+Dus misschien even kijken als we hier een 
+queryvenster even open zetten
+
+12
+00:01:35.000 --> 00:01:42.000
+Dus wat is de structuur van de tabellen, die zien we hier,
+constraints bij de eerste tabel blijkbaar geen
+
+13
+00:01:42.000 --> 00:01:48.000
+En bij de tweede tabel enkel een location primary key
+
+14
+00:01:48.000 --> 00:01:52.000
+Dus dat wil zeggen dat hier op locid een primary key staat
+
+15
+00:01:52.000 --> 00:01:55.000
+In die andere tabel zijn er blijkbaar geen constraints
+
+16
+00:01:55.000 --> 00:02:03.000
+Dus die locid is natuurlijk een foreign key hier naartoe, een verwijzing
+maar die wordt niet afgedwongen het is ruwe data die we daar gebruiken
+
+17
+00:02:07.000 --> 00:02:19.000
+Dus toon de informatie voor locatie 244
+
+18
+00:02:19.000 --> 00:02:23.000
+Eerst een search path instellen
+
+19
+00:02:35.000 --> 00:02:45.000
+De tabel is location en het locatieid was 244
+
+20
+00:02:46.000 --> 00:02:58.000
+Dus we draaien die query, ik heb een missing gemaakt ergens,
+even kijken, search path to geolite, zit ik in de juiste databank?
+
+22
+00:03:23.000 --> 00:03:28.000
+Is kijken als ik een typfout heb dan kan ik het ook zo 
+eenvoudig doen natuurlijk
+
+23
+00:03:30.000 --> 00:03:33.000
+Query kijken
+
+24
+00:03:33.000 --> 00:03:39.000
+Is kijken wat is daar expliciet opgegeven
+
+25
+00:03:39.000 --> 00:03:48.000
+Heb ik daar een typefout gemaakt? nee toch
+Maar we zullen zien
+
+26
+00:03:53.000 --> 00:03:58.000
+Dus we vinden hier die data terug, ja oke
+
+27
+00:03:58.000 --> 00:04:03.000
+Een andere vraag die gesteld werd was
+
+28
+00:04:05.500 --> 00:04:14.500
+We hebben die voor 244, dat ging vrij snel als je wil
+Dus dat duurde een seconde
+
+29
+00:04:16.000 --> 00:04:21.500
+Het opvragen van die query duurde 1 seconde ongeveer
+
+30
+00:04:22.000 --> 00:04:26.500
+Ik denk inderdaad dat de search path daarnet niet is uitgevoerd met de selectie, dat klopt
+
+31
+00:04:26.500 --> 00:04:32.000
+Dus dit is even wachten, maar toch oké
+
+32
+00:04:33.000 --> 00:04:37.000
+Nu gaan we een andere query doen namelijk
+
+33
+00:04:38.000 --> 00:04:42.000
+Als ik iets lager in de opgave ga 
+
+34
+00:04:46.000 --> 00:04:53.000
+Toon alle rijen met 'Cape Town' dus Cape Town is natuurlijk een stad
+Dat gaat een andere kolom zijn
+
+35
+00:04:53.000 --> 00:04:58.000  color: #00FF00
+De bedoeling is dat we die nu gaan gebruiken
+
+36
+00:05:03.000 --> 00:05:18.000  color: #00FF00
+Dus ik neem dezelfde query ongeveer maar ik zeg nu: 
+city die is 'Cape Town'
+
+37
+00:05:22.000 --> 00:05:29.000  color: #00FF00
+Deze query opzich duurt die iets langer
+
+38
+00:05:30.000 --> 00:05:36.000  color: #00FF00
+Maar ook niet overdreven langer, als je zegt van kijk je vindt hier 299 rijen 
+dat duurde wat langer
+
+39
+00:05:36.000 --> 00:05:47.000
+In eerste instantie als ik deze databank nu vers zou opstarten dan
+zou dit een groter verschil zijn
+
+40
+00:05:47.000 --> 00:05:50.000
+Ik weet niet of er ondertussen studenten zijn die begrijpen waarom?
+
+41
+00:05:50.000 --> 00:05:58.000
+Ik zal is even kijken
+Bij 1 van de vragen is ook hoeveel rijen zitten hier in die tabel
+
+42
+00:06:14.000 --> 00:06:25.000
+Dan zien we dat hier bijna een miljoen rijen inzitten, ja dus 
+bijna een miljoen aan rijen, 800000 rijen 
+
+43
+00:06:25.000 --> 00:06:36.000
+Maar opzicht gaan die query's vrij snel, dus wat is de reden hier?
+Als ik dan ga kijken terug naar de opgave, dan gaat het eigenlijk om caching
+
+44
+00:06:36.000 --> 00:06:45.000
+Dus wat wilt dat zeggen? Standaard gezien zijn indexen zeer goed maar op het ene veld locatieid was er een index en was die query snel
+
+45
+00:06:45.000 --> 00:06:51.000
+Op het ander veld city was er geen index maar was die query ook vrij snel
+
+46
+00:06:51.000 --> 00:06:56.000
+Dus waarvoor dienen die indexen zou je kunnen denken? Dat heeft natuurlijk te maken met:
+
+47
+00:06:56.000 --> 00:06:59.500
+Hoe groot is uw tabel ten opzichte van hoeveel kan er gecachet worden in het geheugen?
+
+48
+00:07:00.000 --> 00:07:09.000
+En dan heb je verschillende soorten cach, je hebt eenderzijds de cach van uw hardware, daar heb je geen controle over 
+
+49
+00:07:09.000 --> 00:07:16.000
+Dus dan zou je de machine koud moeten afzetten, en als ze koud is, afstaat en aanzetten dat die cach leeg is bijvoorbeeld
+
+50
+00:07:16.000 --> 00:07:23.000
+Je hebt je besturingssysteem cach waar je ook geen controle over hebt die gaat ook caching doen
+
+51
+00:07:23.000 --> 00:07:30.000
+Dat wil zeggen in het geheugen laden, omdat die denkt dat zijn stukken die vaak gevraagd gaan worden 
+
+52
+00:07:30.000 --> 00:07:34.000
+En dan heb je de cach van de databank, daar heb je een kleine invloed op
+Die kan je resetten 
+
+53
+00:07:34.000 --> 00:07:38.000
+Maar er zijn dus eigenlijk 3 vormen van cach die er eigenlijk voor zorgen van die data die 
+
+54
+00:07:38.000 --> 00:07:45.000
+We nodig hebben zit misschien al in het geheugen waardoor dat die query toch snel uitvoerd
+
+55
+00:07:45.000 --> 00:07:52.000
+Dat wil zeggen iemand anders heeft ook die query uitgevoerd of iemand heeft ook al die tabel location geraadpleegd en daar data uit opgehaald
+
+56
+00:07:52.000 --> 00:08:00.000
+Waardoor die pagina's normaal enkel op schijf staan toch al ergens gecachet zijn, waardoor die data toch snel terugkomen
+
+57
+00:08:00.000 --> 00:08:07.000
+Het zijn niet zozeer de query's dat gecachet zijn maar de pagina's die de data bevatten van de tabellen die we opzoeken
+
+58
+00:08:08.000 --> 00:08:13.500
+Dus dat is voor die vraag, dan denk ik dat we hier vandaag gaan afronden en dan doen we volgende keer verder 
