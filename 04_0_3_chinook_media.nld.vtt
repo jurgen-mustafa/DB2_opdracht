@@ -170,5 +170,158 @@ zijn er nog meer opties?
 dus dan gaan we ne keer kijken
 naar een andere optie
 
-00:02:53.906 --> 00:02:54.688
+00:02:53.861 --> 00:02:54.861
 even kijken
+
+00:03:01.633 --> 00:03:03.454
+dus dit was met een lateral
+
+00:03:03.699 --> 00:03:06.302
+dit is met een ...
+zonder lateral
+
+00:03:06.387 --> 00:03:08.243
+we gaan die ne keer proberen
+
+00:03:09.449 --> 00:03:10.449
+efkes kijken
+
+00:03:16.880 --> 00:03:17.880
+ja...
+
+00:03:18.635 --> 00:03:19.635
+nu...
+
+00:03:19.911 --> 00:03:23.816
+als ik nu lui ben en ik wil snel weten
+of dat deze query de juiste query is
+
+00:03:24.092 --> 00:03:25.297
+hoe zou ik dat kunnen doen?
+
+00:03:25.498 --> 00:03:28.517
+dus euh .... die natural ok
+
+00:03:28.922 --> 00:03:32.383
+ik zie daar een paar dingen staan
+er wordt daar geteld in de subquery
+
+00:03:32.853 --> 00:03:34.053
+efkes kijken...
+
+00:03:35.739 --> 00:03:38.200
+track
+dus dat is deze track
+
+00:03:38.494 --> 00:03:39.785
+miliseconden
+
+00:03:39.896 --> 00:03:44.930
+dus er wordt hier geteld hoeveel dat 
+er zijn die miliseconden minder hebben
+
+00:03:48.568 --> 00:03:51.497
+en dat mogen er maximum 2
+dus als ik het goed bezie
+
+00:03:52.092 --> 00:03:53.647
+wat wordt er hier geteld?
+
+00:03:54.074 --> 00:03:56.156
+als ik het snel beschouw
+
+00:03:56.500 --> 00:04:00.933
+we tellen hier hoeveel tracks er zijn die
+minder miliseconden hebben
+
+00:04:02.687 --> 00:04:05.220
+en dat mogen er maximum 1 zijn
+
+00:04:05.245 --> 00:04:06.298
+dus wat denk je dan?
+
+00:04:15.997 --> 00:04:19.135
+ik ga misschien de vorige query 
+er ook even bij halen
+
+00:04:21.943 --> 00:04:25.152
+dan zie je deze hier
+dus ik vind daar een...
+
+00:04:26.115 --> 00:04:27.990
+deze resultaten bijvoorbeeld
+
+00:04:28.067 --> 00:04:31.608
+en bij die andere query vind ik
+precies toch iets anders
+
+00:04:31.656 --> 00:04:33.542
+alhoewel
+efkes kijken
+
+00:04:36.569 --> 00:04:37.569
+pom pom pom
+
+00:04:49.488 --> 00:04:52.853
+ik ben lui bijvoorbeeld en ik ga er van uit
+dat die eerste query goed is
+
+00:04:52.878 --> 00:04:54.148
+dus wat zou ik kunnen doen?
+
+00:04:56.133 --> 00:04:58.494
+ik kan het verschil gaan kijken 
+van die queries
+
+00:04:58.828 --> 00:05:01.149
+dus ik kan bijvoorbeeld 
+die eerste query nemen
+
+00:05:02.704 --> 00:05:04.983
+en ik kan dan zeggen van
+"kijk..."
+
+00:05:05.867 --> 00:05:06.867
+"...accept"
+
+00:05:07.167 --> 00:05:08.645
+ik kan het verschil bekijken
+
+00:05:08.975 --> 00:05:13.246
+met die andere query
+dus die query die daarnet gegeven werdt
+
+00:05:13.596 --> 00:05:17.306
+dus
+ik ga die nog even terug knippen en plakken
+
+00:05:21.695 --> 00:05:24.645
+ik zie dat ik mijn scherm niet goed gedeeld hebt
+moment
+
+00:05:28.450 --> 00:05:30.188
+dus dat gaan we even aanpassen
+
+00:05:30.774 --> 00:05:31.774
+sorry
+
+00:05:31.833 --> 00:05:33.493
+dus ik had gezegd van euh
+
+00:05:34.112 --> 00:05:36.072
+ik ga dit hier ondertussen even plakken
+
+00:05:44.034 --> 00:05:46.107
+dus er was de eerste query van daarnet
+
+00:05:47.218 --> 00:05:50.547
+namelijk die met de left lateral join
+
+00:05:52.680 --> 00:05:55.610
+die geeft deze resultaat
+we hebben daar een bepaald
+
+00:05:56.116 --> 00:06:00.156
+kostprijs van genomen
+die query was acceptabel qua performantie 
+dat was ok
