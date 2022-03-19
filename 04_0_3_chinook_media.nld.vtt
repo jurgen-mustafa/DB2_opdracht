@@ -36,3 +36,139 @@ kijk je altijd naar de bovenste lijn
 00:00:34.042 --> 00:00:36.453
 er waren een aantal studenten die 
 dat daarstraks vroegen
+
+00:00:36.630 --> 00:00:39.518
+dus de bovenste lijn geeft
+de samenvatting van het heel queryplan
+
+00:00:39.685 --> 00:00:44.296
+het queryplan is hetgeen wat de planner/
+de opimizer intern heeft beslist van
+
+00:00:44.318 --> 00:00:49.883
+met de hardware &amp; geheugen die ik heb
+met hetgeen dat ik weet van de tabel
+
+00:00:50.038 --> 00:00:54.293
+is dit volgens mij de beste manier om 
+deze query uit te voeren
+
+00:00:54.436 --> 00:00:56.122
+dus hij omschrijft dat hier
+
+00:00:56.581 --> 00:00:58.871
+het belangrijkste getal hier is 
+het laatste getal
+
+00:00:59.044 --> 00:01:01.658
+dus die 5700 wilt zeggen
+
+00:01:01.892 --> 00:01:04.208
+das de kostprijs om alle data te tonen
+
+00:01:04.472 --> 00:01:10.115
+en die 16 is de kostprijs om 
+de eerste rij te tonen
+
+00:01:10.527 --> 00:01:12.911
+daarstraks waren er mensen
+dus das kostprijzen
+
+00:01:12.970 --> 00:01:15.665
+Je kan alleen maar kostprijzen vergelijken
+op dezelfde databank
+
+00:01:15.709 --> 00:01:19.582
+omdat die ook afhankelijk zijn van parameters 
+die je kan instellen op u databank
+
+00:01:20.287 --> 00:01:22.371
+dus dan je natuurlijk gaan kijken van
+ja maar ja
+
+00:01:23.194 --> 00:01:25.510
+ik wil ook de tijd tonen
+
+00:01:25.699 --> 00:01:29.455
+wie weet nog de optie dat je
+effectief die query gaat uitvoeren?
+
+00:01:29.691 --> 00:01:32.018
+dat je de tijd ook toont
+bij die explain?
+
+00:01:35.810 --> 00:01:38.048
+ja indeerdaad Arthur
+Analyze
+
+00:01:40.706 --> 00:01:43.522
+dus dan krijg je een idee van de tijd
+
+00:01:43.696 --> 00:01:47.534
+wat dat we hier zijn is dat de tijd 
+eigenlijk vrij snel is
+
+00:01:47.674 --> 00:01:50.234
+dus dat is hier 11 miliseconden
+
+00:01:51.368 --> 00:01:53.391
+ik denk dat alles onder ...
+
+00:01:55.054 --> 00:02:00.304
+onze ogen werken bijvoorbeeld als je naar
+film kijkt dan 30 frames per seconde
+
+00:02:01.803 --> 00:02:06.510
+dus als het een duizend miliseconden zijn
+we delen dat door 30
+
+00:02:07.050 --> 00:02:08.750
+en zelfs 20 frames zou ik zeggen
+
+00:02:08.984 --> 00:02:12.086
+alles onder de 50 miliseconden is eigenlijk
+voor onze ogen
+
+00:02:12.115 --> 00:02:14.271
+dus dan komt het resultaat 
+nog altijd heel snel
+
+00:02:14.296 --> 00:02:16.363
+al hetgeen dat onder de 50 miliseconde is
+
+00:02:16.388 --> 00:02:19.314
+dus opzich is die query aanvaardbaar met
+de data dat daarin staat
+
+00:02:19.436 --> 00:02:22.861
+het is niet dat het zegt 
+"je hebt hier een optimalizatieprobleem"
+
+00:02:25.142 --> 00:02:26.314
+wat zien we hier nog?
+
+00:02:26.778 --> 00:02:28.876
+we zien hier bijvoorbeeld
+dat de planner
+
+00:02:29.151 --> 00:02:34.238
+heeft 0.2 miliseconden nodig afgerond
+en het effectieve uitvoeren is
+
+00:02:34.367 --> 00:02:38.161
+die 11 miliseconden dus we komen samen
+aan 12 miliseconden ongeveer
+
+00:02:39.030 --> 00:02:40.920
+dus een query die efficient genoeg is
+
+00:02:41.001 --> 00:02:43.901
+maar we kunnen kijken
+zijn er nog meer opties?
+
+00:02:47.145 --> 00:02:50.983
+dus dan gaan we ne keer kijken
+naar een andere optie
+
+00:02:53.906 --> 00:02:54.688
+even kijken
