@@ -1,0 +1,239 @@
+﻿WEBVT
+
+00:00:01.046 --> 00:00:02.068
+what do we see here?
+
+00:00:02.093 --> 00:00:05.653
+so for the question that was asked
+
+00:00:12.262 --> 00:00:15.743
+so for each album, give 
+the 2 longest tracks
+
+00:00:15.929 --> 00:00:17.196
+we are going to search
+
+00:00:18.043 --> 00:00:20.376
+for the best performing query
+
+00:00:20.777 --> 00:00:22.677
+So that means
+
+00:00:22.923 --> 00:00:25.089
+for that first solution
+that we have there
+
+00:00:26.629 --> 00:00:28.962
+we look at this cost
+
+00:00:28.996 --> 00:00:30.185
+So then you actually see
+
+00:00:30.346 --> 00:00:34.009
+If you have to summarise it in a number
+you always look at the top line
+
+00:00:34.042 --> 00:00:36.453
+there were a number of students who 
+asked that earlier.
+
+00:00:36.630 --> 00:00:39.518
+So the top line gives
+the summary of the whole query plan
+
+00:00:39.685 --> 00:00:44.296
+The query plan is what the planner/
+the opimizer has decided internally from
+
+00:00:44.318 --> 00:00:49.883
+with the hardware &amp; memory that I have
+with what I know of the table
+
+00:00:50.038 --> 00:00:54.293
+I think this is the best way to 
+execute this query
+
+00:00:54.436 --> 00:00:56.122
+so he describes that here
+
+00:00:56.581 --> 00:00:58.871
+the most important number here is 
+the last number
+
+00:00:59.044 --> 00:01:01.658
+So the 5700 means
+
+00:01:01.892 --> 00:01:04.208
+That is the cost to show all data
+
+00:01:04.472 --> 00:01:10.115
+and the 16 is the cost of showing 
+the first row
+
+00:01:10.527 --> 00:01:12.911
+there were people there earlier
+so that is the cost
+
+00:01:12.970 --> 00:01:15.665
+You can only compare cost prices
+on the same database
+
+00:01:15.709 --> 00:01:19.582
+because they also depend on parameters 
+that you can set on your database
+
+00:01:20.287 --> 00:01:22.371
+so then of course you go and look at it like
+so yeah
+
+00:01:23.194 --> 00:01:25.510
+I also want to show the time
+
+00:01:25.699 --> 00:01:29.455
+who else knows the option that
+will actually run that query?
+
+00:01:29.691 --> 00:01:32.018
+that will also show the time
+with that explain?
+
+00:01:35.810 --> 00:01:38.048
+yes indeed Arthur
+analyze
+
+00:01:40.706 --> 00:01:43.522
+So then you get an idea of the time
+
+00:01:43.696 --> 00:01:47.534
+what we see here is that time 
+is actually quite fast
+
+00:01:47.674 --> 00:01:50.234
+so that's 11 milliseconds here.
+
+00:01:51.368 --> 00:01:53.391
+I think everything under...
+
+00:01:55.054 --> 00:02:00.304
+our eyes work for example if you watch
+film than 30 frames per second
+
+00:02:01.803 --> 00:02:06.510
+so if it's a thousand milliseconds
+we divide that by 30
+
+00:02:07.050 --> 00:02:08.750
+and even 20 frames I would say
+
+00:02:08.984 --> 00:02:12.086
+anything under 50 milliseconds is actually
+to our eyes.
+
+00:02:12.115 --> 00:02:14.271
+so then the result is 
+still very fast.
+
+00:02:14.296 --> 00:02:16.363
+all that is below 50 milliseconds
+
+00:02:16.388 --> 00:02:19.314
+so that query is acceptable with
+the data that is in there.
+
+00:02:19.436 --> 00:02:22.861
+It's not like it says 
+"you've got an optimisation problem here".
+
+00:02:25.142 --> 00:02:26.314
+what do we see here?
+
+00:02:26.778 --> 00:02:28.876
+we see here for example
+that the planner
+
+00:02:29.151 --> 00:02:34.238
+has 0.2 milliseconds rounded off
+and the effective execution is
+
+00:02:34.367 --> 00:02:38.161
+those 11 milliseconds so those add up to
+12 milliseconds approximately.
+
+00:02:39.030 --> 00:02:40.920
+So that's a query that is efficient enough
+
+00:02:41.001 --> 00:02:43.901
+but we can check
+are there any other options?
+
+00:02:47.145 --> 00:02:50.983
+So then we are going to look
+for another option.
+
+00:02:53.861 --> 00:02:54.861
+let's see
+
+00:03:01.633 --> 00:03:03.454
+So this was with a lateral
+
+00:03:03.699 --> 00:03:06.302
+This is with a...
+without lateral
+
+00:03:06.387 --> 00:03:08.243
+we are going to try that one
+
+00:03:09.449 --> 00:03:10.449
+let's have a look
+
+00:03:16.880 --> 00:03:17.880
+yes...
+
+00:03:18.635 --> 00:03:19.635
+now...
+
+00:03:19.911 --> 00:03:23.816
+If I'm lazy and I want to know quickly
+whether this query is the right query
+
+00:03:24.092 --> 00:03:25.297
+how could I do that?
+
+00:03:25.498 --> 00:03:28.517
+so euh.... 
+that natural ok
+
+00:03:28.922 --> 00:03:32.383
+I see a few things there
+there is a counting in the subquery there
+
+00:03:32.853 --> 00:03:34.053
+let's see...
+
+00:03:35.739 --> 00:03:38.200
+track
+so that is this track
+
+00:03:38.494 --> 00:03:39.785
+milliseconds
+
+00:03:39.896 --> 00:03:44.930
+So there is a count here of how many 
+there are who have less miliseconds
+
+00:03:48.568 --> 00:03:51.497
+and that should be a maximum of 2
+so if I look at it correctly
+
+00:03:52.092 --> 00:03:53.647
+what is being counted here?
+
+00:03:54.074 --> 00:03:56.156
+if i look at it quickly
+
+00:03:56.500 --> 00:04:00.933
+we are counting here how many tracks there are that have
+have fewer milliseconds.
+
+00:04:02.687 --> 00:04:05.220
+and there may be a maximum of 1
