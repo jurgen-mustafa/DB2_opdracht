@@ -579,3 +579,630 @@ by a factor of 10
 00:10:59.384 --> 00:11:05.098
 When I look at the times, this query is slower than this one
 despite the fact that it has a lower cost
+
+00:11:05.536 --> 00:11:07.296
+So if you plot that on a graph
+
+00:11:07.516 --> 00:11:10.069
+what you expect is the following:
+
+00:11:10.336 --> 00:11:14.872
+If this is the cost price and this is the execution time
+
+00:11:15.008 --> 00:11:19.888
+then if the cost price is low you would expect 
+a low execution time
+
+00:11:19.913 --> 00:11:22.007
+and at a high cost price a high execution time.
+
+00:11:22.320 --> 00:11:25.153
+What happened here now?
+
+00:11:29.185 --> 00:11:32.718
+For 211 for example, we find a cost...
+
+00:11:32.825 --> 00:11:36.662
+So for a cost of 211 I find a
+
+00:11:38.701 --> 00:11:39.701
+Uh sorry
+
+00:11:39.780 --> 00:11:41.419
+I have the...
+
+00:11:43.473 --> 00:11:44.473
+Yes...
+
+00:11:45.137 --> 00:11:47.901
+So for a cost
+of 211 I'm here
+
+00:11:47.925 --> 00:11:50.697
+and then I have an
+execution time of 130 ms
+
+00:11:50.708 --> 00:11:54.293
+And for a cost of
+5000 I'm here with 11 seconds.
+
+00:11:54.317 --> 00:11:57.479
+So I'm here, what I
+didn't expect, which is very strange.
+
+00:11:57.511 --> 00:11:59.536
+Does anybody have a
+possible explanation for that?
+
+00:11:59.560 --> 00:12:02.199
+There are several
+possible explanations.
+
+00:12:04.131 --> 00:12:06.776
+Why it is actually declining,
+
+00:12:06.800 --> 00:12:09.807
+where that you would expect that it
+could be increasing.
+
+00:12:19.099 --> 00:12:23.439
+We expect a low cost and a
+low time. A high cost
+
+00:12:23.464 --> 00:12:26.693
+and a higher execution time, but
+here it's just the opposite,
+
+00:12:26.718 --> 00:12:32.798
+so what are possible
+reasons that it's like this now?
+
+00:12:33.257 --> 00:12:34.840
+It could be an exception
+you say
+
+00:12:34.865 --> 00:12:37.482
+It found quickly
+what it needed...
+
+00:12:37.526 --> 00:12:39.465
+ Yes... Yes
+
+00:12:44.282 --> 00:12:46.208
+Rik is already coming closer... Caching !
+
+00:12:46.249 --> 00:12:51.790
+But caching? In a way
+the same tables are retrieved I think...
+
+00:12:52.339 --> 00:12:56.722
+It's about the same
+tables, so I expect in the
+
+00:12:56.747 --> 00:13:01.235
+cache that the 2nd query
+that executes,  has benefit
+
+00:13:01.260 --> 00:13:04.786
+because then there might
+already been cached more by then.
+
+00:13:05.626 --> 00:13:08.616
+But caching does give
+a certain indication though...
+
+00:13:08.623 --> 00:13:12.207
+A certain hint for what
+might be going on.
+
+00:13:16.714 --> 00:13:20.940
+What else has a
+impact on the execution time?
+
+00:13:21.508 --> 00:13:25.787
+Remember we talked about transactions 
+in the 1st semester
+
+00:13:25.789 --> 00:13:27.626
+Why did we talk about transactions?
+
+00:13:27.640 --> 00:13:32.248
+Why do we need transactions
+when we are working in a database?
+
+00:13:52.298 --> 00:13:53.437
+I'll put it in another way...
+
+00:13:53.445 --> 00:14:00.321
+Do you remember an example of a
+problem you could have with transactions?
+
+00:14:04.786 --> 00:14:06.706
+Multiple users, indeed Philippe!
+
+00:14:06.713 --> 00:14:09.862
+We have several users on the same system, so
+
+00:14:09.887 --> 00:14:13.984
+the cost price is a
+theoretical value that your planner calculates.
+
+00:14:14.008 --> 00:14:15.510
+That is a fixed value.
+
+00:14:15.610 --> 00:14:21.279
+But your execution time also depends on the
+load on the system at that time.
+
+00:14:21.781 --> 00:14:24.400
+It may well be that a
+small difference in load,
+
+00:14:24.424 --> 00:14:27.211
+where at that time that
+server is doing other things....
+
+00:14:27.236 --> 00:14:28.996
+(that's a concrete physical machine) ...
+
+00:14:29.020 --> 00:14:31.761
+which gives you a
+different execution time.
+
+00:14:31.857 --> 00:14:34.123
+Something else that you also have is
+
+00:14:34.637 --> 00:14:36.317
+In addition to the physical system
+
+00:14:36.600 --> 00:14:38.873
+there are also people here from
+other specialisations
+
+00:14:38.898 --> 00:14:41.370
+We have 3 different specialisations.
+This is an answer
+
+00:14:41.394 --> 00:14:43.760
+for 1 of the
+directions I would say.
+
+00:14:44.385 --> 00:14:48.718
+I'm sitting here at home and
+there I'm running the query,
+
+00:14:48.871 --> 00:14:52.352
+So what could be another
+explanation...
+
+00:14:58.667 --> 00:15:01.581
+By which I see a difference
+in execution time?
+
+00:15:03.476 --> 00:15:05.329
+Yes indeed the network here.
+
+00:15:05.350 --> 00:15:10.111
+So the network can also have its
+influence there of course.
+
+00:15:10.692 --> 00:15:13.593
+So  on the one hand we have the physical
+machine and on the other hand the network. So
+
+00:15:13.618 --> 00:15:17.054
+don't limit yourself to what you
+see, always think a little wider guys.
+
+00:15:17.946 --> 00:15:23.563
+And one last statement, you can
+maybe think of others, is that
+
+00:15:23.587 --> 00:15:26.946
+possibly the planner is actually making an incorrect
+estimate.
+
+00:15:27.013 --> 00:15:28.313
+That happens sometimes too.
+
+00:15:28.406 --> 00:15:32.960
+That's also a piece of software that
+the planning estimates like look...
+
+00:15:32.985 --> 00:15:38.412
+for me the cost here at this query is so
+big
+
+00:15:38.437 --> 00:15:41.019
+but actually in
+practice it's smaller
+
+00:15:41.984 --> 00:15:45.328
+He underestimates himself
+with his planning there.
+
+00:15:45.353 --> 00:15:46.925
+So that could
+therefore also be another reason.
+
+00:15:46.950 --> 00:15:48.944
+So you have a lot of
+different reasons.
+
+00:15:48.969 --> 00:15:51.622
+So the moral of the story is
+actually...
+
+00:15:51.916 --> 00:15:53.942
+If you can, just put that ANALYZE in there.
+
+00:15:54.083 --> 00:15:55.786
+before the effective execution.
+
+00:15:55.811 --> 00:15:57.686
+Unless
+it is too heavy to execute or there
+
+00:15:57.711 --> 00:16:00.497
+is a DML, an insert, update and
+delete involved.
+
+00:16:00.704 --> 00:16:03.439
+Then of course you have to be careful
+that you don't start modifying data
+
+00:16:03.465 --> 00:16:06.098
+when that wouldn't be the intention.
+
+00:16:06.325 --> 00:16:11.135
+And run that multiple times.  And if we
+execute something multiple times,
+
+00:16:11.236 --> 00:16:14.539
+then we could
+actually be able to keep track of all those timings.
+
+00:16:14.571 --> 00:16:16.329
+That cost price isn't going to change.
+
+00:16:16.354 --> 00:16:19.427
+but we could keep track of 
+those timing.
+
+00:16:19.467 --> 00:16:21.853
+and then what could we do
+with those execution times?
+
+00:16:23.286 --> 00:16:26.716
+Then I refer back
+to the people who already had
+
+00:16:26.741 --> 00:16:29.303
+operational analysis this week.
+
+00:16:36.385 --> 00:16:38.918
+If I have multiple timings
+of the same query.
+
+00:16:38.932 --> 00:16:39.935
+What could I do?
+
+00:16:39.949 --> 00:16:43.853
+For the people who
+got statistics last semester?
+
+00:16:50.253 --> 00:16:51.799
+Calculating an average...
+
+00:16:51.933 --> 00:16:54.952
+And to take it a step further Milan?
+
+00:16:55.219 --> 00:16:58.547
+Because usually there is a
+certain uncertainty on...
+
+00:17:08.859 --> 00:17:11.748
+If you're going to look a little bit to the left
+and to the right of your average....
+
+00:17:12.902 --> 00:17:15.174
+A confidence interval, indeed yes.
+
+00:17:15.201 --> 00:17:17.219
+Standard deviation
+or confidence interval.
+
+00:17:17.244 --> 00:17:19.641
+So you could
+write a little loop of....
+
+00:17:19.666 --> 00:17:21.952
+We're going to run that query
+so many times... Or in a cronjob.
+
+00:17:21.977 --> 00:17:24.547
+And we write the explain plan away somewhere
+
+00:17:24.626 --> 00:17:26.928
+and you calculate
+the confidence interval on that.
+
+00:17:26.953 --> 00:17:28.399
+And so you get a better
+idea of...
+
+00:17:28.424 --> 00:17:32.029
+What is the situation here
+instead of 1 snapshot.
+
+00:17:32.050 --> 00:17:34.113
+Because that cost is indeed not going to
+change...
+
+00:17:34.120 --> 00:17:35.800
+But those timings there?
+
+00:17:38.417 --> 00:17:46.412
+[No useful information]
+
+00:17:48.381 --> 00:17:50.301
+So those are
+interesting points he guys.
+
+00:17:50.341 --> 00:17:52.430
+I don't expect euhm...
+
+00:17:53.944 --> 00:17:55.384
+This is already very detailed
+
+00:17:55.750 --> 00:18:00.119
+So this here is actually
+for the high marks.
+
+00:18:00.167 --> 00:18:03.342
+I'm already happy that you guys can
+work towards performance with the explain...
+
+00:18:03.367 --> 00:18:07.632
+with the costings
+be able to write more performant queries...
+
+00:18:07.700 --> 00:18:13.755
+realize that things
+like index scanning are important
+
+00:18:13.762 --> 00:18:17.145
+Or that it can often improve a process.
+
+00:18:19.844 --> 00:18:22.270
+I think it would be
+interesting to know.
+
+00:18:22.297 --> 00:18:26.218
+There's another piece
+that I can show you I think in this context.
+
+00:18:26.238 --> 00:18:31.306
+Then I think about the
+people who are more on the system side.
+
+00:18:32.870 --> 00:18:35.249
+So I can also ask, for example, from....
+
+00:18:35.276 --> 00:18:36.329
+How is it actually?
+
+00:18:36.336 --> 00:18:38.869
+A moment ago, someone was talking about caching...
+
+00:18:39.207 --> 00:18:41.274
+And give you the option of buffers
+
+00:18:41.287 --> 00:18:46.901
+So then you can look at what is
+effectively coming out of a cache.
+
+00:18:46.975 --> 00:18:50.431
+So what I see is the same 
+query plan that we saw before.
+
+00:18:50.667 --> 00:18:53.200
+We have a
+similar time there.
+
+00:18:53.359 --> 00:18:56.889
+Here it says Buffers: shared hit= 3 ...
+
+00:18:57.223 --> 00:19:00.236
+So that means for
+this sequential scan it actually has
+
+00:19:00.260 --> 00:19:03.214
+
+been able to get everything out of the memory
+
+00:19:04.490 --> 00:19:08.394
+For this query there is
+also Buffers: shared hit=so much ...
+
+00:19:08.950 --> 00:19:12.406
+So this was able to get 
+everything out of memory as well.
+
+00:19:13.210 --> 00:19:17.728
+Otherwise, there is something about dirtied
+Or you find any other values with that.
+
+00:19:17.875 --> 00:19:21.055
+Here you can even find the method that he
+used with
+
+00:19:21.080 --> 00:19:23.219
+the memory
+that is available, it is "Quicksort"
+
+00:19:23.233 --> 00:19:25.066
+I don't know if
+you recognize quicksort.
+
+00:19:25.093 --> 00:19:28.997
+We saw
+sorting algorithms in the first year.
+
+00:19:30.097 --> 00:19:35.425
+What do you remember about quicksort
+When you think back to the 1st year?
+
+00:19:43.917 --> 00:19:47.514
+Therefore, you don't have to remember the algorithm
+anymore, but this is about performance.
+
+00:19:47.539 --> 00:19:49.836
+you've seen
+different sorting algorithms,
+
+00:19:49.861 --> 00:19:54.257
+maybe you know any
+other sorting algorithms from back then?
+
+00:20:09.417 --> 00:20:11.097
+It has been a while no?
+
+00:20:13.361 --> 00:20:14.434
+The sorting he...
+
+00:20:14.467 --> 00:20:15.472
+Sorting algorithms:
+
+00:20:15.493 --> 00:20:17.869
+One was quicksort, which was
+a recursive algorithm,
+
+00:20:17.894 --> 00:20:20.607
+which means that
+it did dare to use some memory
+
+00:20:20.667 --> 00:20:24.402
+But it was actually a very
+performing algorithm, it was very fast.
+
+00:20:24.489 --> 00:20:27.945
+One variant that
+was also kind of fast was the bubble sort.
+
+00:20:27.950 --> 00:20:31.516
+But you also had slower
+algorithms like the mergesort and so on.
+
+00:20:31.530 --> 00:20:35.783
+Basically, the planner, depending on 
+the data available in the memory,
+
+00:20:35.823 --> 00:20:37.995
+will choose his
+sorting algorithm.
+
+00:20:38.029 --> 00:20:43.981
+So here I like to see that quicksort because
+I know that's a fast sorting algorithm.
+
+00:20:44.416 --> 00:20:45.696
+So that's good.
+
+00:20:45.968 --> 00:20:47.729
+If there is a different sorting algorithm there....
+
+00:20:47.754 --> 00:20:50.150
+then maybe it's
+because it doesn't have enough memory to
+
+00:20:50.175 --> 00:20:52.557
+execute the sorting procedure,
+so that it falls back on another one.
+
+00:20:52.582 --> 00:20:54.524
+So that's all interesting
+
+00:20:55.097 --> 00:20:57.083
+So that's how you get
+some more information.
+
+00:20:57.104 --> 00:21:01.712
+At the moment there's no data coming
+from the disk, but from the memory.
+
+00:21:01.824 --> 00:21:02.944
+Why is that?
+
+00:21:02.964 --> 00:21:05.560
+Because all of us consulted 
+that table on the exact same database
+
+00:21:05.584 --> 00:21:08.092
+so in the meantime it's been cached.
+
+00:21:08.105 --> 00:21:11.881
+Maybe we can
+do that with the other query as well.
+
+00:21:18.508 --> 00:21:19.508
+Yeah...
+
+00:21:20.061 --> 00:21:22.461
+So here you see some other things already.
+
+00:21:22.572 --> 00:21:25.830
+Then you see that 
+we're going to use that quicksort again.
+
+00:21:26.207 --> 00:21:29.307
+We are still left with a cost that is
+higher here,
+
+00:21:29.314 --> 00:21:33.740
+so something makes me wonder that
+possibly the query plan could be a coincidence.
+
+00:21:33.780 --> 00:21:35.980
+So it has to execute very often.
+
+00:21:39.480 --> 00:21:41.546
+Then I'm going to take a look further...
+
+00:21:41.986 --> 00:21:44.646
+So here are all
+similar things.
+
+00:21:44.760 --> 00:21:49.688
+Hash Join I also like to see listed, this
+is usually faster than a nested loop.
+
+00:21:51.777 --> 00:21:56.358
+Buckets, you can actually
+compare to pages or blocks.
+
+00:21:56.378 --> 00:21:59.613
+So how many he
+needed there for his hash
+
+00:21:59.626 --> 00:22:02.027
+he apparently needed that many
+memory
+
+00:22:02.051 --> 00:22:04.766
+for the hash
+join to then start executing.
+
+00:22:05.297 --> 00:22:06.297
+Okay...
+
+00:22:06.784 --> 00:22:09.689
+All right that's a little more information on that.
+
+00:22:09.930 --> 00:22:14.117
+Those other queries, I think those
+are also good that you guys have put in chat.
+
+00:22:14.137 --> 00:22:17.120
+We'll check them out...
+

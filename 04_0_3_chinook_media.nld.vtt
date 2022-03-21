@@ -675,7 +675,7 @@ wat hij nodig heeft...
 Rik komt al korter... Caching !
 
 00:12:46.249 --> 00:12:51.790
-maar caching? Opzich worden
+Maar caching? Opzich worden
 dezelfde tabellen hier opgehaald denk ik...
 
 00:12:52.339 --> 00:12:56.722
@@ -770,7 +770,7 @@ dit is een antwoord
 
 00:14:41.394 --> 00:14:43.760
 voor 1 van de
-keuzerichtingen zou ik zeggen
+keuzerichtingen zou ik zeggen.
 
 00:14:44.385 --> 00:14:48.718
 Ik zit hier thuis en
@@ -778,7 +778,7 @@ daar draai ik de query,
 
 00:14:48.871 --> 00:14:52.352
 Dus wat zou nog een
-verklaring kunnen zijn?
+verklaring kunnen zijn...
 
 00:14:58.667 --> 00:15:01.581
 Waardoor ik een verschil
@@ -845,7 +845,7 @@ Als je kan zet die ANALYZE erbij
 voor het effectieve uitvoeren.
 
 00:15:55.811 --> 00:15:57.686
- Tenzij
+Tenzij
 het te zwaar is om uit te voeren of het
 
 00:15:57.711 --> 00:16:00.497
@@ -1105,7 +1105,7 @@ Eingelijk gaat de planner hier afhankelijk van
 de data die ter beschikking is in het geheugen
 
 00:20:35.823 --> 00:20:37.995
-gaat hij zijn zijn
+gaat hij zijn
 sorteeralgoritme kiezen.
 
 00:20:38.029 --> 00:20:43.981
