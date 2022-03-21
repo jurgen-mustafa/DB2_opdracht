@@ -7,7 +7,7 @@ wat zien we hier?
 dus voor de vraag die gesteld was
 
 00:00:12.262 --> 00:00:15.743
-dus geef voor elk album 
+dus geef voor elk album
 de 2 langste nummers
 
 00:00:15.929 --> 00:00:17.196
@@ -34,7 +34,7 @@ als je het moet samenvatten in een getal
 kijk je altijd naar de bovenste lijn
 
 00:00:34.042 --> 00:00:36.453
-er waren een aantal studenten die 
+er waren een aantal studenten die
 dat daarstraks vroegen
 
 00:00:36.630 --> 00:00:39.518
@@ -50,14 +50,14 @@ met de hardware &amp; geheugen die ik heb
 met hetgeen dat ik weet van de tabel
 
 00:00:50.038 --> 00:00:54.293
-is dit volgens mij de beste manier om 
+is dit volgens mij de beste manier om
 deze query uit te voeren
 
 00:00:54.436 --> 00:00:56.122
 dus hij omschrijft dat hier
 
 00:00:56.581 --> 00:00:58.871
-het belangrijkste getal hier is 
+het belangrijkste getal hier is
 het laatste getal
 
 00:00:59.044 --> 00:01:01.658
@@ -67,7 +67,7 @@ dus die 5700 wilt zeggen
 das de kostprijs om alle data te tonen
 
 00:01:04.472 --> 00:01:10.115
-en die 16 is de kostprijs om 
+en die 16 is de kostprijs om
 de eerste rij te tonen
 
 00:01:10.527 --> 00:01:12.911
@@ -79,7 +79,7 @@ Je kan alleen maar kostprijzen vergelijken
 op dezelfde databank
 
 00:01:15.709 --> 00:01:19.582
-omdat die ook afhankelijk zijn van parameters 
+omdat die ook afhankelijk zijn van parameters
 die je kan instellen op u databank
 
 00:01:20.287 --> 00:01:22.371
@@ -105,7 +105,7 @@ analyze
 dus dan krijg je een idee van de tijd
 
 00:01:43.696 --> 00:01:47.534
-wat dat we hier zien is dat de tijd 
+wat dat we hier zien is dat de tijd
 eigenlijk vrij snel is
 
 00:01:47.674 --> 00:01:50.234
@@ -130,7 +130,7 @@ alles onder de 50 miliseconden is eigenlijk
 voor onze ogen
 
 00:02:12.115 --> 00:02:14.271
-dus dan komt het resultaat 
+dus dan komt het resultaat
 nog altijd heel snel
 
 00:02:14.296 --> 00:02:16.363
@@ -141,7 +141,7 @@ dus opzich is die query aanvaardbaar met
 de data dat daarin staat
 
 00:02:19.436 --> 00:02:22.861
-het is niet dat het zegt 
+het is niet dat het zegt
 "je hebt hier een optimalizatieprobleem"
 
 00:02:25.142 --> 00:02:26.314
@@ -200,7 +200,7 @@ of dat deze query de juiste query is
 hoe zou ik dat kunnen doen?
 
 00:03:25.498 --> 00:03:28.517
-dus euh.... 
+dus euh....
 die natural ok
 
 00:03:28.922 --> 00:03:32.383
@@ -218,7 +218,7 @@ dus dat is deze track
 miliseconden
 
 00:03:39.896 --> 00:03:44.930
-dus er wordt hier geteld hoeveel dat 
+dus er wordt hier geteld hoeveel dat
 er zijn die miliseconden minder hebben
 
 00:03:48.568 --> 00:03:51.497
@@ -242,7 +242,7 @@ en dat mogen er maximum 1 zijn
 dus wat denk je dan?
 
 00:04:15.997 --> 00:04:19.135
-ik ga misschien de vorige query 
+ik ga misschien de vorige query
 er ook even bij halen
 
 00:04:21.943 --> 00:04:25.152
@@ -271,11 +271,11 @@ dat die eerste query goed is
 dus wat zou ik kunnen doen?
 
 00:04:56.133 --> 00:04:58.494
-ik kan het verschil gaan kijken 
+ik kan het verschil gaan kijken
 van die queries
 
 00:04:58.828 --> 00:05:01.149
-dus ik kan bijvoorbeeld 
+dus ik kan bijvoorbeeld
 die eerste query nemen
 
 00:05:02.704 --> 00:05:04.983
@@ -324,7 +324,7 @@ we hebben daar een bepaald
 
 00:05:56.116 --> 00:06:00.156
 kostprijs van genomen
-die query was acceptabel qua performantie 
+die query was acceptabel qua performantie
 dat was ok
 
 00:06:01.445 --> 00:06:03.584
@@ -399,7 +399,7 @@ de twee queries onder mekaar te plakken
 zonder de order by en er een except tussen te zetten
 
 00:07:19.056 --> 00:07:22.304
-ik wil al die data behalve degene die 
+ik wil al die data behalve degene die
 daar voorkomen bijvoorbeeld
 
 00:07:22.615 --> 00:07:25.286
@@ -438,11 +438,11 @@ dus dan moet dan met een
 groter dan teken
 
 00:07:54.651 --> 00:07:57.229
-en we willen hier ook eens 
+en we willen hier ook eens
 de kostprijs van bekijken
 
 00:07:57.477 --> 00:08:00.981
-we zullen in een keer ook 
+we zullen in een keer ook
 het uitvoertijd vragen
 
 00:08:01.589 --> 00:08:02.589
@@ -457,11 +457,11 @@ ik krijg hier een uitvoeringstijd van
 150 miliseconden
 
 00:08:21.413 --> 00:08:25.772
-dus die uitvoeringstijd herriner ik mij is al meer 
+dus die uitvoeringstijd herriner ik mij is al meer
 want daarstraks was het minder dan 50 miliseconden
 
 00:08:25.797 --> 00:08:29.407
-maar het plan 
+maar het plan
 zou wel eens anders kunnen geweest zijn
 
 00:08:29.489 --> 00:08:31.827
@@ -524,11 +524,11 @@ we hebben dus een query waarbij
 dat we dit resultaat hebben
 
 00:09:35.054 --> 00:09:37.785
-een we hebben een andere query waarbij 
+een we hebben een andere query waarbij
 we dit resultaat hebben
 
 00:09:37.810 --> 00:09:40.367
-en wat is er hier nu interessant 
+en wat is er hier nu interessant
 om te zien eigenlijk?
 
 00:09:49.016 --> 00:09:50.196
@@ -542,7 +542,7 @@ maar ik zal het dan efjes schematisch
 op papier zetten
 
 00:10:06.928 --> 00:10:11.355
-dus bij de eerste query hebben we 
+dus bij de eerste query hebben we
 een kost van 211
 
 00:10:12.477 --> 00:10:18.668
@@ -550,7 +550,7 @@ en een uitvoertijd van
 130 miliseconden
 
 00:10:19.158 --> 00:10:26.589
-en bij de andere query hebben we 
+en bij de andere query hebben we
 een kost van 5701 en 11 miliseconden
 
 00:10:30.612 --> 00:10:35.191
@@ -579,3 +579,636 @@ makkelijk groter is
 00:10:59.384 --> 00:11:05.098
 als ik naar de tijden kijk is deze query trager dan deze
 ondanks het feit dat die een lagere kostprijs heeft
+
+00:11:05.536 --> 00:11:07.296
+dus als je dat op een grafiek uitzet
+
+00:11:07.516 --> 00:11:10.069
+is hetgeen dat je verwacht, het volgende:
+
+00:11:10.336 --> 00:11:14.872
+Als dit de kostprijs is en dit de uitvoeringstijd
+
+00:11:15.008 --> 00:11:19.888
+dan verwacht je bij een lage
+kostprijs een lage uitvoeringstijd
+
+00:11:19.913 --> 00:11:22.007
+en bij een hoge kostprijs
+een hoge uitvoeringstijd.
+
+00:11:22.320 --> 00:11:25.153
+Wat is er hier nu gebeurd?
+
+00:11:29.185 --> 00:11:32.718
+Hebben we hier bijvoorbeeld
+voor 211 vind ik een kostprijs.
+
+00:11:32.825 --> 00:11:36.662
+Dus voor een kostprijs van 211 vind ik een
+
+00:11:38.701 --> 00:11:39.701
+Euh sorry
+
+00:11:39.780 --> 00:11:41.419
+ik heb hier de...
+
+00:11:43.473 --> 00:11:44.473
+Ja...
+
+00:11:45.137 --> 00:11:47.901
+Dus voor een kostprijs
+van 211 zit ik hier
+
+00:11:47.925 --> 00:11:50.697
+en dan heb ik een
+uitvoeringstijd van 130 ms
+
+00:11:50.708 --> 00:11:54.293
+En voor een kostprijs van
+5000 zit ik hier met 11 seconden.
+
+00:11:54.317 --> 00:11:57.479
+Dus ik zit hier als het ware wat ik
+niet verwacht, wat heel vreemd is.
+
+00:11:57.511 --> 00:11:59.536
+Heeft iemand daar een
+mogelijke verklaring voor?
+
+00:11:59.560 --> 00:12:02.199
+Er zijn verschillende
+verklaringen mogelijk.
+
+00:12:04.131 --> 00:12:06.776
+Waarom dat dat hier
+eigenlijk dalend is,
+
+00:12:06.800 --> 00:12:09.807
+waar dat je verwacht dat het
+stijgend zou kunnen zijn.
+
+00:12:19.099 --> 00:12:23.439
+We verwachten een lage kostprijs en een
+lage tijd. Een hoge kostprijs
+
+00:12:23.464 --> 00:12:26.693
+en een hogere uitvoeringstijd, maar
+hier is het net omgekeerd,
+
+00:12:26.718 --> 00:12:32.798
+dus wat zijn mogelijke
+redenen dat het nu zo is?
+
+00:12:33.257 --> 00:12:34.840
+Het kan een uitzondering
+zijn zeg je
+
+00:12:34.865 --> 00:12:37.482
+Hij heeft het snel gevonden
+wat hij nodig heeft...
+
+00:12:37.526 --> 00:12:39.465
+ Ja... Ja
+
+00:12:44.282 --> 00:12:46.208
+Rik komt al korter... Caching !
+
+00:12:46.249 --> 00:12:51.790
+maar caching? Opzich worden
+dezelfde tabellen hier opgehaald denk ik...
+
+00:12:52.339 --> 00:12:56.722
+Het gaat om dezelfde
+tabellen, dus ik verwacht in de
+
+00:12:56.747 --> 00:13:01.235
+cache dat zelf de 2de query
+die uitvoert, dat die voordeel
+
+00:13:01.260 --> 00:13:04.786
+heeft omdat er dan misschien
+al meer gecached is tegen dan.
+
+00:13:05.626 --> 00:13:08.616
+Maar caching geeft
+wel een zekere indicatie...
+
+00:13:08.623 --> 00:13:12.207
+Een zekere hint voor wat er
+aan de hand zou kunnen zijn.
+
+00:13:16.714 --> 00:13:20.940
+Wat heeft er nog een
+invloed op de uitvoeringstijd?
+
+00:13:21.508 --> 00:13:25.787
+Denk eraan we hebben in het 1ste
+semester gesproken over transacties.
+
+00:13:25.789 --> 00:13:27.626
+Waarom spraken we over transacties?
+
+00:13:27.640 --> 00:13:32.248
+Waarom hebben we nood aan transacties
+wanneer we in een databank werken?
+
+00:13:52.298 --> 00:13:53.437
+Ik zal het anders zeggen...
+
+00:13:53.445 --> 00:14:00.321
+Herinner je nog een voorbeeld van een
+probleem dat je kon hebben bij transacties?
+
+00:14:04.786 --> 00:14:06.706
+Meerdere gebruikers, inderdaad Philippe!
+
+00:14:06.713 --> 00:14:09.862
+We zitten met meerdere
+gebruikers op hetzelfde systeem, dus
+
+00:14:09.887 --> 00:14:13.984
+die kostprijs dat is een
+theoretische waarde dat u planner berekent.
+
+00:14:14.008 --> 00:14:15.510
+Dat is een vaste
+waarde.
+
+00:14:15.610 --> 00:14:21.279
+Maar u uitvoeringstijd hangt ook af van u
+belasting van u systeem op dat moment.
+
+00:14:21.781 --> 00:14:24.400
+Het kan best zijn dat een
+klein verschil in belasting,
+
+00:14:24.424 --> 00:14:27.211
+waar op dat moment die
+server nog andere dingen aan het doen is...
+
+00:14:27.236 --> 00:14:28.996
+(dat is een concrete fysieke machine) ...
+
+00:14:29.020 --> 00:14:31.761
+waardoor je een
+andere uitvoeringstijd krijgt.
+
+00:14:31.857 --> 00:14:34.123
+Iets anders wat dat je ook hebt is
+
+00:14:34.637 --> 00:14:36.317
+Naast het fysieke systeem
+
+00:14:36.600 --> 00:14:38.873
+hier zitten ook mensen van
+een andere keuzerichting
+
+00:14:38.898 --> 00:14:41.370
+We hebben 3 keuzerichtingen,
+dit is een antwoord
+
+00:14:41.394 --> 00:14:43.760
+voor 1 van de
+keuzerichtingen zou ik zeggen
+
+00:14:44.385 --> 00:14:48.718
+Ik zit hier thuis en
+daar draai ik de query,
+
+00:14:48.871 --> 00:14:52.352
+Dus wat zou nog een
+verklaring kunnen zijn?
+
+00:14:58.667 --> 00:15:01.581
+Waardoor ik een verschil
+zie in uitvoeringstijd?
+
+00:15:03.476 --> 00:15:05.329
+Ja inderdaad het netwerk hier he.
+
+00:15:05.350 --> 00:15:10.111
+Dus het netwerk kan ook zijn
+invloed daar hebben natuurlijk.
+
+00:15:10.692 --> 00:15:13.593
+Dus we hebben enerzijds de fysieke
+machine en anderzijds het netwerk. Dus
+
+00:15:13.618 --> 00:15:17.054
+beperk u niet tot datgene dat je
+ziet, denk altijd wat ruimer he mannen.
+
+00:15:17.946 --> 00:15:23.563
+En een laatste verklaring, je kan
+er misschien nog anderen bedenken, is dat
+
+00:15:23.587 --> 00:15:26.946
+eventueel die planner eigenlijk een foute
+schatting maakt.
+
+00:15:27.013 --> 00:15:28.313
+Dat gebeurd soms ook he.
+
+00:15:28.406 --> 00:15:32.960
+Dat is ook een stuk software dat
+die planning inschat van kijk de kostprijs
+
+00:15:32.985 --> 00:15:38.412
+voor mij is hier bij deze query zo
+groot
+
+00:15:38.437 --> 00:15:41.019
+maar eigenlijk in de
+praktijk is die kleiner
+
+00:15:41.984 --> 00:15:45.328
+Hij onderschat zichzelf bijvoorbeeld
+met zijn planning daar.
+
+00:15:45.353 --> 00:15:46.925
+Dus dat zou
+dus ook nog een reden kunnen zijn.
+
+00:15:46.950 --> 00:15:48.944
+Maar je hebt dus veel
+verschillende redenen.
+
+00:15:48.969 --> 00:15:51.622
+Dus de moraal van het verhaal is
+eigenlijk...
+
+00:15:51.916 --> 00:15:53.942
+Als je kan zet die ANALYZE erbij
+
+00:15:54.083 --> 00:15:55.786
+voor het effectieve uitvoeren.
+
+00:15:55.811 --> 00:15:57.686
+ Tenzij
+het te zwaar is om uit te voeren of het
+
+00:15:57.711 --> 00:16:00.497
+gaat om een DML  Een insert, update en
+delete...
+
+00:16:00.704 --> 00:16:03.439
+Dan moet je natuurlijk oppassen
+dat je geen gegevens gaat aanpassen
+
+00:16:03.465 --> 00:16:06.098
+als dat niet de bedoeling zou zijn.
+
+00:16:06.325 --> 00:16:11.135
+En voer dat meerdere keren uit.  En als we
+iets meerdere keren uitvoeren,
+
+00:16:11.236 --> 00:16:14.539
+dan zouden we dus
+eigenlijk al die timings kunnen bijhouden.
+
+00:16:14.571 --> 00:16:16.329
+Die kostprijs die gaat niet veranderen.
+
+00:16:16.354 --> 00:16:19.427
+maar al die timings zouden we kunnen gaan
+bijhouden...  die uitvoertijden
+
+00:16:19.467 --> 00:16:21.853
+en wat zouden we dan kunnen doen
+met die uitvoeringstijden?
+
+00:16:23.286 --> 00:16:26.716
+Dan verwijs ik terug
+naar de mensen die misschien deze week
+
+00:16:26.741 --> 00:16:29.303
+operationele analyze gehad hebben.
+
+00:16:36.385 --> 00:16:38.918
+Als ik meerdere timings
+heb van dezelfde query...
+
+00:16:38.932 --> 00:16:39.935
+Wat zou ik kunnen doen?
+
+00:16:39.949 --> 00:16:43.853
+Voor de mensen die
+vorig semester statistiek gekregen hebben?
+
+00:16:50.253 --> 00:16:51.799
+Een gemiddelde berekenen...
+
+00:16:51.933 --> 00:16:54.952
+ En om nog een stapje verder te gaan Milan?
+
+00:16:55.219 --> 00:16:58.547
+Want daar zit een
+bepaalde onzekerheid meestal op...
+
+00:17:08.859 --> 00:17:11.748
+Als je een beetje links
+en rechts van je gemiddelde gaat kijken...
+
+00:17:12.902 --> 00:17:15.174
+Een betrouwbaarheidsinterval, inderdaad ja.
+
+00:17:15.201 --> 00:17:17.219
+Standaardafwijking
+of betrouwbaarheidsinterval.
+
+00:17:17.244 --> 00:17:19.641
+Dus je zou hier
+een klein lusje kunnen schrijven van...
+
+00:17:19.666 --> 00:17:21.952
+We gaan die query
+zo vaak uitvoeren... Of in een cronjob.
+
+00:17:21.977 --> 00:17:24.547
+En we schrijven dat explain plan ergens weg
+
+00:17:24.626 --> 00:17:26.928
+en je berekent daar
+dan het betrouwbaarheidsinterval op.
+
+00:17:26.953 --> 00:17:28.399
+En zo krijg je een beter
+idee van...
+
+00:17:28.424 --> 00:17:32.029
+Hoe zit het hier nu
+eigenlijk in plaats van 1 momentopname.
+
+00:17:32.050 --> 00:17:34.113
+Want die kostprijs gaat inderdaad niet
+veranderen...
+
+00:17:34.120 --> 00:17:35.800
+Maar die timings daar?
+
+00:17:38.417 --> 00:17:46.412
+[No useful information]
+
+00:17:48.381 --> 00:17:50.301
+Dus dat zijn
+allemaal aandachtspunten he mannen.
+
+00:17:50.341 --> 00:17:52.430
+Ik verwacht niet euhm...
+
+00:17:53.944 --> 00:17:55.384
+Dat is al vrij ver
+
+00:17:55.750 --> 00:18:00.119
+Dus dat is hier eigenlijk
+voor de hoge punten hetgeen we hier zeggen.
+
+00:18:00.167 --> 00:18:03.342
+Ik ben al blij dat jullie naar performantie
+toe kunnen werken met die explain...
+
+00:18:03.367 --> 00:18:07.632
+met die kostprijzen
+performantere queries kunnen schrijven...
+
+00:18:07.700 --> 00:18:13.755
+doorhebben dat dingen
+zoals index scannen dat die belangrijk zijn
+
+00:18:13.762 --> 00:18:17.145
+Of dat dat toch
+wel een proces kan verbeteren vaak.
+
+00:18:19.844 --> 00:18:22.270
+Ik denk dat het wel
+interessant is om te weten.
+
+00:18:22.297 --> 00:18:26.218
+Er is nog een ander stukje
+dat ik u kan tonen denk ik in deze context.
+
+00:18:26.238 --> 00:18:31.306
+Dan denk ik terug aan de
+mensen die meer aan de systeem-kant zitten.
+
+00:18:32.870 --> 00:18:35.249
+Dus ik kan bijvoorbeeld ook vragen van...
+
+00:18:35.276 --> 00:18:36.329
+Hoe zit het eigenlijk?
+
+00:18:36.336 --> 00:18:38.869
+Daarstraks sprak iemand van caching...
+
+00:18:39.207 --> 00:18:41.274
+En geef je de optie buffers mee
+
+00:18:41.287 --> 00:18:46.901
+Dus dan kan je kijken van wat komt
+er nu effectief uit een cache als het ware.
+
+00:18:46.975 --> 00:18:50.431
+Dus wat ik nu
+zie is hetzelfde query plan van daarnet.
+
+00:18:50.667 --> 00:18:53.200
+We hebben een
+vergelijkbare tijd daar.
+
+00:18:53.359 --> 00:18:56.889
+Hier staat Buffers: shared hit= 3 ...
+
+00:18:57.223 --> 00:19:00.236
+Dus dat wilt zeggen voor
+deze sequentiele scan heeft die eigenlijk
+
+00:19:00.260 --> 00:19:03.214
+
+alles uit het geheugen kunnen halen
+
+00:19:04.490 --> 00:19:08.394
+Voor deze query staat
+hier ook Buffers: shared hit=zoveel ...
+
+00:19:08.950 --> 00:19:12.406
+Dus dat heeft
+ook alles uit het geheugen kunnen halen.
+
+00:19:13.210 --> 00:19:17.728
+Anders staat hier iets van dirtied
+of vind je daar nog andere waarden bij.
+
+00:19:17.875 --> 00:19:21.055
+Hier vind je zelfs de methode die hij
+gebruikt heeft met
+
+00:19:21.080 --> 00:19:23.219
+het geheugen
+dat er ter beschikking is, is "Quicksort"
+
+00:19:23.233 --> 00:19:25.066
+Ik weet niet of
+je quicksort herkent.
+
+00:19:25.093 --> 00:19:28.997
+Vroeger zagen we altijd
+sorteeralgoritmen in het eerste jaar.
+
+00:19:30.097 --> 00:19:35.425
+Wat weet je nog van quicksort
+als je terugdenkt aan het 1ste jaar?
+
+00:19:43.917 --> 00:19:47.514
+Je moet daarom het algoritme niet meer
+kennen, maar het gaat hier over performantie.
+
+00:19:47.539 --> 00:19:49.836
+je hebt daar
+verschillende sorteeralgoritmes gezien,
+
+00:19:49.861 --> 00:19:54.257
+misschien ken je nog
+andere sorteeralgoritmes van toen?
+
+00:20:09.417 --> 00:20:11.097
+Dat zit wat ver precies?
+
+00:20:13.361 --> 00:20:14.434
+Het sorteren he...
+
+00:20:14.467 --> 00:20:15.472
+Sorteeralgoritmes:
+
+00:20:15.493 --> 00:20:17.869
+Een daarvan was quicksort, dat was
+een recursief algoritme,
+
+00:20:17.894 --> 00:20:20.607
+waardoor dat
+het wel al wat geheugen durft te gebruiken
+
+00:20:20.667 --> 00:20:24.402
+Maar het was eigenlijk een heel
+performant algoritme, het was heel snel.
+
+00:20:24.489 --> 00:20:27.945
+Een variant die
+ook wel snel was, was de bubble sort.
+
+00:20:27.950 --> 00:20:31.516
+Maar je had ook tragere
+algoritmes zoals de mergesort enzoverder.
+
+00:20:31.530 --> 00:20:35.783
+Eingelijk gaat de planner hier afhankelijk van
+de data die ter beschikking is in het geheugen
+
+00:20:35.823 --> 00:20:37.995
+gaat hij zijn zijn
+sorteeralgoritme kiezen.
+
+00:20:38.029 --> 00:20:43.981
+Dus hier die quicksort zie ik graag staan omdat
+ik weet dat dat een snel sorteeralgoritme is.
+
+00:20:44.416 --> 00:20:45.696
+Dus dat is goed.
+
+00:20:45.968 --> 00:20:47.729
+Staat daar een ander sorteeralgoritme...
+
+00:20:47.754 --> 00:20:50.150
+dan is dat misschien
+omdat die niet genoeg geheugen heeft om
+
+00:20:50.175 --> 00:20:52.557
+de sortering uit
+te voeren, dat die terugvalt op een andere.
+
+00:20:52.582 --> 00:20:54.524
+Dus dat is allemaal interessant
+
+00:20:55.097 --> 00:20:57.083
+Dus zo krijg je
+wat meer informatie.
+
+00:20:57.104 --> 00:21:01.712
+Er komt op dit moment geen data
+vanuit de schijf ,maar uit het geheugen.
+
+00:21:01.824 --> 00:21:02.944
+Waarom is dat?
+
+00:21:02.964 --> 00:21:05.560
+Omdat wij allemaal
+natuurlijk op diezelfde databank die tabel
+
+00:21:05.584 --> 00:21:08.092
+hebben zitten
+raadplegen en ondertussen is die gecached.
+
+00:21:08.105 --> 00:21:11.881
+Misschien kunnen
+we dat bij die andere query ook even doen.
+
+00:21:18.508 --> 00:21:19.508
+Ja...
+
+00:21:20.061 --> 00:21:22.461
+Dus hier zie je al wat anders staan.
+
+00:21:22.572 --> 00:21:25.830
+Dan zie je inderdaad
+terug dat we die quicksort gaan gebruiken.
+
+00:21:26.207 --> 00:21:29.307
+We blijven nochtans met een kost die
+hier hoger zit,
+
+00:21:29.314 --> 00:21:33.740
+dus iets doet mij vermoeden dat
+eventueel het query plan kan toeval zijn.
+
+00:21:33.780 --> 00:21:35.980
+Het moet dus heel vaak uitvoeren.
+
+00:21:39.480 --> 00:21:41.546
+Dan ga ik even verder kijken...
+
+00:21:41.986 --> 00:21:44.646
+Dus hier staan allemaal
+vergelijkbare zaken.
+
+00:21:44.760 --> 00:21:49.688
+Hash Join zie ik ook graag staan, dat
+is meestal sneller dan een nested loop.
+
+00:21:51.777 --> 00:21:56.358
+Buckets, dat kan je eigenlijk
+vergelijken met pagina's of blokken.
+
+00:21:56.378 --> 00:21:59.613
+Dus hoeveel hij er
+daar nodig heeft gehad voor zijn hash
+
+00:21:59.626 --> 00:22:02.027
+heeft hij blijkbaar zoveel
+geheugen nodig gehad
+
+00:22:02.051 --> 00:22:04.766
+voor die hash
+join dan uiteindelijk te gaan uitvoeren.
+
+00:22:05.297 --> 00:22:06.297
+Oke...
+
+00:22:06.784 --> 00:22:09.689
+Goed dat is iets meer informatie daarbij.
+
+00:22:09.930 --> 00:22:14.117
+Die andere queries, ik denk dat die
+ook goed zijn die jullie hebben ingezet.
+
+00:22:14.137 --> 00:22:17.120
+We zullen ze even nakijken...
