@@ -10,9 +10,9 @@ ondertitelingen db2
 2. 04_0_1_Limiting_result_sets.eng.vtt
 
 
- 04_0_2_LATERAL.mkv to : 
-1. 04_0_2_LATERAL.nld.vtt - first 10 min
-2. 04_0_2_LATERAL.eng.vtt
+ 40 min 04_0_2_LATERAL.mkv to : 
+1. 04_0_2_LATERAL.nld.vtt - ruben first 10 min
+2. 04_0_2_LATERAL.eng.vtt 
 
 04_0_3_chinook_media.mkvto: 
 1. 04_0_3_chinook_media.nld.vtt -jurgen elias done
