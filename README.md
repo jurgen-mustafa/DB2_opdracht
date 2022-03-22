@@ -6,7 +6,7 @@ ondertitelingen db2
 2. 02_0_3_3_index_geolite.caching.eng.vtt - done
 
 04_0_1_Limiting_result_sets.nld.mkv to :
-1. 04_0_1_Limiting_result_sets.nld.vtt 
+1. 04_0_1_Limiting_result_sets.nld.vtt - emile done
 2. 04_0_1_Limiting_result_sets.eng.vtt
 
 
@@ -15,8 +15,8 @@ ondertitelingen db2
 2. 04_0_2_LATERAL.eng.vtt
 
 04_0_3_chinook_media.mkvto: 
-1. 04_0_3_chinook_media.nld.vtt -elias done
-2. 04_0_3_chinook_media.eng.vtt -elias done
+1. 04_0_3_chinook_media.nld.vtt -jurgen elias done
+2. 04_0_3_chinook_media.eng.vtt -jurgen elias done
 
 
 
