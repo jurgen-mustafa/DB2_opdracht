@@ -14,7 +14,7 @@ ondertitelingen db2
 1. 04_0_2_LATERAL.nld.vtt - ruben first 10 min
 2. 04_0_2_LATERAL.eng.vtt 
 
-04_0_3_chinook_media.mkvto: 
+20min 04_0_3_chinook_media.mkvto: 
 1. 04_0_3_chinook_media.nld.vtt -jurgen elias done
 2. 04_0_3_chinook_media.eng.vtt -jurgen elias done
 
