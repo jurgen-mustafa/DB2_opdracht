@@ -5,7 +5,7 @@ ondertitelingen db2
 1. 02_0_3_3_index_geolite.caching.nld.vtt - done
 2. 02_0_3_3_index_geolite.caching.eng.vtt - done
 
-04_0_1_Limiting_result_sets.nld.mkv to :
+10 min 04_0_1_Limiting_result_sets.nld.mkv to :
 1. 04_0_1_Limiting_result_sets.nld.vtt - emile done
 2. 04_0_1_Limiting_result_sets.eng.vtt
 
