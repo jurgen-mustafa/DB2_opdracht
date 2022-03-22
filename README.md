@@ -1,7 +1,7 @@
 # DB2_opdracht
 ondertitelingen db2
 
-02_0_3_3_index_geolite.caching.mkv to : ,, 
+8 min 02_0_3_3_index_geolite.caching.mkv to : ,, 
 1. 02_0_3_3_index_geolite.caching.nld.vtt - done
 2. 02_0_3_3_index_geolite.caching.eng.vtt - done
 
