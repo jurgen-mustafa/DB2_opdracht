@@ -618,3 +618,642 @@ Does anyone see the difference?
 
 00:09:53.014 --> 00:09:55.914
 Where that the difference is made
+
+00:20:00.710 --> 00:20:01.570
+example
+
+00:20:01.909 --> 00:20:05.770
+ my colleague, amie and i, wim there is the letter "m" in it
+
+00:20:06.056 --> 00:20:08.703
+so we have common letters in our first names.
+
+00:20:09.170 --> 00:20:12.070
+for example i see there
+
+00:20:12.603 --> 00:20:14.217
+lucas is the last one here
+
+00:20:14.497 --> 00:20:17.217
+lucas and my name have no common letters.
+
+00:20:17.390 --> 00:20:18.430
+lucas and milan do
+
+00:20:19.980 --> 00:20:22.620
+lucas and kevin don't either, for example
+
+00:20:23.406 --> 00:20:26.713
+  I want to show people who have common letters in their first name
+
+00:20:29.487 --> 00:20:31.587
+We can use this for example.
+
+00:20:32.513 --> 00:20:35.527
+there is a function like a nest.
+
+00:20:35.552 --> 00:20:38.010
+so that we can convert strings to
+
+00:20:38.223 --> 00:20:39.377
+separate characters
+
+00:20:39.530 --> 00:20:40.457
+that's a first step
+
+00:20:43.097 --> 00:20:45.443
+so I can convert names and first names
+
+00:20:45.754 --> 00:20:47.054
+so think about it and we'll have that function.
+
+00:20:47.400 --> 00:20:49.614
+start converting first names to separate letters
+
+00:20:51.394 --> 00:20:52.007
+okay
+
+00:20:53.654 --> 00:20:55.714
+then we could actually use that
+
+00:20:55.960 --> 00:20:58.167
+then we could use this to get a name
+
+00:20:58.293 --> 00:21:00.393
+so like a table was just made
+
+00:21:00.473 --> 00:21:01.987
+from one row to the other
+
+00:21:03.280 --> 00:21:04.813
+then the corresponding values
+
+00:21:06.277 --> 00:21:07.777
+could you do that here
+
+00:21:07.843 --> 00:21:09.270
+to actually start combining the names
+
+00:21:09.337 --> 00:21:10.577
+with all their separate letters
+
+00:21:10.863 --> 00:21:12.817
+understands everybody, I'm going to let it stand for a moment
+
+00:21:14.100 --> 00:21:14.840
+for example
+
+00:21:14.993 --> 00:21:16.580
+image you are in a table customers state
+
+00:21:16.600 --> 00:21:17.833
+just the word
+
+00:21:17.927 --> 00:21:18.600
+arthur
+
+00:21:18.873 --> 00:21:20.153
+there is only one name
+
+00:21:20.567 --> 00:21:22.360
+customer number 1 with arthur
+
+00:21:22.857 --> 00:21:24.484
+What is shown here?
+
+00:21:25.297 --> 00:21:26.710
+what comes out of this query
+
+00:21:26.735 --> 00:21:27.317
+who can say
+
+00:21:30.837 --> 00:21:33.297
+image you in table customer has only one row
+
+00:21:34.123 --> 00:21:36.163
+called customer 1 rent
+
+00:21:52.050 --> 00:21:54.223
+will first ask another question
+
+00:21:54.417 --> 00:21:56.223
+how many rows are going to come out of this
+
+00:21:56.857 --> 00:21:57.823
+from this query
+
+00:22:05.206 --> 00:22:06.193
+one row
+
+00:22:07.714 --> 00:22:09.340
+people who have any other ideas?
+
+00:22:12.287 --> 00:22:13.600
+remember in there
+
+00:22:14.360 --> 00:22:15.454
+you've got something like
+
+00:22:15.520 --> 00:22:16.494
+a cartesian product
+
+00:22:16.684 --> 00:22:18.684
+but with that dependence from here
+
+00:22:18.924 --> 00:22:19.604
+so that
+
+00:22:19.770 --> 00:22:20.657
+arthur
+
+00:22:21.070 --> 00:22:23.284
+who is going to be on that "k1.vname"
+
+00:22:24.124 --> 00:22:25.230
+indeed mathias
+
+00:22:25.910 --> 00:22:26.990
+have you got any ideas
+
+00:22:27.103 --> 00:22:28.423
+use your microphone.
+
+00:22:28.503 --> 00:22:29.843
+what the output is
+
+00:22:31.063 --> 00:22:31.843
+at arthur
+
+00:22:41.943 --> 00:22:45.317
+otherwise the first row only, if you just put it in the chat
+
+00:22:48.526 --> 00:22:50.666
+then the other 6 rows will follow automatically I think.
+
+00:22:56.350 --> 00:22:57.903
+yes, that's right
+
+00:22:57.943 --> 00:22:59.583
+we get there 6 times artuur
+
+00:22:59.903 --> 00:23:01.836
+because artuur consists of 6 letters.
+
+00:23:02.074 --> 00:23:04.740
+so this here this second expression here
+
+00:23:04.934 --> 00:23:07.627
+select regexp_split_to_table
+
+00:23:08.334 --> 00:23:10.474
+function that splits the name
+
+00:23:10.766 --> 00:23:12.226
+into separate characters
+
+00:23:12.313 --> 00:23:14.360
+Then I get a,r,t and so on.
+
+00:23:14.546 --> 00:23:15.253
+six letters
+
+00:23:15.766 --> 00:23:16.900
+
+
+00:23:16.933 --> 00:23:15.613
+so I get a table here
+
+00:23:17.360 --> 00:23:18.720
+with six rows
+
+00:23:18.786 --> 00:23:20.486
+which is combined with a row
+
+00:23:20.533 --> 00:23:21.973
+from that top one so I get
+
+00:23:22.007 --> 00:23:23.067
+six rows in all
+
+00:23:23.180 --> 00:23:24.660
+so I get arthur a
+
+00:23:25.073 --> 00:23:26.013
+rent r
+
+00:23:26.373 --> 00:23:27.400
+ground rent t
+
+00:23:27.707 --> 00:23:29.907
+etcover to final arrent r
+
+00:23:33.359 --> 00:23:35.293
+that's one way, everybody understands why I do that.
+
+00:23:36.353 --> 00:23:39.726
+to actually cross over with people with the same
+
+00:23:39.960 --> 00:23:41.260
+letter in their name have
+
+00:23:42.253 --> 00:23:44.036
+Now I've actually created a table where
+
+00:23:44.116 --> 00:23:44.783
+by name
+
+00:23:44.976 --> 00:23:46.603
+knows which letter occurs in
+
+00:23:46.783 --> 00:23:48.530
+so what could be the next step
+
+00:23:48.956 --> 00:23:50.383
+at what level are you going to think
+
+00:23:55.450 --> 00:23:57.936
+so I have that here for example for arthuur we know that
+
+00:23:58.750 --> 00:24:01.943
+but if it had to be someone else e.g. lucas i would have five rows here
+
+00:24:02.990 --> 00:24:05.630
+Then those l, u and so on.
+
+00:24:06.327 --> 00:24:08.007
+Then at some point we get the letter "a".
+
+00:24:09.647 --> 00:24:11.767
+so what could you start using as
+
+00:24:12.347 --> 00:24:15.087
+being a . . condition
+
+
+00:24:38.843 --> 00:24:42.070
+so the first time you guys have worked with that letter already
+
+00:24:43.016 --> 00:24:44.083
+is a little bit of getting used to.
+
+00:24:47.523 --> 00:24:48.856
+if you go one step further
+
+00:24:50.027 --> 00:24:51.980
+so that conversion, as just put
+
+00:24:52.013 --> 00:24:53.100
+it does happen.
+
+00:24:53.206 --> 00:24:55.053
+that arthur, here it is about sjeik
+
+00:24:55.107 --> 00:24:56.420
+etcetera so all the
+
+00:24:57.066 --> 00:24:59.153
+all the elements are actually
+
+00:24:59.180 --> 00:25:00.640
+normally only one row for Sheikh
+
+00:25:00.753 --> 00:25:01.833
+I now have 5.
+
+00:25:02.093 --> 00:25:02.940
+etcetera
+
+00:25:03.066 --> 00:25:04.366
+so I get all these people
+
+00:25:06.166 --> 00:25:07.573
+so if I have this as a table
+
+00:25:08.373 --> 00:25:09.706
+how would I now make that table
+
+00:25:09.813 --> 00:25:11.346
+connect to itself?
+
+00:25:12.993 --> 00:25:13.873
+such that
+
+00:25:14.140 --> 00:25:15.586
+I get all the people
+
+00:25:15.733 --> 00:25:18.506
+who have a common letter in their first name
+
+00:25:19.213 --> 00:25:20.913
+how can I make that table with itself
+
+00:25:21.020 --> 00:25:22.120
+imagine that is a table
+
+00:25:23.390 --> 00:25:24.930
+with customer number first name l
+
+00:25:25.350 --> 00:25:27.530
+How do I connect that table to itself so that I can
+
+00:25:27.763 --> 00:25:28.463
+all the people
+
+00:25:29.156 --> 00:25:31.910
+together who have a common letter
+
+00:25:31.935 --> 00:25:32.806
+have in their first name
+
+00:25:40.573 --> 00:25:41.346
+what is then
+
+00:25:42.546 --> 00:25:43.666
+my joined condition
+
+00:25:45.246 --> 00:25:48.606
+so imagine i'm going to call up that table twice for example
+
+00:25:52.390 --> 00:25:54.390
+what is this join condition going to be.
+
+00:25:54.924 --> 00:25:55.984
+This is the table.
+
+00:25:56.530 --> 00:25:57.744
+x1
+
+00:25:57.890 --> 00:26:00.037
+And I call table x2 again.
+
+00:26:00.110 --> 00:26:02.364
+but that's actually the same table so how can I call x1 and x2
+
+00:26:02.653 --> 00:26:04.247
+going to connect on which column
+
+00:26:07.553 --> 00:26:09.827
+are going to merge, are going to join
+
+00:26:21.190 --> 00:26:23.190
+yes indeed, so that "L"
+
+00:26:23.610 --> 00:26:25.629
+but not even a like is necessary
+
+00:26:25.737 --> 00:26:26.743
+because it's a character
+
+00:26:27.717 --> 00:26:29.316
+so I'm going to use that "L"
+
+00:26:29.343 --> 00:26:30.457
+That's right, milan.
+
+00:26:30.564 --> 00:26:31.844
+x1 l, x2 l
+
+00:26:31.950 --> 00:26:32.984
+so that system
+
+00:26:33.210 --> 00:26:35.250
+so those are the steps that I've done here
+
+00:26:35.697 --> 00:26:36.597
+we are indeed going to
+
+00:26:36.837 --> 00:26:38.484
+so we want to know per person
+
+00:26:39.850 --> 00:26:41.177
+common letter
+
+00:26:41.202 --> 00:26:43.564
+so initially I want to know who has a common letter
+
+00:26:44.404 --> 00:26:45.477
+then I can just
+
+00:26:45.557 --> 00:26:46.724
+maybe start counting again
+
+00:26:46.749 --> 00:26:47.564
+because that's a step deeper
+
+00:26:47.610 --> 00:26:48.830
+but I'm the problem
+
+00:26:48.873 --> 00:26:50.053
+we are breaking this down
+
+00:26:50.257 --> 00:26:51.937
+so the join condition is indeed
+
+00:26:51.997 --> 00:26:53.190
+are indeed the common letters
+
+00:26:53.717 --> 00:26:55.217
+that is, I have those customers
+
+00:26:56.057 --> 00:26:57.857
+and I'm actually going to split them up
+
+00:26:59.000 --> 00:27:00.233
+in the first time
+
+00:27:00.540 --> 00:27:02.626
+i'm going to split those clats a second time
+
+00:27:02.800 --> 00:27:03.626
+that's good.
+
+00:27:04.266 --> 00:27:05.673
+Then I get all these letters.
+
+00:27:06.406 --> 00:27:08.553
+I'm going to say they must have the same letters
+
+00:27:09.013 --> 00:27:10.420
+that's that where condition here
+
+00:27:11.773 --> 00:27:13.206
+and I'm also going to say
+
+00:27:13.906 --> 00:27:16.240
+I'm going to say it must be other people
+
+00:27:16.393 --> 00:27:18.746
+cause I want to know what other people have gmn. letters
+
+00:27:19.714 --> 00:27:23.834
+because it doesn't make sense to say arthur has the same letters as arthur
+
+00:27:24.200 --> 00:27:25.586
+customer 1 goes
+
+00:27:27.820 --> 00:27:28.700
+so hence
+
+00:27:29.706 --> 00:27:32.673
+the condition after building that structure
+
+00:27:33.283 --> 00:27:35.930
+have a letter in common but are not the same client
+
+00:27:41.380 --> 00:27:43.060
+here we are.
+
+00:27:44.780 --> 00:27:46.020
+Now I have to know
+
+00:27:47.653 --> 00:27:49.206
+so the question was
+
+00:27:51.413 --> 00:27:53.487
+we want to know how many people are there
+
+00:27:53.580 --> 00:27:55.087
+that's what all students would have
+
+00:27:55.453 --> 00:27:58.213
+how many people are there who have one letter in common
+
+00:27:58.247 --> 00:27:58.893
+with arthur
+
+00:27:59.290 --> 00:28:00.997
+how many people are there who have one letter in common
+
+00:28:01.090 --> 00:28:02.930
+with milan and so on.
+
+00:28:03.570 --> 00:28:05.577
+how can i solve this problem
+
+00:28:05.617 --> 00:28:06.530
+if I have this query
+
+00:28:15.277 --> 00:28:16.843
+are almost to the solution
+
+00:28:29.254 --> 00:28:30.720
+so this query is going
+
+00:28:31.870 --> 00:28:33.450
+give for each person
+
+00:28:34.043 --> 00:28:35.723
+other people who have a letter
+
+00:28:35.770 --> 00:28:36.970
+in common outside of themselves
+
+00:28:38.283 --> 00:28:39.796
+how should i make this query yet
+
+00:28:40.260 --> 00:28:42.047
+adjust a little bit, expand to know
+
+00:28:42.313 --> 00:28:43.480
+how many people there are
+
+00:28:44.080 --> 00:28:45.540
+who have a letter in common
+
+00:28:45.627 --> 00:28:48.100
+with your name or with the name of the person
+
+00:28:49.240 --> 00:28:50.207
+that's on that row
+
+00:28:52.947 --> 00:28:53.973
+that group by
+
+00:28:57.807 --> 00:29:00.413
+is customer 1 name and customer 2 name
+
+00:29:00.447 --> 00:29:01.893
+are those functionally dependent on that
+
+00:29:02.140 --> 00:29:03.700
+you have to think about that
+
+00:29:07.280 --> 00:29:07.860
+so
+
+00:29:10.427 --> 00:29:11.460
+we'll get there I think
+
+00:29:13.537 --> 00:29:15.044
+That's right, the group by and the count.
+
+00:29:15.270 --> 00:29:17.144
+so don't get caught by
+
+00:29:17.169 --> 00:29:18.317
+that k2 name
+
+00:29:18.457 --> 00:29:19.764
+if that has any other value
+
+00:29:19.789 --> 00:29:20.930
+you're going to get error messages there.
+
+00:29:21.204 --> 00:29:22.750
+so indeed there but just a
+
+00:29:22.857 --> 00:29:23.630
+grouping
+
+00:29:24.537 --> 00:29:26.917
+These are the results of that, for example.
+
+00:29:29.370 --> 00:29:30.924
+I wanted to first
+
+00:29:31.347 --> 00:29:33.487
+an alternative without lateral
+
+00:29:35.780 --> 00:29:37.473
+without lateral do this
+
+00:29:37.600 --> 00:29:38.987
+are you actually going to be working with subquerys
+
+00:29:39.012 --> 00:29:40.816
+if you're going to calculate the results separately
+
+00:29:41.303 --> 00:29:42.803
+so you go for example here
+
+00:29:42.863 --> 00:29:44.216
+harrow from
+
+00:29:44.376 --> 00:29:46.583
+I'm going to break those names down this is one table
+
+00:29:46.890 --> 00:29:48.343
+so that program
+
+00:29:48.376 --> 00:29:49.610
+then I can repeat
+
+00:29:51.443 --> 00:29:52.730
+so without lateral
+
+00:29:52.803 --> 00:29:54.330
+does that mean that all of that moves
+
+00:29:54.376 --> 00:29:55.636
+to you select statement
+
+00:29:56.137 --> 00:29:58.110
+so I get the same query as before.
+
+00:29:58.270 --> 00:29:59.357
+but I'm going to do all those things
+
+00:29:59.623 --> 00:30:01.790
+into my from here.
+
+Translated with www.DeepL.com/Translator (free version)
