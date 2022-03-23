@@ -30,11 +30,11 @@ series one two three
 Dus 1 2 3
 
 00:00:18.735 --> 00:00:21.221
-En ik geef daar dan een naam aan 
+En ik geef daar dan een naam aan
 en ik maak een tijdelijke tabel aan
 
 00:00:21.403 --> 00:00:23.170
-Hier staan een aantal dingen, he dus dit gaat
+Hier staan een aantal dingen, dus dit gaat
 
 00:00:23.374 --> 00:00:25.285
 Getallen genereren,
@@ -63,8 +63,8 @@ Een luie manier om te zeggen van
 Ja
 
 00:00:38.498 --> 00:00:41.478
-Als er in de achtergrond
-zitten er natuurlijk allerlei
+In de achtergrond zitten er
+natuurlijk allerlei
 
 00:00:41.635 --> 00:00:44.397
 Werkers die in de achtergrond
@@ -85,11 +85,11 @@ Dus een beetje zoals de temp
 directory op Linux zou je kunnen zeggen
 
 00:00:54.172 --> 00:00:56.481
-Dus da's makkelijk om dingen te testen soms
+Dus dat is makkelijk om dingen te testen soms
 
 00:00:57.583 --> 00:00:59.804
-Dus we gaan die nekeer opvragen
-we zien natuurlijk
+Dus we gaan die een keer opvragen.
+We zien natuurlijk
 
 00:00:59.930 --> 00:01:03.158
 Die nummers 1 2 3 daar dan in verschijnen
@@ -102,14 +102,14 @@ Ok
 Als ik deze query uitvoer he
 
 00:01:08.250 --> 00:01:10.992
-De tabel nummers heeft de waarde 1 2 3
+De tabel nummers heeft de waardes 1 2 3
 
 00:01:12.033 --> 00:01:14.937
 Gaat deze query werken
 of is hier een probleem
 
 00:01:19.983 --> 00:01:21.871
-Wie ziet er he de tabel nummers
+Wie ziet er de tabel nummers
 
 00:01:22.014 --> 00:01:23.647
 Ik zal hem even terug tonen misschien
@@ -118,10 +118,10 @@ Ik zal hem even terug tonen misschien
 Hij heeft de kolom max_num
 
 00:01:25.967 --> 00:01:27.474
-En de waarde 1 2 3
+En de waardes 1 2 3
 
 00:01:27.632 --> 00:01:28.949
-Da's de tabel nummers
+Dat is de tabel nummers
 
 00:01:29.717 --> 00:01:33.209
 Dus als je kijkt naar deze query, is
@@ -136,11 +136,11 @@ om die vraag te beantwoorden
 
 00:01:47.343 --> 00:01:50.358
 Maar begrijp je conceptueel
-wat er hier staat in de from
+wat er hier staat in de FROM
 
 00:01:50.484 --> 00:01:52.819
 Wat is de eerste stap die
-er in de from gebeurt
+er in de FROM gebeurt
 
 00:01:55.283 --> 00:01:57.333
 Da's altijd dezelfde stap,
@@ -150,7 +150,7 @@ want er staat een komma
 Dus de eerste stap is een...
 
 00:02:00.899 --> 00:02:03.382
-Cross Join, goed Filip he Cross Join
+Cross Join, goed Filip! Cross Join
 
 00:02:04.220 --> 00:02:08.183
 Niet geëxpliciteerd, dus we spreken
@@ -176,8 +176,8 @@ conceptueel zou je misschien kunnen denken
 Ik denk dat daar zoiets gaat inkomen
 
 00:02:31.967 --> 00:02:34.536
-Die generate series da's
-gewoon die begint met waarde 1
+Die generate_series begint gewoon
+met waarde 1
 
 00:02:34.739 --> 00:02:36.571
 En die stopt bij waarde max_num
@@ -195,7 +195,7 @@ Een lijst van 1 tot max_num
 Inderdaad Sigfried, maar wat is die max_num?
 
 00:02:46.198 --> 00:02:49.221
-He die max_num komt van
+Die max_num komt van
 nummers, dus wat verwacht je daar
 
 00:02:51.867 --> 00:02:53.160
@@ -219,14 +219,14 @@ De volgende rij daarin
 
 00:03:04.342 --> 00:03:07.104
 Dus ik verwacht een keer
-generate series van 1 tot 2
+generate_series van 1 tot 2
 
 00:03:07.551 --> 00:03:08.670
 En nummers is een keer 3
 
 00:03:08.796 --> 00:03:11.575
 De laatste rij, dus ik verwacht
-generate series van 1 tot 3
+generate_series van 1 tot 3
 
 00:03:13.300 --> 00:03:16.212
 Dit is hetgeen wat je conceptueel
@@ -249,7 +249,7 @@ Maar je kan daar niet naar verwijzen
 omdat dat op hetzelfde niveau zit
 
 00:03:32.193 --> 00:03:34.148
-Je kan niet op hetzelfde niveau in de from
+Je kan niet op hetzelfde niveau in de FROM
 
 00:03:34.355 --> 00:03:35.561
 Dat gaat niet
@@ -277,14 +277,14 @@ soort subquerry doet dit jou dan denken?
 Omdat ik hier een afhankelijkheid heb
 
 00:04:02.254 --> 00:04:04.245
-Inderdaad Kim, een gecorreleerde subquerry he
+Inderdaad Kim, een gecorreleerde subquerry
 
 00:04:04.621 --> 00:04:07.404
 Dus we kunnen inderdaad zoiets
 doen als gecorreleerde subquerries
 
 00:04:07.530 --> 00:04:09.673
-Maar dan moeten we inderdaad he dus
+Maar dan moeten we inderdaad dus
 
 00:04:10.194 --> 00:04:11.503
 Dit probleempje oplossen
@@ -346,7 +346,7 @@ Dus een functie die een
 verzameling teruggeeft
 
 00:04:53.654 --> 00:04:55.876
-Generate series is daar één voorbeeld van
+generate_series is daar één voorbeeld van
 
 00:04:59.277 --> 00:05:01.427
 In de standaard
@@ -396,8 +396,8 @@ Dus ik krijg 1 met 1
 2 is nu mijn max_num hier
 
 00:05:40.833 --> 00:05:44.391
-Dus ik krijg 1 en 2 bij generate
-series gecombineerd met die twee
+Dus ik krijg 1 en 2 bij generate_series
+gecombineerd met die twee
 
 00:05:44.664 --> 00:05:46.664
 En voor 3 krijg ik 1 2 3
