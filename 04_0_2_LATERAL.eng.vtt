@@ -1253,7 +1253,540 @@ so I get the same query as before.
 00:29:58.270 --> 00:29:59.357
 but I'm going to do all those things
 
-00:29:59.623 --> 00:30:01.790
-into my from here.
+00:29:59,721 --> 00:30:02,248
+so put it here in my front. I'm going to put those
 
-Translated with www.DeepL.com/Translator (free version)
+00:30:02,267 --> 00:30:05,506
+take a look, so I calculated those here separately actually.
+
+00:30:05,540 --> 00:30:09,120
+So this is also an option I just wanted to show.
+
+00:30:09,180 --> 00:30:11,280
+all, let's see. I was thinking.
+
+00:30:11,523 --> 00:30:14,410
+we'll..., it's true what you guys say hey, the GROUP BY and the COUNT.
+
+00:30:14,435 --> 00:30:17,576
+I expected the solution after that, I don't have my preview on.
+
+00:30:18,137 --> 00:30:19,137
+okay
+
+00:30:20,000 --> 00:30:23,509
+So if we just adjust this query
+
+00:30:23,534 --> 00:30:26,821
+To finalize it because apparently that slide is missing.
+
+00:30:28,367 --> 00:30:30,917
+Indeed, we're going to group those by customer number.
+
+00:30:32,013 --> 00:30:35,506
+ That name is functionally dependent so you can put that in your GROUP BY as well.
+
+00:30:35,526 --> 00:30:38,787
+Indeed, you just get a COUNT that you can put in there.
+
+00:30:38,814 --> 00:30:41,980
+So you can say GROUP BY customer number and first name.
+
+00:30:42,007 --> 00:30:44,693
+and you should leave out the k2 name
+
+00:30:44,793 --> 00:30:47,586
+or you're going to do count of k2 name by.
+
+00:30:47,713 --> 00:30:50,066
+So you can do that perfectly then.
+
+00:30:50,213 --> 00:30:54,233
+We don't need that L1 anymore to see what the common initial is.
+
+00:30:54,258 --> 00:30:56,316
+um, the common letter.
+
+00:30:56,363 --> 00:30:58,663
+So that's just here for your information.
+
+00:30:59,930 --> 00:31:07,453
+And then the other little example I just said hey, so without a letter we can also possibly work if we calculate those things separately.
+
+00:31:08,360 --> 00:31:09,360
+okay.
+
+00:31:10,536 --> 00:31:14,130
+Then we have another little example.
+
+00:31:14,397 --> 00:31:16,290
+Non-scalar subqueries
+
+00:31:16,943 --> 00:31:20,129
+What do we mean by a scalar subquery?
+
+00:31:24,740 --> 00:31:27,913
+Remember? We had 4 types of subqueries.
+
+00:31:28,167 --> 00:31:30,186
+We had table subqueries,
+
+00:31:30,353 --> 00:31:31,393
+we had...
+
+00:31:34,317 --> 00:31:36,592
+Abstractly, it's always a table of course,
+
+00:31:36,617 --> 00:31:39,721
+but for certain dimentions we give it a different name.
+
+00:31:40,047 --> 00:31:44,340
+So what do we mean by a scalar subquery?
+
+00:31:46,246 --> 00:31:51,570
+Multiple rows and columns? Then we talk about a table subquery Lucas.
+
+00:31:51,667 --> 00:31:57,407
+NIet-scalar, then we mean by that it is more than 1 row and 1 column.
+
+00:31:57,503 --> 00:31:59,803
+So that's not scalar there.
+
+00:32:00,263 --> 00:32:02,529
+So scalar subquery is just 1 times 1.
+
+00:32:02,897 --> 00:32:03,269
+yes.
+
+00:32:03,460 --> 00:32:06,532
+but we're talking about
+non scalar subqueries
+
+00:32:06,563 --> 00:32:11,519
+Subqueries that we know of that are not scalar.
+
+00:32:11,560 --> 00:32:14,093
+ You guys also know that if we put a subquery in the SELECT...
+
+00:32:14,706 --> 00:32:17,763
+In the Select, yes then there should only be 1 value there.
+
+00:32:18,137 --> 00:32:23,570
+If it says "SELECT customer number comma" there and then a subquery, only 1 value should come out of that.
+
+00:32:23,684 --> 00:32:28,990
+that should be there, that's the only way you can add that in the SELECT, but what if it's not...
+
+00:32:29,430 --> 00:32:32,273
+That then more than 1 value, how do we solve that?
+
+00:32:33,830 --> 00:32:34,830
+Okay
+
+00:32:34,896 --> 00:32:35,896
+So
+
+00:32:36,296 --> 00:32:37,296
+This Here.
+
+00:32:37,883 --> 00:32:39,163
+Is not a problem.
+
+00:32:39,713 --> 00:32:41,646
+This is a Scalar subquery.
+
+00:32:41,833 --> 00:32:45,023
+Hey, I'm looking up stuff here from travel,...
+
+00:32:45,544 --> 00:32:49,563
+And I write a subquery in my SELECT and da maximum is 1 value.
+
+00:32:49,820 --> 00:32:52,053
+And it's a correlated subquery.
+
+00:32:52,120 --> 00:32:53,253
+By itself, no problem.
+
+00:32:53,293 --> 00:32:58,366
+is it correlated or not, the important thing is that there is only one value here, so it executes perfectly.
+
+00:32:58,399 --> 00:33:03,773
+You always have to keep in mind, does that take the form of a table, does that make sense?
+
+00:33:04,460 --> 00:33:05,980
+So this is not a problem, but....
+
+00:33:07,313 --> 00:33:08,806
+What if I put this now?
+
+00:33:09,313 --> 00:33:11,666
+Then you will indeed get that error message.
+
+00:33:13,910 --> 00:33:17,090
+That length of stay, that could be multiple lengths of stay here.
+
+00:33:17,160 --> 00:33:21,460
+For the same trip they are probably multiple visits so also multiple lengths of stay.
+
+00:33:21,970 --> 00:33:22,443
+so
+
+00:33:22,896 --> 00:33:26,676
+Here comes trip 1 with 7 different verbiage.
+
+00:33:26,693 --> 00:33:32,209
+Now you can think of yes, to me that makes sense. I can go back and supplement that like that latteral. But that's not how that works.
+
+00:33:32,393 --> 00:33:35,061
+The standard is not so defined.
+
+00:33:35,086 --> 00:33:37,539
+So it always expects 1 value there.
+
+00:33:38,367 --> 00:33:40,100
+So then you get that error.
+
+00:33:40,780 --> 00:33:43,593
+So how can we solve that? also with that latteral again.
+
+00:33:43,967 --> 00:33:44,967
+so euh...
+
+00:33:46,324 --> 00:33:48,223
+Aja this little example I can also give.
+
+00:33:54,700 --> 00:34:00,520
+It should really be 1 times 1 for subquery, because here only 1 comes out, they are also agregation functions, comes out 1 row
+
+00:34:00,620 --> 00:34:02,300
+but with 2 columns
+
+00:34:02,327 --> 00:34:07,050
+You could of course solve this by splitting that into 2 correlated subqueries. 1 for sum,
+
+00:34:07,144 --> 00:34:08,744
+1note for variance.
+
+00:34:09,494 --> 00:34:10,494
+but okay.
+
+00:34:11,767 --> 00:34:14,026
+Just show it for the sake of completeness for the people who...
+
+00:34:14,133 --> 00:34:16,667
+That's a question I get sometimes.
+
+00:34:16,680 --> 00:34:18,986
+So the solution here is lateral eh.
+
+00:34:19,056 --> 00:34:20,576
+Yes, we're going to have our...
+
+00:34:20,616 --> 00:34:24,904
+The thing that was in our SELECT we're going to move to our FROM.
+
+00:34:25,103 --> 00:34:26,936
+We say we want all those trips.
+
+00:34:27,170 --> 00:34:33,042
+But in addition to those trips, we want to take a look at each trip, what about the length of stay here, both the sum and the variance.
+
+00:34:33,174 --> 00:34:35,113
+For that trip, and I'll add that.
+
+00:34:35,247 --> 00:34:37,120
+And I'm going to show that then.
+
+00:34:37,480 --> 00:34:41,430
+The word lateral is needed here because length of stay comes from travel.
+
+00:34:42,484 --> 00:34:45,150
+From the table travel at one level higher.
+
+00:34:45,587 --> 00:34:46,587
+okay
+
+00:34:48,360 --> 00:34:51,027
+So then we get this here for example.
+
+00:34:51,150 --> 00:34:52,950
+We get here variance 0
+
+00:34:53,060 --> 00:34:59,040
+Yes, that means there is only 1 visit for that trip. 31
+
+00:34:59,746 --> 00:35:00,746
+okay
+
+00:35:06,947 --> 00:35:12,176
+We could also write that query just now, the first one I gave there without those aggregation functions.
+
+00:35:12,206 --> 00:35:14,690
+If we have more than one value, we can do that too.
+
+00:35:15,813 --> 00:35:16,279
+yes
+
+00:35:16,787 --> 00:35:21,730
+Now these are a little bit of artificial examples. because of course we can also start doing this by....
+
+00:35:21,990 --> 00:35:24,934
+visits moving up a level.
+
+00:35:24,964 --> 00:35:27,097
+And start calculating those things.
+
+00:35:27,980 --> 00:35:28,980
+okay
+
+00:35:29,374 --> 00:35:32,174
+We can make combinations of those things.
+
+00:35:32,323 --> 00:35:34,956
+That is, you can both...
+
+00:35:36,050 --> 00:35:38,450
+Work with either that latteral.
+
+00:35:38,504 --> 00:35:44,333
+We can start working with even agregation functions combined with an ordinary value, so that GROUP BY.
+
+00:35:44,460 --> 00:35:46,713
+So you can actually start doing a fair amount of those things.
+
+00:35:48,307 --> 00:35:48,846
+okay
+
+00:35:52,437 --> 00:35:54,237
+This might be another one.
+
+00:35:54,577 --> 00:35:56,177
+That I can show then.
+
+00:35:56,540 --> 00:35:59,868
+So, you guys have already seen different agregation functions,
+
+00:36:01,290 --> 00:36:03,243
+let's go back, yeah.
+
+00:36:07,340 --> 00:36:08,340
+moment
+
+00:36:08,647 --> 00:36:11,247
+Now that example is no longer there, that's okay.
+
+00:36:11,540 --> 00:36:14,659
+So the COUNT you all know.
+
+00:36:14,913 --> 00:36:19,150
+but what we just did with that UN NEST
+
+00:36:19,470 --> 00:36:20,856
+so from a row
+
+00:36:21,360 --> 00:36:25,313
+flat hey, back to normalizing the original value.
+
+00:36:25,493 --> 00:36:31,099
+Can you also reverse denormalize with an agregation cucntion like array agregate, so then we put those together
+
+00:36:31,260 --> 00:36:34,160
+So das also a way that you can work.
+
+00:36:34,760 --> 00:36:38,408
+So then you get something like that, the reverse effect actually.
+
+00:36:39,980 --> 00:36:45,046
+Then the most common case I think, so all the previous cases we've seen so far
+
+00:36:45,167 --> 00:36:49,136
+Unless you're really with such a normlization/denormalization problem.
+
+00:36:49,690 --> 00:36:54,329
+So that it's denormalized data that you have to go and normalize.
+
+00:36:56,250 --> 00:37:00,826
+Most of the queries that we've seen so far you can probably find another alternative.
+
+00:37:00,860 --> 00:37:02,873
+That you don't need that lateral, yes.
+
+00:37:03,254 --> 00:37:09,250
+This is one where that lateral usually, yeah,...you're not going to be able to get around it usually.
+
+00:37:09,706 --> 00:37:12,606
+So, we just saw the presentation of fetch first.
+
+00:37:12,653 --> 00:37:15,753
+So we want to start comparing that to a limited dependent result.
+
+00:37:16,100 --> 00:37:17,780
+So what does that mean?
+
+00:37:18,366 --> 00:37:19,366
+okay
+
+00:37:20,460 --> 00:37:23,646
+So,this is such an example? we have travel....
+
+00:37:24,616 --> 00:37:29,339
+And we're going to join that with this subquery but there's a dependency there with that leteral.
+
+00:37:29,687 --> 00:37:32,887
+So try to see once, what does this query do?
+
+00:39:41,290 --> 00:39:45,106
+Ah sorry, I had turned my sound off for a moment with the drinking.
+
+00:39:45,233 --> 00:39:47,373
+Good that Sasha reports that.
+
+00:39:48,000 --> 00:39:52,076
+So, the hint from Rik indeed,
+
+00:39:52,636 --> 00:39:57,796
+or the thing that Arthuur says there or Rik, it's about the 2 smallest or the 2 largest indeed.
+
+00:39:58,506 --> 00:40:02,410
+So if we go through it step by step, we have the table travel here in the FROM.
+
+00:40:02,970 --> 00:40:06,022
+All the trips are shown anyway, here, LEFT.
+
+00:40:06,800 --> 00:40:09,516
+Then that's combined with any visits.
+
+00:40:09,656 --> 00:40:12,262
+I see that in visits B2
+
+00:40:13,016 --> 00:40:15,516
+And the WHERE condition here, it goes for this trip.
+
+00:40:16,647 --> 00:40:18,187
+So the visitor of that trip.
+
+00:40:19,173 --> 00:40:22,673
+And for visiting I'm going to look up, what sky objects are actually visited here?
+
+00:40:22,737 --> 00:40:26,310
+And then I'm going to sort them by diameter, just the first 2....
+
+00:40:27,170 --> 00:40:29,076
+show and retrieve.
+
+00:40:29,204 --> 00:40:33,702
+So that basically means, I'm going to per trip only the first 2 objects....
+
+00:40:34,410 --> 00:40:36,433
+Which are visited according to the diameter.
+
+00:40:36,526 --> 00:40:40,066
+Now the question is of course how is this sorted? ORDER BY diameter.
+
+00:40:40,296 --> 00:40:42,469
+Is that from small to large or from large to small?
+
+00:40:42,836 --> 00:40:49,770
+If you don't remember that, is not a problem, I don't always do that either but that is indeed the system that is applied here, we will have a look.
+
+00:40:51,330 --> 00:40:51,830
+okay
+
+00:40:52,110 --> 00:40:55,770
+So what you see here I think when you see those diameters going up.
+
+00:40:55,943 --> 00:40:58,682
+You see here, after a 32 it does indeed go over.
+
+00:40:58,956 --> 00:41:02,969
+So the 2 smallest celestial objects per trip that are shown here
+
+00:41:04,107 --> 00:41:05,107
+okay
+
+00:41:06,140 --> 00:41:06,720
+good
+
+00:41:07,037 --> 00:41:10,590
+So by comparison, we'll look that one up.
+
+00:41:11,050 --> 00:41:13,009
+This was line 32.
+
+00:41:13,456 --> 00:41:18,256
+Did I have trip number 32, I had an object of diameter 7 and 14.
+
+00:41:18,586 --> 00:41:21,199
+So if I look up everything for example from 32
+
+00:41:22,294 --> 00:41:26,420
+I find there indeed so from 7, 14 and all those other are bigger.
+
+00:41:26,680 --> 00:41:30,787
+So I effectively get the 2 smallest objects what are visited on that trip.
+
+00:41:33,834 --> 00:41:34,834
+okay
+
+00:41:35,240 --> 00:41:42,180
+So most of the time you can indeed work without that lateral, but some problems you can idly solve without that lateral.
+
+00:41:42,247 --> 00:41:44,780
+So when you're sitting with an example like that....
+
+00:41:46,413 --> 00:41:47,613
+Like this right here.
+
+00:41:48,720 --> 00:41:52,933
+When that you actually have a... it stands here... moment...
+
+00:41:53,370 --> 00:41:56,603
+When you have to compare to a limited dependent outcome.
+
+00:41:56,756 --> 00:41:59,902
+So that you actually think for example, I need a subquery.
+
+00:42:00,143 --> 00:42:03,136
+Where I need that fetch first while I'm in an edependency.
+
+00:42:03,707 --> 00:42:06,823
+Then 9/10 you're going to need that lateral anyway.
+
+00:42:07,184 --> 00:42:11,919
+Or you're stuck with that little example from earlier with that row that you want to start denormalizing.
+
+00:42:12,034 --> 00:42:14,434
+The one you want to go normalize sorry.
+
+00:42:14,560 --> 00:42:19,799
+Then 9/10 you're going to need a lateral like that as well although sometimes that does require alternatives.
+
+00:42:20,113 --> 00:42:23,802
+Other than that, you can actually write alternative queries quite often.
+
+00:42:24,603 --> 00:42:27,186
+Then the only question is, if you write those queries....
+
+00:42:28,626 --> 00:42:31,293
+If you know how then you can do that.
+
+00:42:31,886 --> 00:42:39,062
+I have that way with lateral, I have that way without lateral , we are going to compare those cost prices to see, which query do I choose here of course?
+
+00:42:39,090 --> 00:42:40,090
+That's what we're trying to do to you guys...
+
+00:42:40,413 --> 00:42:45,786
+so perfomance is something, once you master databases, then you really do get into that area of performance.
+
+00:42:46,530 --> 00:42:47,530
+okay
+
+00:42:47,710 --> 00:42:50,177
+Are there any questions about that lateral?
+
+00:42:51,526 --> 00:42:52,646
+Lateral joins.
+
+00:43:04,480 --> 00:43:05,480
+okay
