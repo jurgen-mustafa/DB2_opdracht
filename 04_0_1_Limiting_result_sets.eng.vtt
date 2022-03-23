@@ -1,0 +1,420 @@
+WEBVTT FILE
+
+1
+00:00.150 --> 00:02.396
+Limiting result sets
+
+2
+00:02.460 --> 00:06.595
+In English also called limiting result sets
+
+3
+00:08.100 --> 00:13.213
+So, this is an example to get the three youngest players.
+
+4
+00:13.483 --> 00:17.213
+This is something you have already seen previous semester.
+
+5
+00:18.872 --> 00:20.960
+But than we solved it a bit differently.
+
+6
+00:20.991 --> 00:24.142
+I don't know if you still remember how we solved it than
+
+7
+00:24.333 --> 00:28.378
+Lets take a look to a possible solution 
+
+8
+00:29.474 --> 00:33.799
+and that was done with a correlated subquery.
+
+9
+00:33.910 --> 00:39.704
+And that will work on a lot of databases because a lot of them support correlated subqueries.
+
+10
+00:40.569 --> 00:43.553
+So, this was a for example a generic solution.
+
+11
+00:43.553 --> 00:44.993
+You have the players
+
+12
+00:46.673 --> 00:47.807
+And what must be where?
+
+13
+00:47.817 --> 00:51.331
+We are going to search how many players, this happens in a subquery
+
+14
+00:51.355 --> 00:56.150
+We are going to search how many players have a birthdate higher than a specific birthday
+
+15
+00:56.516 --> 00:59.999
+If you have a higher birthdate, you are younger
+
+16
+01:00.087 --> 01:04.791
+So this subquery counts how many players have a higher birthday than 
+
+17
+01:05.173 --> 01:09.228
+The player you were in the subquery above, we have explained this previous semester
+
+18
+01:09.355 --> 01:12.683
+You can see that as a for-loop, that upper query.
+
+19
+01:12.760 --> 01:14.180
+You arrive at the first row
+
+20
+01:14.585 --> 01:17.378
+Oké, so we have a player, than we go to our subquery
+
+21
+01:17.403 --> 01:28.148
+And than there goes a for-loop over the table again which checks who has a higher birthdate.
+
+22
+01:28.173 --> 01:38.696
+And those you count and there could be only 2. So how do you get for example, and that is the answer of this question, if there are 2 than you are the third
+
+23
+01:38.728 --> 01:47.189
+This is an interesting query to remember because you can play with those two, these equals and bigge than here in the where condition
+
+24
+01:47.197 --> 01:49.934
+And what there is in yhe where condition as well
+
+25
+01:49.967 --> 01:52.847
+To solve all countproblems
+
+26
+01:52.983 --> 01:55.585
+If we look at this query
+
+27
+01:56.220 --> 01:58.487
+This gives us the result evidently
+
+28
+02:01.313 --> 02:04.750
+to find the three to five youngest players, can I change the previous query?
+
+29
+02:06.361 --> 02:10.124
+So can someone see the previous query, the one we just saw 
+
+30
+02:10.172 --> 02:12.585
+lets see, can I go back easily
+
+31
+02:14.077 --> 02:16.267
+Oh, that was not my intention
+
+32
+02:18.417 --> 02:20.684
+This is another kind of going back
+
+33
+02:27.561 --> 02:29.161
+Where can I find this
+
+34
+02:30.030 --> 02:32.163
+Maybe like this, yes oke
+
+35
+02:32.292 --> 02:38.196
+So does someone see how we can change this query so we show the third to the fift player if you sort them
+
+36
+02:51.173 --> 02:52.831
+So this query
+
+37
+02:55.927 --> 02:58.807
+He shows the 3 youngest players. How could we know that?
+
+38
+02:58.823 --> 03:05.570
+Because it's counting, there can only be maximum two players with a higher birthdate
+
+39
+03:05.582 --> 03:09.280
+A higher birthdate means youner. Ther can be maximum 2
+
+40
+03:09.288 --> 03:12.164
+So this one count the three youngest.
+
+41
+03:14.260 --> 03:20.340
+How can we change this so we get the third to fifth of this query.
+
+42
+03:21.442 --> 03:23.122
+Does someone has a suggestion
+
+43
+03:23.236 --> 03:25.169
+You can use your mic
+
+44
+03:25.426 --> 03:26.426
+Or chat
+
+45
+03:36.196 --> 03:42.426
+So to show th ethree youngest, I count here that there can only be maximum 2 younger
+
+46
+03:43.217 --> 03:47.185
+How can I change this so I get the third to fitht?
+
+47
+03:51.833 --> 03:59.434
+So you can indeed make a construction so you get the five youngest players and than you take the 2 oldest
+
+48
+04:00.790 --> 04:04.759
+You could place a five here and this whole contruction would become a subquery
+
+49
+04:06.553 --> 04:13.188
+In the from for example, where you use a where condition again so to be sure you have the oldest.
+
+50
+04:14.569 --> 04:20.505
+Because of this you get a big nested structure, isn't there something easier to solve this, don't you have an operator
+
+51
+04:20.863 --> 04:24.703
+Or could't we we work with an extra condition here?
+
+52
+04:37.618 --> 04:41.330
+A little early in the morning for most of the sudents so I go further
+
+53
+04:41.355 --> 04:47.347
+The third to the fifth, than I hope you all use a between operator.
+
+54
+04:47.411 --> 04:57.237
+So you say, the amount of people you find here have a higher birthdate, so they are younger.
+
+55
+04:57.286 --> 05:00.422
+
+must be between 3 and 5 for example.
+
+56
+05:02.498 --> 05:08.910
+That depends if the borders are implemented or not .This is ofcourse the system you can use.
+
+57
+05:10.419 --> 05:12.219
+So we get these people
+
+58
+05:14.331 --> 05:26.775
+From the first semester untill now we speak about performance is an important angle, because of that we show you different ways to get data of the same kind, so you can try different ways to solve this so you can see what has the most performance.
+
+59
+05:26.966 --> 05:31.712
+We are going to look at this queryplan of this query.
+
+60
+05:32.141 --> 05:36.815
+What do you see, he scanes two times sequential.
+
+61
+05:36.863 --> 05:42.204
+Sequential over this table, Sequential, over this table
+
+62
+05:42.680 --> 05:46.656
+And scanning sequential means that he has to go over whole the table.
+
+63
+05:46.667 --> 05:48.878
+We don't use indexes, it's quiet slow
+
+64
+05:49.300 --> 05:52.372
+The cost is oke, 34
+
+
+65
+05:52.990 --> 05:57.406
+How so, because there is not much data in the players table.
+
+66
+06:01.562 --> 06:03.242
+Can we do something better?
+
+67
+06:04.236 --> 06:15.414
+If we look at things you havn't learn yet, than there is after the order by something like offset and fetch first, you can give an offset, a startpoint frow where you begin
+
+
+68
+06:15.870 --> 06:19.831
+And a fetch, amount of row you want
+
+69
+06:20.038 --> 06:24.119
+this is only usefull, that's why the order by here is, if you use order by.
+
+70
+06:24.127 --> 06:27.327
+Because if your data has a random order
+
+71
+06:27.913 --> 06:31.562
+And you skip seven rows and you start to show ten rows after
+
+72
+06:31.587 --> 06:38.602
+You will get ten random rows because there is no order in the data, you don't know what data you selected
+
+73
+06:38.904 --> 06:41.997
+It is only useful in combination with order by
+
+74
+06:42.092 --> 06:43.772
+so our previous query
+
+75
+06:44.267 --> 06:48.140
+The three youngest players, yes we are going to sort them on birthdate
+
+76
+06:48.267 --> 06:50.671
+And lets say, show me the first 3 rows
+
+77
+06:51.227 --> 06:53.294
+So fetch first three rows only
+
+78
+06:55.141 --> 06:58.442
+Now, if we check the queryplan, we get the same results
+
+79
+06:58.500 --> 07:05.807
+And the previeous one, the one with third to the fith, you can say it has to skip two
+
+80
+07:06.506 --> 07:09.209
+We don't need the two youngest, that's the offset two rows.
+
+81
+07:09.432 --> 07:18.963
+and than I want the next three, so fetch first three rows only, so we get the 3, 4 and 5th youngest
+
+82
+07:21.585 --> 07:23.851
+So that's where those results come from
+
+83
+07:25.233 --> 07:29.981
+Now, if we look up the queryplan, previous it cost 34, I don't know if you still remember.
+
+84
+07:30.140 --> 07:32.790
+Lets see what the cost is right now.
+
+85
+07:33.084 --> 07:38.084
+We went from cost 34 to cost 1,39
+
+86
+07:38.163 --> 07:46.459
+I you see that in the bigger order, factor 10, a 0 to the side and it is in fact factor20, 30 but I like to use the bigger orde 
+
+87
+07:48.206 --> 07:54.265
+What is the big difference here, we still scan sequential but we have to go over the table only once
+
+88
+07:54.401 --> 07:59.521
+In stead of the previous one, who had to go over the table twice
+
+89
+07:59.869 --> 08:01.549
+You see the same query
+
+90
+08:02.448 --> 08:05.432
+but much more efficient
+
+91
+08:06.875 --> 08:10.176
+That's the basic of limiting result sets
+
+92
+08:10.462 --> 08:12.634
+I will show you the previous one once more
+
+93
+08:12.754 --> 08:14.434
+Be sure you order 
+
+94
+08:15.533 --> 08:20.642
+If you dont start at row wan, use offset and say where you want to start
+
+95
+08:20.667 --> 08:23.357
+And here the fetch first, how many rows do you want to check?
+
+96
+08:23.611 --> 08:26.511
+Sortorder can be with multiple collumns
+
+97
+08:26.763 --> 08:31.435
+Are the nullvalues at the top or bottom, ascending or descending...
+
+98
+08:34.342 --> 08:38.404
+Thna there is the word limit, postgres supports the word limit
+
+99
+08:38.476 --> 08:42.031
+just like mysql and mariadb
+
+100
+08:42.437 --> 08:47.087
+but for example in oracle or mmsqldb2 you won't find limit
+
+101
+08:47.100 --> 08:54.452
+So limit is productspecific, so we ask not to use limit and only use the standards
+
+102
+08:54.492 --> 08:59.698
+We try to teach you so generetic as possible so you can work with alot of databaseproducts.
+
+103
+09:00.411 --> 09:09.602
+So we will, even if it works, not approve limit. So work as we just shown you, with fetch first.
+
+104
+09:13.476 --> 09:17.188
+lets see, I am at the end om my slides.

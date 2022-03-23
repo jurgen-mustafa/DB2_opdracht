@@ -1,0 +1,417 @@
+﻿WEBVTT FILE
+
+1
+00:00.150 --> 00:02.396
+Het beperken van resultaten
+
+2
+00:02.460 --> 00:06.595
+In het Engels zegt men wel eens limiting result sets zou je kunnen zeggen.
+
+3
+00:08.100 --> 00:13.213
+Dus, dit zou een voorbeeld kunnen zijn van toon de drie jongste spelers.
+
+4
+00:13.483 --> 00:17.213
+Dat is iets dat je eigenlijk vorig semester ook gezien hebt.
+
+5
+00:18.872 --> 00:20.960
+Maar we hebben dat toen op een andere manier opgelost.
+
+6
+00:20.991 --> 00:24.142
+Ik weet niet of je dat nog weet, hoe we dat toen opgelost hebben
+
+7
+00:24.333 --> 00:28.378
+Misschien eens kijken wat een mogelijke oplossing was
+
+8
+00:29.474 --> 00:33.799
+En dat was dan met een gecorreleerde subquery dat we daar een oplossing gezien hebben.
+
+9
+00:33.910 --> 00:39.704
+En die gaat werken op heel veel databanken omdat heel veel databanken gecorreleerde subquery ondersteunen.
+
+10
+00:40.569 --> 00:43.553
+Dus, dit was daar een generieke oplossing voor bijvoorbeeld,
+
+11
+00:43.553 --> 00:44.993
+Je hebt de spelers
+
+12
+00:46.673 --> 00:47.807
+En wat moet er waar zijn?
+
+13
+00:47.817 --> 00:51.331
+We gaan opzoeken hoeveel spelers, dat gebeurt in een subquery
+
+14
+00:51.355 --> 00:56.150
+We gaan opzoeken hoeveel spelers er eigenlijk een geboortedatum hebben die dat groter is
+
+15
+00:56.516 --> 00:59.999
+Als je een grotere geboortedatum hebt, dan ben jij jonger
+
+16
+01:00.087 --> 01:04.791
+Dus deze subquery telt hoeveel spelers zijn er tenopzichte van de speler die je
+
+17
+01:05.173 --> 01:09.228
+Waarop je dat moment bent in de query hier van boven, we hebben dat vorig semester uitgelegd
+
+18
+01:09.355 --> 01:12.683
+Je kan dat zien als een for-lus, die bovenste query.
+
+19
+01:12.760 --> 01:14.180
+Je komt bij de eerste rij
+
+20
+01:14.585 --> 01:17.378
+Oké, dus we hebben een speler, dan gaan we naar onze subquery
+
+21
+01:17.403 --> 01:28.148
+En dan worden eigenlijk weer, over een for-lus een herhaling door de tabel spelers gaat een lus die gaat nakijken wie er een hogere geboorte datum heeft.
+
+22
+01:28.173 --> 01:38.696
+En die tel je en dat mogen er maximum 2 zijn. Dus hoe krijg je bijvoorbeeld en dat is een antwoord voorbeeld op deze vraag, als er 2 zijn dan ben jij de derde
+
+23
+01:38.728 --> 01:47.189
+Dat is een interessante query, ook om te onthouden een beetje omdat je eigenlijk kan spelen met die twee, die gelijk aan of groter dan hier in de where conditie
+
+24
+01:47.197 --> 01:49.934
+En even goed wat er in de where conditie van de subquery staat
+
+25
+01:49.967 --> 01:52.847
+Om alle aller handen van telproblemen op te lossen
+
+26
+01:52.983 --> 01:55.585
+Nu als we die query bekijken
+
+27
+01:56.220 --> 01:58.487
+Dit geeft het resultaat blijkbaar
+
+28
+02:01.313 --> 02:04.750
+De drie tot vijf jongste spelers kan ik die query dan aanpassen van daarnet
+
+29
+02:06.361 --> 02:10.124
+Dus ziet iemand die query van daarnet, die we net gezien hebben
+
+30
+02:10.172 --> 02:12.585
+Even kijken kan ik gemakkelijk terug gaan
+
+31
+02:14.077 --> 02:16.267
+Oei dat is niet de bedoeling
+
+32
+02:18.417 --> 02:20.684
+Dat is een ander soort terug gaan
+
+33
+02:27.561 --> 02:29.161
+Waar staat dat hier?
+
+34
+02:30.030 --> 02:32.163
+Misschien gewoon zo eens, ja oke
+
+35
+02:32.292 --> 02:38.196
+Dus ziet er iemand hoe je deze query kan aanpassen zodat je de derde tot de vijfde speler toont als je ze gaat rangschikken
+
+36
+02:51.173 --> 02:52.831
+Dus deze query
+
+37
+02:55.927 --> 02:58.807
+Die toont de 3 jongste spelers. Hoe konden we dat weten?
+
+38
+02:58.823 --> 03:05.570
+Omdat er eigenlijk geteld wordt, er mogen maximum twee spelers zijn die een geboortedatum hebben die dat groter is
+
+39
+03:05.582 --> 03:09.280
+Een grotere geboortedatum wil zeggen jonger. Het mogen er maximum twee zijn
+
+40
+03:09.288 --> 03:12.164
+Dus die telt de drie jongste.
+
+41
+03:14.260 --> 03:20.340
+Dus nu gaan we van, hoe kunnen we dit nu aanpassen zodanig dat we de derde tot de vijfde tonen in deze query.
+
+42
+03:21.442 --> 03:23.122
+Iemand een sugestie
+
+43
+03:23.236 --> 03:25.169
+Je mag ook je micro gebruiken
+
+44
+03:25.426 --> 03:26.426
+Of de chat
+
+45
+03:36.196 --> 03:42.426
+Dus om de drie jongste te tonen tel ik hier dat er hier maximum  2 zijn die dat jonger zijn
+
+46
+03:43.217 --> 03:47.185
+Hoe kan ik dit aanpassen zodat ik de derde tot de vijfde toon?
+
+47
+03:51.833 --> 03:59.434
+Dus je zou inderdaad een constructie kunnen opzetten dat je de vijf jongste spelers neemt en daarvan dan de twee oudste neemt
+
+48
+04:00.790 --> 04:04.759
+Je zou hier een vijf kunnen zetten en heel deze constructie wordt dan een subquery
+
+49
+04:06.553 --> 04:13.188
+In de from bijvoorbeeld, waardat je dan opnieuw een where conditie gaat gebruiken om af te dwingen dat je de oudste hebt.
+
+50
+04:14.569 --> 04:20.505
+Dan krijg je een zeer genestte structuur, is er niets eenvoudiger om dat op te lossen, heb je geen operator gezien
+
+51
+04:20.863 --> 04:24.703
+Of zouden we hier niet met een extra conditie kunnen werken?
+
+52
+04:37.618 --> 04:41.330
+Beetje vroeg precies voor de meesten dus ik zal voort gaan
+
+53
+04:41.355 --> 04:47.347
+De derde tot de vijde, dan hoop ik dat je met een between operator werkt.
+
+54
+04:47.411 --> 04:57.237
+Dus dat je zegt van ik heb dezelfde subquery van daarnet, en ik ga zeggen, dit resultaat , het aantal mensen dat ik terug vindt hier, die een hogere geboorte datum hebben, die jonger zijn.
+
+55
+04:57.286 --> 05:00.422
+moet tussen de drie en de vijf zijn bijvoorbeeld.
+
+56
+05:02.498 --> 05:08.910
+Dat is dus afhankelijk van de grenzen of deze hierbij zitten of niet. Dit is natuurlijk het systeem die je hiervoor kan gebruiken.
+
+57
+05:10.419 --> 05:12.219
+Dan krijgen we deze mensen
+
+58
+05:14.331 --> 05:26.775
+Sinds dit semester spreken ook over performantie is een belangrijke invalshoek, daarom dat we jullie ook verschillende manieren zien om dezelfde soort data op te halen, dat je verschillende manieren kan uitproberen om te zien welke het meest performant is
+
+59
+05:26.966 --> 05:31.712
+We gaan dit queryplan een keer opzoeken  van deze query.
+
+60
+05:32.141 --> 05:36.815
+Wat zie je dan, dat die eigenlijk 2 keer sequencieel gaat scannen
+
+61
+05:36.863 --> 05:42.204
+Sequencieel over deze tabel, Sequencieel, over deze tabel
+
+62
+05:42.680 --> 05:46.656
+En sequencieel scannen wil zeggen dat die heel de tabel, als dit een grote tabel is, moet overlopen.
+
+63
+05:46.667 --> 05:48.878
+Er wordt geen index gebruikt, het is vrij traag.
+
+64
+05:49.300 --> 05:52.372
+Op zich valt die kostpijs hier nog goed mee, 34
+
+65
+05:52.990 --> 05:57.406
+Waarom komt dat, omdat er heel weinig data zit in mijn tabel spelers.
+
+66
+06:01.562 --> 06:03.242
+Kunnen we dit beter doen?
+
+67
+06:04.236 --> 06:15.414
+Als we gaan kijken naar wat we nog niet gezien hebben bij jullie dan is er na de order by zoiets als offset en fetch first, je kan dus een offset geven, een startpunt van waar begin je
+
+68
+06:15.870 --> 06:19.831
+En een fetch, zoveel rijen ga je ophalen
+
+69
+06:20.038 --> 06:24.119
+Dat heeft alleen maar zin, vandaar dat die order by hierbij staat, als je een order by hebt natuurlijk.
+
+70
+06:24.127 --> 06:27.327
+Want als jij je data in willikeurige volgorde hebt staan
+
+71
+06:27.913 --> 06:31.562
+En je gaat dan zeven rijen overslaan en je begint dan tien rijen te tonen
+
+72
+06:31.587 --> 06:38.602
+Dan zijn dat eigenlijk tien willikeurige rijen want je hebt geen order by gedefinieerd, je weet niet welke data dat je daar selecteerd
+
+73
+06:38.904 --> 06:41.997
+Het heeft dus alleen maar zin in combinatie met een order by
+
+74
+06:42.092 --> 06:43.772
+Dus onze vorige query
+
+75
+06:44.267 --> 06:48.140
+De drie jongste spelers, ja dan gaan we sorteren per geboortedatum
+
+76
+06:48.267 --> 06:50.671
+En zeggen we, toon mij de eerste drie rijen
+
+77
+06:51.227 --> 06:53.294
+Dus fetch first three rows only
+
+78
+06:55.141 --> 06:58.442
+Als we nu naar het queryplan gaan kijken, we krijgen dezelde resultaten
+
+79
+06:58.500 --> 07:05.807
+En die anderen van daarnet, die derde tot die vijfde, dan kan je zeggen van ja ik moet er eigenlijk twee overslaan
+
+80
+07:06.506 --> 07:09.209
+De twee jongste moet ik niet hebben, dat is die offset two rows.
+
+81
+07:09.432 --> 07:18.963
+En dan wil ik de drie volgenden, dus fetch first three rows only, dus zo krijg ik van 3, 4 en 5 van zijnde de jongste.
+
+82
+07:21.585 --> 07:23.851
+Dus die resultaten komen daar uit
+
+83
+07:25.233 --> 07:29.981
+Als we nu het queryplan gaan opzoeken, daarstraks was het 34 de kost, ik weet niet of je het je nog herinnert.
+
+84
+07:30.140 --> 07:32.790
+Dus nu zal ik deze query even opzoeken de kostprijs.
+
+85
+07:33.084 --> 07:38.084
+Ik ben nu gegaan van een kostprijs van 34 naar 1,39
+
+86
+07:38.163 --> 07:46.459
+Als je in groter orde kijkt, factor 10, een nulletje opschuiven het is eigenlijk een factor 20, 30 hier maar ik werk liever met grote ordes daar
+
+87
+07:48.206 --> 07:54.265
+Wat is het grote verschil hier, er wordt inderdaad nog altijd Sequencieel gescand maar de tabel moet maar 1 keer worden doorlopen
+
+88
+07:54.401 --> 07:59.521
+In plaats van in het vorige query plan moest hij 2 keer die tabel gaan doorlopen
+
+89
+07:59.869 --> 08:01.549
+Je ziet dezelfde query
+
+90
+08:02.448 --> 08:05.432
+Maar een pak efficienter, daar willen we naartoe gaan
+
+91
+08:06.875 --> 08:10.176
+Dat is de basis van het beperken van resultaten
+
+92
+08:10.462 --> 08:12.634
+Ik zal nog eens de vorige even tonen
+
+93
+08:12.754 --> 08:14.434
+Zorg dat je sorteert
+
+94
+08:15.533 --> 08:20.642
+Als je niet bij het eerste begint, zorg dan dat je een offset definieerd vanaf waar wil je beginnen te tellen
+
+95
+08:20.667 --> 08:23.357
+En hier de fetch first, hoeveel rijen wil je ophalen?
+
+96
+08:23.611 --> 08:26.511
+Sorteervolgorde kan je hier ook nog aangeven met meerdere kolommen
+
+97
+08:26.763 --> 08:31.435
+Staan de nullwaarden van voor of vanachter, oploend of aflopend enzovoort
+
+98
+08:34.342 --> 08:38.404
+Dan is er het woordje limit, postgres ondersteund ook het woordje limit
+
+99
+08:38.476 --> 08:42.031
+net als mysql en mariadb
+
+100
+08:42.437 --> 08:47.087
+Maar bijvoorbeeld op een oracle, op een mmsqldb2 ga je dat niet terugvinden
+
+101
+08:47.100 --> 08:54.452
+Dus dat is productspecifiek, dus we vragen toch aan jullie om zoals bij de andere voorbeelden die we al gezien hebben, van hou u aan de standaard
+
+102
+08:54.492 --> 08:59.698
+We proberen u zoveel mogelijk generiek op te leiden zodat je met heel veel databankproducten kan werken.
+
+103
+09:00.411 --> 09:09.602
+Dus die limit, die gaan wij, ook al werkt die, gaan we niet goedkeuren. Dus dan werk je zoals we net gezien hebben, met fetch first.
+
+104
+09:13.476 --> 09:17.188
+Even kijken, ik zit hier aan het einde van de presentatie.
