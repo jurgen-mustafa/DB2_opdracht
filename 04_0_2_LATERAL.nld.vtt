@@ -30,7 +30,6 @@ series one two three
 Dus 1 2 3
 
 00:00:18.735 --> 00:00:21.221
-En ik geef daar dan een naam aan 
 en ik maak een tijdelijke tabel aan
 
 00:00:21.403 --> 00:00:23.170
@@ -123,7 +122,6 @@ En de waarde 1 2 3
 00:01:27.632 --> 00:01:28.949
 Da's de tabel nummers
 
-00:01:29.717 --> 00:01:33.209
 Dus als je kijkt naar deze query, is
 hier een probleem of gaat dat werken?
 
@@ -621,3 +619,641 @@ Ziet er iemand het verschil?
 
 00:09:53.014 --> 00:09:55.914
 Waar dat het verschil gemaakt wordt
+00:19:52.150 --> 00:19:55.017
+voorbeeld
+
+00:20:00.710 --> 00:20:01.570
+voorbeeld
+
+00:20:01.909 --> 00:20:05.770
+ mijn collega, amie en ik, wim daar zit de letter "m" in
+
+00:20:06.056 --> 00:20:08.703
+dus we hebben gemeenschappelijke letters in onze voornaam
+
+00:20:09.170 --> 00:20:12.070
+bijvoorbeeld ik zie daar staan
+
+00:20:12.603 --> 00:20:14.217
+lucas is de laatste hier
+
+00:20:14.497 --> 00:20:17.217
+lucas en mijn naam hebben geen gemeenschappelijke letters
+
+00:20:17.390 --> 00:20:18.430
+lucas en milan wel
+
+00:20:19.980 --> 00:20:22.620
+lucas en kevin ook niet,   bijvoorbeeld
+
+00:20:23.406 --> 00:20:26.713
+  ik wil mensen tonen die gemeenschappelijke letters hebben in hun voornaam
+
+00:20:29.487 --> 00:20:31.587
+daarvoor kunnen we bijvoorbeeld dit gebruiken
+
+00:20:32.513 --> 00:20:35.527
+er bestaat een functie zoals daarnest een nest
+
+00:20:35.552 --> 00:20:38.010
+zodat we strings kunnen omzetten naar
+
+00:20:38.223 --> 00:20:39.377
+aparte karakters
+
+00:20:39.530 --> 00:20:40.457
+dat is een eerste stap
+
+00:20:43.097 --> 00:20:45.443
+zo kan ik namen en voornamen omzetten
+
+00:20:45.754 --> 00:20:47.054
+dus denk ernaen we hebben die functie
+
+00:20:47.400 --> 00:20:49.614
+voornamen gaan omzetten naar aparte letters
+
+00:20:51.394 --> 00:20:52.007
+oke
+
+00:20:53.654 --> 00:20:55.714
+dan zouden we dat eigenlijk kunnen gebruiken
+
+00:20:55.960 --> 00:20:58.167
+dan zouden we dit kunnen gebruiken om een naam
+
+00:20:58.293 --> 00:21:00.393
+dus zoals daarnet een tabel werd gemaakt
+
+00:21:00.473 --> 00:21:01.987
+van enederzijds een rij
+
+00:21:03.280 --> 00:21:04.813
+dan de overeenkomstige waarden
+
+00:21:06.277 --> 00:21:07.777
+zou je dat hier kunnen doen
+
+00:21:07.843 --> 00:21:09.270
+om eigenlijk de namen te gaan combineren
+
+00:21:09.337 --> 00:21:10.577
+met al hun aparte letters
+
+00:21:10.863 --> 00:21:12.817
+begrijpt iedereen, ik laat hem even staan
+
+00:21:14.100 --> 00:21:14.840
+bijvoorbeeld
+
+00:21:14.993 --> 00:21:16.580
+beeld u in een tabel klanten staat
+
+00:21:16.600 --> 00:21:17.833
+enkel het woord
+
+00:21:17.927 --> 00:21:18.600
+arthuur
+
+00:21:18.873 --> 00:21:20.153
+er is maar een naam
+
+00:21:20.567 --> 00:21:22.360
+klant nummer 1 met arthuur
+
+00:21:22.857 --> 00:21:24.484
+wat wordt hier dan getoond
+
+00:21:25.297 --> 00:21:26.710
+wat komt uit deze query
+
+00:21:26.735 --> 00:21:27.317
+wie kan dat zeggen
+
+00:21:30.837 --> 00:21:33.297
+beeld u in tabel klant heeft maar één rij
+
+00:21:34.123 --> 00:21:36.163
+genaamd klant 1 arthuur
+
+00:21:52.050 --> 00:21:54.223
+zal eerst een andere vraag stellen
+
+00:21:54.417 --> 00:21:56.223
+hoeveel rijen gaan hier uit komen
+
+00:21:56.857 --> 00:21:57.823
+uit deze query
+
+00:22:05.206 --> 00:22:06.193
+een rij
+
+00:22:07.714 --> 00:22:09.340
+mensen die nog een ander idee hebben?
+
+00:22:12.287 --> 00:22:13.600
+denk eraan daarbinnen
+
+00:22:14.360 --> 00:22:15.454
+heb je zoiets als
+
+00:22:15.520 --> 00:22:16.494
+een cartesische product
+
+00:22:16.684 --> 00:22:18.684
+maar wel met die afhankelijkheid hier vandaan
+
+00:22:18.924 --> 00:22:19.604
+dus die
+
+00:22:19.770 --> 00:22:20.657
+arthuur
+
+00:22:21.070 --> 00:22:23.284
+die gaat hie op die "k1.vnaam" komen hee
+
+00:22:24.124 --> 00:22:25.230
+inderdaad mathias
+
+00:22:25.910 --> 00:22:26.990
+heb je een idee
+
+00:22:27.103 --> 00:22:28.423
+gebruik eventueel je micro
+
+00:22:28.503 --> 00:22:29.843
+wat de uitvoer is
+
+00:22:31.063 --> 00:22:31.843
+bij arthuur
+
+00:22:41.943 --> 00:22:45.317
+anders de eerste rij alleen, als je die even in de chat zet
+
+00:22:48.526 --> 00:22:50.666
+dan volgen de andere 6 rijen vanzelf denk ik.
+
+00:22:56.350 --> 00:22:57.903
+ja, dat klopt ubderdaad
+
+00:22:57.943 --> 00:22:59.583
+wij krijgen daar 6 keer artuur
+
+00:22:59.903 --> 00:23:01.836
+omdat arthuur bestaat uit 6 letters
+
+00:23:02.074 --> 00:23:04.740
+dus dit hier deze tweede expressie hier
+
+00:23:04.934 --> 00:23:07.627
+select regexp_split_to_table
+
+00:23:08.334 --> 00:23:10.474
+functie die de naam gaat opsplitsen
+
+00:23:10.766 --> 00:23:12.226
+in aparte karakters
+
+00:23:12.313 --> 00:23:14.360
+dan krijg ik a,r,t enzoverder
+
+00:23:14.546 --> 00:23:15.253
+zes letters
+
+00:23:15.766 --> 00:23:16.900
+
+
+00:23:16.933 --> 00:23:15.613
+dus ik krijg hier een tabel
+
+00:23:17.360 --> 00:23:18.720
+met zes rijen
+
+00:23:18.786 --> 00:23:20.486
+die wordt gecombineerd met een rij
+
+00:23:20.533 --> 00:23:21.973
+uit die bovenste dus ik krijg
+
+00:23:22.007 --> 00:23:23.067
+zes rijen in totaal
+
+00:23:23.180 --> 00:23:24.660
+dus ik krijg arthuur a
+
+00:23:25.073 --> 00:23:26.013
+arthuur r
+
+00:23:26.373 --> 00:23:27.400
+arthuur t
+
+00:23:27.707 --> 00:23:29.907
+enzover tot uiteindlijke arthuur r
+
+00:23:33.359 --> 00:23:35.293
+dat is één manier, begrijpt iedereen waarom ik dat doe
+
+00:23:36.353 --> 00:23:39.726
+om eigenlijk over te stappen met mensen met dezelfde
+
+00:23:39.960 --> 00:23:41.260
+letter in hun naam hebben
+
+00:23:42.253 --> 00:23:44.036
+nu heb ik eibenlijk een tabel gemaakt waarbij
+
+00:23:44.116 --> 00:23:44.783
+per naam
+
+00:23:44.976 --> 00:23:46.603
+weet welke letter in voorkomt
+
+00:23:46.783 --> 00:23:48.530
+dus wat zou de volgende stap kunnen zijn
+
+00:23:48.956 --> 00:23:50.383
+op welk niveau ga je nadenken
+
+00:23:55.450 --> 00:23:57.936
+dus ik heb dat hier bijvoorbeeld voor arthuur weten we dat
+
+00:23:58.750 --> 00:24:01.943
+maar moest het iemand anders zijn bv. lucas dan had ik hier vijf rijen
+
+00:24:02.990 --> 00:24:05.630
+dan krijgen die l,u enzoverder
+
+00:24:06.327 --> 00:24:08.007
+dan krijgen we op een bepaald moment de letter "a"
+
+00:24:09.647 --> 00:24:11.767
+dus wat zou je kunnen gaan gebruiken als
+
+00:24:12.347 --> 00:24:15.087
+zijnde een . . . conditie
+
+00:24:38.843 --> 00:24:42.070
+dus het eerste de eerste keer dat jullie met die letter al werken
+
+00:24:43.016 --> 00:24:44.083
+beetje wennen is
+
+00:24:47.523 --> 00:24:48.856
+als je eentje verder gaat
+
+00:24:50.027 --> 00:24:51.980
+dus die omzetting, zoals daarstraks gezet
+
+00:24:52.013 --> 00:24:53.100
+die gebeurt inderdaad
+
+00:24:53.206 --> 00:24:55.053
+die arthuur, hier gaat het over sjeik
+
+00:24:55.107 --> 00:24:56.420
+enzoverder dus alle
+
+00:24:57.066 --> 00:24:59.153
+alle elementen worden eigenlijk
+
+00:24:59.180 --> 00:25:00.640
+normaal maar één rij voor Sjeik
+
+00:25:00.753 --> 00:25:01.833
+heb ik er nu 5
+
+00:25:02.093 --> 00:25:02.940
+enzoverder
+
+00:25:03.066 --> 00:25:04.366
+dus krijg ik al die mensen
+
+00:25:06.166 --> 00:25:07.573
+dus als ik dit heb als tabel
+
+00:25:08.373 --> 00:25:09.706
+hoe zou ik nu die tabel
+
+00:25:09.813 --> 00:25:11.346
+met zichzelf verbinden?
+
+00:25:12.993 --> 00:25:13.873
+zondanig dat
+
+00:25:14.140 --> 00:25:15.586
+ik alle mensen krijg
+
+00:25:15.733 --> 00:25:18.506
+die een gemeenschappelijk letter hebben in hun voornaam
+
+00:25:19.213 --> 00:25:20.913
+hoe kan ik die tabel met zichzelf
+
+00:25:21.020 --> 00:25:22.120
+beeld u in dat is een tabel
+
+00:25:23.390 --> 00:25:24.930
+met klantnr voornaam l
+
+00:25:25.350 --> 00:25:27.530
+hoe kan ik die tabel met zichzelf verbinden zodanig dat ik
+
+00:25:27.763 --> 00:25:28.463
+alle mensen
+
+00:25:29.156 --> 00:25:31.910
+samen zet die een gemeenschappelijk letter
+
+00:25:31.935 --> 00:25:32.806
+hebben in hun voornaam
+
+00:25:40.573 --> 00:25:41.346
+wat is dan
+
+00:25:42.546 --> 00:25:43.666
+mijn joined conditie
+
+00:25:45.246 --> 00:25:48.606
+dus beeld u in ik ga die tabel twee keer oproepen bijvoorbeeld
+
+00:25:52.390 --> 00:25:54.390
+wat gaat dan deze join conditie zijn
+
+00:25:54.924 --> 00:25:55.984
+dit is tabel
+
+00:25:56.530 --> 00:25:57.744
+x1
+
+00:25:57.890 --> 00:26:00.037
+en ik roep nog eens tabel x2
+
+00:26:00.110 --> 00:26:02.364
+maar dat is eigenlijk dezelfde tabel dus hoe kan ik dan x1 en x2
+
+00:26:02.653 --> 00:26:04.247
+gaan verbinden op welke kolom
+
+00:26:07.553 --> 00:26:09.827
+gaan samenvoegen, gaan joinen
+
+00:26:21.190 --> 00:26:23.190
+ja inderdaad, dus die "L"
+
+00:26:23.610 --> 00:26:25.629
+maar zelfs geen like is zelfs niet nodig
+
+00:26:25.737 --> 00:26:26.743
+want het is een karakter
+
+00:26:27.717 --> 00:26:29.316
+dus ik ga die "L" gebruiken
+
+00:26:29.343 --> 00:26:30.457
+inderdaad milan
+
+00:26:30.564 --> 00:26:31.844
+x1 l, x2 l
+
+00:26:31.950 --> 00:26:32.984
+dus dat systeem
+
+00:26:33.210 --> 00:26:35.250
+dus dat zijn de stappen die ik hier heb gedaan
+
+00:26:35.697 --> 00:26:36.597
+gaan we inderdaad
+
+00:26:36.837 --> 00:26:38.484
+dus willen we per persoon weten
+
+00:26:39.850 --> 00:26:41.177
+gemeenschappelijke letter
+
+00:26:41.202 --> 00:26:43.564
+dus in eerste instantie wil ik weten wie heeft een gemeenschappelijke letter
+
+00:26:44.404 --> 00:26:45.477
+dan kan ik daarstraks
+
+00:26:45.557 --> 00:26:46.724
+misschien nog eens gaan tellen
+
+00:26:46.749 --> 00:26:47.564
+want dat is een stap dieper
+
+00:26:47.610 --> 00:26:48.830
+maar ik ben het probleem
+
+00:26:48.873 --> 00:26:50.053
+wij zijn dit aan het opdelen
+
+00:26:50.257 --> 00:26:51.937
+dus de join conditie zijn inderdaad
+
+00:26:51.997 --> 00:26:53.190
+zijn inderdaad de gemeenschappelijke letters
+
+00:26:53.717 --> 00:26:55.217
+dat wil zeggen ik heb die klanten
+
+00:26:56.057 --> 00:26:57.857
+en ik ga die eigenlijk opsplitsen
+
+00:26:59.000 --> 00:27:00.233
+in de eerste keer
+
+00:27:00.540 --> 00:27:02.626
+ik ga die klaten een tweede keer opsplitsen
+
+00:27:02.800 --> 00:27:03.626
+dat is goed
+
+00:27:04.266 --> 00:27:05.673
+dan krijg ik al die letters
+
+00:27:06.406 --> 00:27:08.553
+ik ga zeggen ze moeten dezelfde letters hebben
+
+00:27:09.013 --> 00:27:10.420
+dat is die where conditie hier
+
+00:27:11.773 --> 00:27:13.206
+en ik ga ook zeggen
+
+00:27:13.906 --> 00:27:16.240
+ik ga wel zeggen het moeten andere mensen zijn
+
+00:27:16.393 --> 00:27:18.746
+want ik wil weten welke andere mensen gmn. letters hebben
+
+00:27:19.714 --> 00:27:23.834
+want het is niet zinvol om te zeggen arthuur heeft dezelfde letters als arthuur
+
+00:27:24.200 --> 00:27:25.586
+klant 1 gaat
+
+00:27:27.820 --> 00:27:28.700
+dus vandaar
+
+00:27:29.706 --> 00:27:32.673
+de conditie na het opbouwen van die structuur
+
+00:27:33.283 --> 00:27:35.930
+een letter gemeenschappelijk hebben maar niet dezelfde klant zijn
+
+00:27:41.380 --> 00:27:43.060
+nu zitten we hier
+
+00:27:44.780 --> 00:27:46.020
+nu moet ik nog weten
+
+00:27:47.653 --> 00:27:49.206
+dus de vraag was
+
+00:27:51.413 --> 00:27:53.487
+we willen weten hoeveel mensen er zijn
+
+00:27:53.580 --> 00:27:55.087
+dat is wat alle studenten zouden hebben
+
+00:27:55.453 --> 00:27:58.213
+hoeveel mensen zijn er die een letter gemeenschappelijk hebben
+
+00:27:58.247 --> 00:27:58.893
+met arthuur
+
+00:27:59.290 --> 00:28:00.997
+hoeveel mensen zijn er die een letter gemeenschappelijk
+
+00:28:01.090 --> 00:28:02.930
+hebben met milan enzoverder
+
+00:28:03.570 --> 00:28:05.577
+hoe kan ik dat probleem oplossen
+
+00:28:05.617 --> 00:28:06.530
+als ik deze query heb
+
+00:28:15.277 --> 00:28:16.843
+zijn bijna aan de oplossing
+
+00:28:29.254 --> 00:28:30.720
+dus deze query gaat
+
+00:28:31.870 --> 00:28:33.450
+geven voor elk persoon
+
+00:28:34.043 --> 00:28:35.723
+andere personen die een letter
+
+00:28:35.770 --> 00:28:36.970
+gemeenschappelijk hebben buiten zichzelf
+
+00:28:38.283 --> 00:28:39.796
+hoe moet ik deze query nog
+
+00:28:40.260 --> 00:28:42.047
+beetje aanpassen, uitbreiden om te weten
+
+00:28:42.313 --> 00:28:43.480
+hoeveel mensen er zijn
+
+00:28:44.080 --> 00:28:45.540
+die een letter gemeenschappelijk hebben
+
+00:28:45.627 --> 00:28:48.100
+met jouw naam of met de naam van de persoon
+
+00:28:49.240 --> 00:28:50.207
+die op die rij staat
+
+00:28:52.947 --> 00:28:53.973
+die group by
+
+00:28:57.807 --> 00:29:00.413
+is klant 1 naam en klant 2 naam
+
+00:29:00.447 --> 00:29:01.893
+zijn die daar functioneel afhankelijk van
+
+00:29:02.140 --> 00:29:03.700
+je moet daar eens goed over nadenken
+
+00:29:07.280 --> 00:29:07.860
+dus
+
+00:29:10.427 --> 00:29:11.460
+we komen daar wel denk ik
+
+00:29:13.537 --> 00:29:15.044
+inderdaad die group by en de count
+
+00:29:15.270 --> 00:29:17.144
+dus laat u niet vangen door
+
+00:29:17.169 --> 00:29:18.317
+die k2 naam
+
+00:29:18.457 --> 00:29:19.764
+als dat ook een andere waarde heeft
+
+00:29:19.789 --> 00:29:20.930
+ga je daar foutmeldingen krijgen
+
+00:29:21.204 --> 00:29:22.750
+dus inderdaad daar maar gewoon een
+
+00:29:22.857 --> 00:29:23.630
+groepering
+
+00:29:24.537 --> 00:29:26.917
+dit zijn dan bijvoorbeeld resultaten daar van
+
+00:29:29.370 --> 00:29:30.924
+ik wou nog eerst
+
+00:29:31.347 --> 00:29:33.487
+een alternatief laten zien zonder lateral
+
+00:29:35.780 --> 00:29:37.473
+zonder lateral dit te doen
+
+00:29:37.600 --> 00:29:38.987
+ga je eigenlijk werken met subquerys
+
+00:29:39.012 --> 00:29:40.816
+at je de resultaten apart gaat berekenen
+
+00:29:41.303 --> 00:29:42.803
+dus je gaat bijvoorbeeld hier
+
+00:29:42.863 --> 00:29:44.216
+eggen van
+
+00:29:44.376 --> 00:29:46.583
+ik ga die namen opsplitsen dit is één tabel
+
+00:29:46.890 --> 00:29:48.343
+dus dat programma
+
+00:29:48.376 --> 00:29:49.610
+dan kan ik herhalen
+
+00:29:51.443 --> 00:29:52.730
+dus zonder lateral
+
+00:29:52.803 --> 00:29:54.330
+wil dat zeggen dat dat allemaal verhuist
+
+00:29:54.376 --> 00:29:55.636
+naar u select statement
+
+00:29:56.137 --> 00:29:58.110
+dus krijg ik dezelfde query als daarstraks
+
+00:29:58.270 --> 00:29:59.357
+maar ik ga al die dingen
+
+00:29:59.623 --> 00:30:01.790
+hier in mijn from zetten
