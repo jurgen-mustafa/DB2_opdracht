@@ -1636,362 +1636,541 @@ dus krijg ik dezelfde query als daarstraks
 
 00:29:58.270 --> 00:29:59.357
 maar ik ga al die dingen
-00:29:59,721 --&gt; 00:30:02,248
+
+00:29:59,721 --> 00:30:02,248
 dus hier in mijn front zetten. Ik ga die dan
-00:30:02,267 --&gt; 00:30:05,506
+
+00:30:02,267 --> 00:30:05,506
 even kijken, dus ik heb die hier appart berekent eigenlijk.
-00:30:05,540 --&gt; 00:30:09,120
+
+00:30:05,540 --> 00:30:09,120
 Dus dit is ook een optie wou ik maar tonen.
-00:30:09,180 --&gt; 00:30:11,280
+
+00:30:09,180 --> 00:30:11,280
 alle, even kijken. Ik dacht..
-00:30:11,523 --&gt; 00:30:14,410
+
+00:30:11,523 --> 00:30:14,410
 we zullen..., het klopt wat jullie zeggen he, de GROUP BY en de COUNT.
-00:30:14,435 --&gt; 00:30:17,576
+
+00:30:14,435 --> 00:30:17,576
 Ik had de oplossing daarna verwacht, ik heb mijn preview niet aan staan.
-00:30:18,137 --&gt; 00:30:19,137
+
+00:30:18,137 --> 00:30:19,137
 oke
-00:30:20,000 --&gt; 00:30:23,509
+
+00:30:20,000 --> 00:30:23,509
 Dus als we deze query nog even aanpassen
-00:30:23,534 --&gt; 00:30:26,821
+
+00:30:23,534 --> 00:30:26,821
 om het af te ronden want blijkbaar ontbreekt die slide.
-00:30:28,367 --&gt; 00:30:30,917
+
+00:30:28,367 --> 00:30:30,917
 Inderdaad, we gaan die groeperen op klantnummer.
-00:30:32,013 --&gt; 00:30:35,506
-Die naam is functioneel afhankelijk dus die kan je ook in je GROUP BY zetten.
-00:30:35,526 --&gt; 00:30:38,787
+
+00:30:32,013 --> 00:30:35,506
+ Die naam is functioneel afhankelijk dus die kan je ook in je GROUP BY zetten.
+
+00:30:35,526 --> 00:30:38,787
 Je krijgt inderdaad gewoon een COUNT die je daar kan bij zetten.
-00:30:38,814 --&gt; 00:30:41,980
+
+00:30:38,814 --> 00:30:41,980
 Dus je kan zeggen: GROUP BY klantnummer en voornaam.
-00:30:42,007 --&gt; 00:30:44,693
+
+00:30:42,007 --> 00:30:44,693
 en die k2 naam moet je weglaten
-00:30:44,793 --&gt; 00:30:47,586
+
+00:30:44,793 --> 00:30:47,586
 of je gaat count van k2 naam door doen.
-00:30:47,713 --&gt; 00:30:50,066
+
+00:30:47,713 --> 00:30:50,066
 Dus dat kan je dan perfect doen.
-00:30:50,213 --&gt; 00:30:54,233
+
+00:30:50,213 --> 00:30:54,233
 Die L1 hebben we niet meer nodig om te zien wat de gemeenschappelijke voorletter is.
-00:30:54,258 --&gt; 00:30:56,316
+
+00:30:54,258 --> 00:30:56,316
 eh.., de gemeenschappelijke letter.
-00:30:56,363 --&gt; 00:30:58,663
+
+00:30:56,363 --> 00:30:58,663
 Dus dat is hier maar ter informatie.
-00:30:59,930 --&gt; 00:31:07,453
+
+00:30:59,930 --> 00:31:07,453
 En dan het andere voorbeeldje zei ik net he, dus zonder letter kunnen we ook eventueel werken als we die dingen appart berekenen.
-00:31:08,360 --&gt; 00:31:09,360
+
+00:31:08,360 --> 00:31:09,360
 oke.
-00:31:10,536 --&gt; 00:31:14,130
+
+00:31:10,536 --> 00:31:14,130
 Dan hebben we nog een ander voorbeeldje.
-00:31:14,397 --&gt; 00:31:16,290
+
+00:31:14,397 --> 00:31:16,290
 Niet-scalaire subqueries
-00:31:16,943 --&gt; 00:31:20,129
+
+00:31:16,943 --> 00:31:20,129
 Wat bedoelen we met een scalaire subquery?
-00:31:24,740 --&gt; 00:31:27,913
+
+00:31:24,740 --> 00:31:27,913
 Weet je nog? We hadden 4 types van subqueries.
-00:31:28,167 --&gt; 00:31:30,186
+
+00:31:28,167 --> 00:31:30,186
 We hadden tabel subqueries,
-00:31:30,353 --&gt; 00:31:31,393
+
+00:31:30,353 --> 00:31:31,393
 we hadden...
-00:31:34,317 --&gt; 00:31:36,592
+
+00:31:34,317 --> 00:31:36,592
 Abstract gezien is het altijd een tabel natuurlijk,
-00:31:36,617 --&gt; 00:31:39,721
+
+00:31:36,617 --> 00:31:39,721
 maar voor beaalde dimenties geven we die een andere naam.
-00:31:40,047 --&gt; 00:31:44,340
+
+00:31:40,047 --> 00:31:44,340
 Dus wat bedoelen we met een scalaire subquery?
-00:31:46,246 --&gt; 00:31:51,570
+
+00:31:46,246 --> 00:31:51,570
 Meerdere rijen en kolommen? Dan spreken we van een tabel subquery Lucas.
-00:31:51,667 --&gt; 00:31:57,407
+
+00:31:51,667 --> 00:31:57,407
 Niet-scalair, dan bedoelen we met dat het meer is dan 1 rij en 1 kolom.
-00:31:57,503 --&gt; 00:31:59,803
+
+00:31:57,503 --> 00:31:59,803
 Dus dat is daar niet scalair.
-00:32:00,263 --&gt; 00:32:02,529
+
+00:32:00,263 --> 00:32:02,529
 Scalaire subquery is dus gewoon 1 maal 1.
-00:32:02,897 --&gt; 00:32:03,269
+
+00:32:02,897 --> 00:32:03,269
 ja.
-00:32:03,460 --&gt; 00:32:06,532
+
+00:32:03,460 --> 00:32:06,532
 maar het gaat hier over
 niet scalaire subqueries
-00:32:06,563 --&gt; 00:32:11,519
+
+00:32:06,563 --> 00:32:11,519
 Subqueries waarvan we weten van die zijn niet scalair.
-00:32:11,560 --&gt; 00:32:14,093
-Jullie weten ook dat als we in de SELECT een subquery zetten...
-00:32:14,706 --&gt; 00:32:17,763
+
+00:32:11,560 --> 00:32:14,093
+ Jullie weten ook dat als we in de SELECT een subquery zetten...
+
+00:32:14,706 --> 00:32:17,763
 In de Select, ja dan mag daar maar 1 waarde komen.
-00:32:18,137 --&gt; 00:32:23,570
+
+00:32:18,137 --> 00:32:23,570
 Als daar staat "SELECT klantnummer komma" en dan een subquery, daar mag maar 1 waarde uit komen.
-00:32:23,684 --&gt; 00:32:28,990
+
+00:32:23,684 --> 00:32:28,990
 dat hoor daar te staan, dat is de enige manier dat je dat in de SELECT kan toevoegen, maar wat als dat nu niet...
-00:32:29,430 --&gt; 00:32:32,273
+
+00:32:29,430 --> 00:32:32,273
 Dat dan meer dan 1 waarde is, hoe lossen we dat op?
-00:32:33,830 --&gt; 00:32:34,830
+
+00:32:33,830 --> 00:32:34,830
 Oke
-00:32:34,896 --&gt; 00:32:35,896
+
+00:32:34,896 --> 00:32:35,896
 Dus
-00:32:36,296 --&gt; 00:32:37,296
+
+00:32:36,296 --> 00:32:37,296
 Dit Hier.
-00:32:37,883 --&gt; 00:32:39,163
+
+00:32:37,883 --> 00:32:39,163
 Is geen probleem.
-00:32:39,713 --&gt; 00:32:41,646
+
+00:32:39,713 --> 00:32:41,646
 Dit is een Scalaire subquery.
-00:32:41,833 --&gt; 00:32:45,023
+
+00:32:41,833 --> 00:32:45,023
 He, ik zoek hier dingen op van reizen,...
-00:32:45,544 --&gt; 00:32:49,563
+
+00:32:45,544 --> 00:32:49,563
 En ik schrijf een subquery in mijn SELECT en da maximum is 1 waarde.
-00:32:49,820 --&gt; 00:32:52,053
+
+00:32:49,820 --> 00:32:52,053
 En het is een gecorelleerde subquery.
-00:32:52,120 --&gt; 00:32:53,253
+
+00:32:52,120 --> 00:32:53,253
 Opzich geen probleem.
-00:32:53,293 --&gt; 00:32:58,366
+
+00:32:53,293 --> 00:32:58,366
 is die nu gecorelleerd of niet, het belangrijkste is dat er hier maar 1 waarde uit komt waardoor dat dit perfect uitvoerd.
-00:32:58,399 --&gt; 00:33:03,773
+
+00:32:58,399 --> 00:33:03,773
 Je moet altijdin het achterhoof houden, heeft dat dan de vorm van een tabel, is dat logisch?
-00:33:04,460 --&gt; 00:33:05,980
+
+00:33:04,460 --> 00:33:05,980
 Dus dit is geen probleem, maar...
-00:33:07,313 --&gt; 00:33:08,806
+
+00:33:07,313 --> 00:33:08,806
 Wat als ik dit nu zet?
-00:33:09,313 --&gt; 00:33:11,666
+
+00:33:09,313 --> 00:33:11,666
 Dan krijg je inderdaad die foutmelding.
-00:33:13,910 --&gt; 00:33:17,090
+
+00:33:13,910 --> 00:33:17,090
 Die verblijfsduur, dat kunnen meerdere verblijfsduren hier zijn.
-00:33:17,160 --&gt; 00:33:21,460
+
+00:33:17,160 --> 00:33:21,460
 Voor dezelfde reis zij er waarschijnlijk meerdere bezoeken dus ook meerdere verblijfsduren.
-00:33:21,970 --&gt; 00:33:22,443
+
+00:33:21,970 --> 00:33:22,443
 dus
-00:33:22,896 --&gt; 00:33:26,676
+
+00:33:22,896 --> 00:33:26,676
 Hier komt reis 1 met 7 verschillende verbijfsduren.
-00:33:26,693 --&gt; 00:33:32,209
+
+00:33:26,693 --> 00:33:32,209
 Nu kan je wel denken van ja, voor mij maakt dat dat logisch. Ik kan dat zoals die latteral terug gaan aanvullen. Maar zo werkt dat niet.
-00:33:32,393 --&gt; 00:33:35,061
+
+00:33:32,393 --> 00:33:35,061
 De standard is niet zo gedefinieerd.
-00:33:35,086 --&gt; 00:33:37,539
+
+00:33:35,086 --> 00:33:37,539
 Dus die verwacht daar altijd 1 waarde.
-00:33:38,367 --&gt; 00:33:40,100
+
+00:33:38,367 --> 00:33:40,100
 Dus dan krijg je die fout.
-00:33:40,780 --&gt; 00:33:43,593
+
+00:33:40,780 --> 00:33:43,593
 Dus hoe kunnen we dat oplossen? ook met die latteral weer.
-00:33:43,967 --&gt; 00:33:44,967
+
+00:33:43,967 --> 00:33:44,967
 dus euh...
-00:33:46,324 --&gt; 00:33:48,223
+
+00:33:46,324 --> 00:33:48,223
 Aja dit voorbeeldje kan ik ook nog geven.
-00:33:54,700 --&gt; 00:34:00,520
+
+00:33:54,700 --> 00:34:00,520
 Het moet echt 1 maal 1 zijn voor subquery, want hier komt er maar 1tje uit, het zijn ook agregatiefuncties, komt 1 rijuit
-00:34:00,620 --&gt; 00:34:02,300
+
+00:34:00,620 --> 00:34:02,300
 maar wel met 2 kolomen
-00:34:02,327 --&gt; 00:34:07,050
+
+00:34:02,327 --> 00:34:07,050
 Dit zou je natuurlijk kunnen oplossen door dat op te splitsen in 2 gecorelleerde subqueries. 1tje voor som,
-00:34:07,144 --&gt; 00:34:08,744
+
+00:34:07,144 --> 00:34:08,744
 1tje voor variantie.
-00:34:09,494 --&gt; 00:34:10,494
+
+00:34:09,494 --> 00:34:10,494
 maar goed.
-00:34:11,767 --&gt; 00:34:14,026
+
+00:34:11,767 --> 00:34:14,026
 Toon het maar voor de voledigheid voor de mensen die zich...
-00:34:14,133 --&gt; 00:34:16,667
+
+00:34:14,133 --> 00:34:16,667
 Das een vraag die ik soms krijg.
-00:34:16,680 --&gt; 00:34:18,986
+
+00:34:16,680 --> 00:34:18,986
 Dus de oplossing hier is lateral eh.
-00:34:19,056 --&gt; 00:34:20,576
+
+00:34:19,056 --> 00:34:20,576
 Ja, we gaan onze...
-00:34:20,616 --&gt; 00:34:24,904
+
+00:34:20,616 --> 00:34:24,904
 Hetgeen dat in onze SELECT stond gaan we verhuiszen naan onze FROM.
-00:34:25,103 --&gt; 00:34:26,936
+
+00:34:25,103 --> 00:34:26,936
 We zeggen we willen al die reizen.
-00:34:27,170 --&gt; 00:34:33,042
+
+00:34:27,170 --> 00:34:33,042
 Maar naast die reizen willen we ook per rijs een keer gaan kijken, hoe zit hethier met de verblijfsduur, zowel de som als de variantie.
-00:34:33,174 --&gt; 00:34:35,113
+
+00:34:33,174 --> 00:34:35,113
 voor die reis, en ik voeg dat toe.
-00:34:35,247 --&gt; 00:34:37,120
+
+00:34:35,247 --> 00:34:37,120
 en ik ga dat dan tonen.
-00:34:37,480 --&gt; 00:34:41,430
+
+00:34:37,480 --> 00:34:41,430
 Het woordje lateral is hier nodig omdat verblijfsduur uit reizen komt.
-00:34:42,484 --&gt; 00:34:45,150
+
+00:34:42,484 --> 00:34:45,150
 Uit de tabel reizen op een niveau hoger.
-00:34:45,587 --&gt; 00:34:46,587
+
+00:34:45,587 --> 00:34:46,587
 oke
-00:34:48,360 --&gt; 00:34:51,027
+
+00:34:48,360 --> 00:34:51,027
 Dus dan krijgenwe dit hier bijvoorbeeld.
-00:34:51,150 --&gt; 00:34:52,950
+
+00:34:51,150 --> 00:34:52,950
 We krijgen hier variantie 0
-00:34:53,060 --&gt; 00:34:59,040
+
+00:34:53,060 --> 00:34:59,040
 Ja, dat wilt zeggen dat er maar 1 bezoek is voor die reis. 31
-00:34:59,746 --&gt; 00:35:00,746
+
+00:34:59,746 --> 00:35:00,746
 oke
-00:35:06,947 --&gt; 00:35:12,176
+
+00:35:06,947 --> 00:35:12,176
 We zouden die query van daarnet ook zo kunnen schrijven, die eerste die ik daar gegevn had zonder die agregatie functies.
-00:35:12,206 --&gt; 00:35:14,690
+
+00:35:12,206 --> 00:35:14,690
 Als we meerdere waarden hebben kunnen we datook zo doen.
-00:35:15,813 --&gt; 00:35:16,279
+
+00:35:15,813 --> 00:35:16,279
 ja
-00:35:16,787 --&gt; 00:35:21,730
+
+00:35:16,787 --> 00:35:21,730
 Nu dit zijn een beetje artificieele voorbeelden. want we kunnen dit natuurlijk ook gaan doen door...
-00:35:21,990 --&gt; 00:35:24,934
+
+00:35:21,990 --> 00:35:24,934
 bezoeken op te schuiven naar een niveau hoger.
-00:35:24,964 --&gt; 00:35:27,097
+
+00:35:24,964 --> 00:35:27,097
 en die dingen te gaan berekenen.
-00:35:27,980 --&gt; 00:35:28,980
+
+00:35:27,980 --> 00:35:28,980
 oke
-00:35:29,374 --&gt; 00:35:32,174
+
+00:35:29,374 --> 00:35:32,174
 We kunen combinaties maken van die dingen.
-00:35:32,323 --&gt; 00:35:34,956
+
+00:35:32,323 --> 00:35:34,956
 Da wilt zeggen, je kan zowel...
-00:35:36,050 --&gt; 00:35:38,450
+
+00:35:36,050 --> 00:35:38,450
 Werken met eenderzijds die latteral.
-00:35:38,504 --&gt; 00:35:44,333
+
+00:35:38,504 --> 00:35:44,333
 We kunnen gaan werken met zelfs agregatiefuncties gecombineerd met een gewone waarde, dus die GROUP BY.
-00:35:44,460 --&gt; 00:35:46,713
+
+00:35:44,460 --> 00:35:46,713
 Dus ge kunt eigenlijk redelijk veel van die dingen gaan doen.
-00:35:48,307 --&gt; 00:35:48,846
+
+00:35:48,307 --> 00:35:48,846
 oke
-00:35:52,437 --&gt; 00:35:54,237
+
+00:35:52,437 --> 00:35:54,237
 Dit is misschien nog eentje.
-00:35:54,577 --&gt; 00:35:56,177
+
+00:35:54,577 --> 00:35:56,177
 Dat ik dan kan tonen.
-00:35:56,540 --&gt; 00:35:59,868
+
+00:35:56,540 --> 00:35:59,868
 dus, jullie hebben al verschilende agregatiefuncties gezien,
-00:36:01,290 --&gt; 00:36:03,243
+
+00:36:01,290 --> 00:36:03,243
 even terug gaan, ja
-00:36:07,340 --&gt; 00:36:08,340
+
+00:36:07,340 --> 00:36:08,340
 moment
-00:36:08,647 --&gt; 00:36:11,247
+
+00:36:08,647 --> 00:36:11,247
 Nu dat voorbeeldstaat er niemeer tussen, dat is niet erg
-00:36:11,540 --&gt; 00:36:14,659
+
+00:36:11,540 --> 00:36:14,659
 Dus de COUNT kennen jullie allemaal.
-00:36:14,913 --&gt; 00:36:19,150
+
+00:36:14,913 --> 00:36:19,150
 maar hetgeen wat we daarnet gedaan hebben met die UN NEST
-00:36:19,470 --&gt; 00:36:20,856
+
+00:36:19,470 --> 00:36:20,856
 dus van een rij
-00:36:21,360 --&gt; 00:36:25,313
+
+00:36:21,360 --> 00:36:25,313
 plat he, terug de oorspronkelijke waarde te gaan normaliseren.
-00:36:25,493 --&gt; 00:36:31,099
+
+00:36:25,493 --> 00:36:31,099
 Kun je ook omgekeerd denormaliseren met een agregatiefucntie zoals array agregate, dus dan zetten we die samen
-00:36:31,260 --&gt; 00:36:34,160
+
+00:36:31,260 --> 00:36:34,160
 Dus das ook een manier waarop je kan werken.
-00:36:34,760 --&gt; 00:36:38,408
+
+00:36:34,760 --> 00:36:38,408
 Dus dan krijg je zoiets, het omgekeerde effect eigenlijk.
-00:36:39,980 --&gt; 00:36:45,046
+
+00:36:39,980 --> 00:36:45,046
 Dan het meest voorkomende geval Denk ik, dus alle voorgaande gevallen die we tot nu toe gezien hebben
-00:36:45,167 --&gt; 00:36:49,136
+
+00:36:45,167 --> 00:36:49,136
 Tenzij je echt met zo een normlisatie/denormalisatie probleem zit.
-00:36:49,690 --&gt; 00:36:54,329
+
+00:36:49,690 --> 00:36:54,329
 Dus dat het gedenormaliseerde data is die je moet gaan normaliseren.
-00:36:56,250 --&gt; 00:37:00,826
+
+00:36:56,250 --> 00:37:00,826
 De meeste queries die we tot nu toe gezien hebben kan je waarschijnlijk nog een ander alternatief vinden.
-00:37:00,860 --&gt; 00:37:02,873
+
+00:37:00,860 --> 00:37:02,873
 Dat je die lateral niet nodig hebt, ja.
-00:37:03,254 --&gt; 00:37:09,250
+
+00:37:03,254 --> 00:37:09,250
 Dit is eentje waardat je die lateral meestal, ja,.. je gaat er meestal niet rond kunnen.
-00:37:09,706 --&gt; 00:37:12,606
+
+00:37:09,706 --> 00:37:12,606
 Dus, we hebben net de presentatie gezien van fetch first.
-00:37:12,653 --&gt; 00:37:15,753
+
+00:37:12,653 --> 00:37:15,753
 Dus we willen dat gaan vergelijken met een beperkt afhankelijk resultaat.
-00:37:16,100 --&gt; 00:37:17,780
+
+00:37:16,100 --> 00:37:17,780
 Dus wat wil dat zeggen?
-00:37:18,366 --&gt; 00:37:19,366
+
+00:37:18,366 --> 00:37:19,366
 oke
-00:37:20,460 --&gt; 00:37:23,646
+
+00:37:20,460 --> 00:37:23,646
 Dus,dit is zo een voorbeeldje? we hebben reizen...
-00:37:24,616 --&gt; 00:37:29,339
+
+00:37:24,616 --> 00:37:29,339
 En we gaan dat joinen met deze subquery maar daar is een afhankelijkheid met die leteral.
-00:37:29,687 --&gt; 00:37:32,887
+
+00:37:29,687 --> 00:37:32,887
 Dus probeer een keer te zien, wat doet deze query?
-00:39:41,290 --&gt; 00:39:45,106
+
+00:39:41,290 --> 00:39:45,106
 Ah sorry, ik had even met het drinken mijn geluid af gezet.
-00:39:45,233 --&gt; 00:39:47,373
+
+00:39:45,233 --> 00:39:47,373
 Goed dat Sasha dat meldt.
-00:39:48,000 --&gt; 00:39:52,076
+
+00:39:48,000 --> 00:39:52,076
 Dus, de hint van Rik inderdaad,
-00:39:52,636 --&gt; 00:39:57,796
+
+00:39:52,636 --> 00:39:57,796
 ofterwijl hetgeen dat Arthuur daar zegt ofterwijl Rik, het gaat over de 2 kleinste of de 2 grootste inderdaad.
-00:39:58,506 --&gt; 00:40:02,410
+
+00:39:58,506 --> 00:40:02,410
 Dus als we het stapsgewijs doorlopen, we hebben hier de tabel reizen in de FROM.
-00:40:02,970 --&gt; 00:40:06,022
+
+00:40:02,970 --> 00:40:06,022
 Alle reizen worden sowieso getoont, hier, LEFT.
-00:40:06,800 --&gt; 00:40:09,516
+
+00:40:06,800 --> 00:40:09,516
 Dan word dat gecombineerd met eventueele bezoeken.
-00:40:09,656 --&gt; 00:40:12,262
+
+00:40:09,656 --> 00:40:12,262
 Dat zie ik aan bezoeken B2
-00:40:13,016 --&gt; 00:40:15,516
+
+00:40:13,016 --> 00:40:15,516
 En de WHERE conditie hier, het gaat voor deze reis.
-00:40:16,647 --&gt; 00:40:18,187
+
+00:40:16,647 --> 00:40:18,187
 Dus de bezoeker van die reis.
-00:40:19,173 --&gt; 00:40:22,673
+
+00:40:19,173 --> 00:40:22,673
 En voor het bezoeken ga ik opzoeken, welke hemelobjecten worden hier eigenlijk bezocht?
-00:40:22,737 --&gt; 00:40:26,310
+
+00:40:22,737 --> 00:40:26,310
 En ik ga ze dan sorteren per diameter, alleen de eerste 2...
-00:40:27,170 --&gt; 00:40:29,076
+
+00:40:27,170 --> 00:40:29,076
 tonen en ophalen.
-00:40:29,204 --&gt; 00:40:33,702
+
+00:40:29,204 --> 00:40:33,702
 Dus dat wil eigenlijk zeggen, ik ga per reis alleen de eerste 2 objecten...
-00:40:34,410 --&gt; 00:40:36,433
+
+00:40:34,410 --> 00:40:36,433
 Die bezocht worden volgens de diameter.
-00:40:36,526 --&gt; 00:40:40,066
+
+00:40:36,526 --> 00:40:40,066
 Nu is de vraag natuurlijk hoe word dit gesorteed? ORDER BY diameter.
-00:40:40,296 --&gt; 00:40:42,469
+
+00:40:40,296 --> 00:40:42,469
 Is dat van klein naar groot of van groot naar klein?
-00:40:42,836 --&gt; 00:40:49,770
+
+00:40:42,836 --> 00:40:49,770
 Als je dat niet onthoudt, is niet erg, ik doe dat ook niet altijd mar dat is inderdaad het systeem dat hier wordt toegepast, we zullen eens kijken.
-00:40:51,330 --&gt; 00:40:51,830
+
+00:40:51,330 --> 00:40:51,830
 oke
-00:40:52,110 --&gt; 00:40:55,770
+
+00:40:52,110 --> 00:40:55,770
 Dus wat je hier ziet staan denk ik als je die diameters ziet oplopen.
-00:40:55,943 --&gt; 00:40:58,682
+
+00:40:55,943 --> 00:40:58,682
 Je ziet hier, na een 32 gaat die er inderdaad over.
-00:40:58,956 --&gt; 00:41:02,969
+
+00:40:58,956 --> 00:41:02,969
 Dus de 2 kleinse hemelobjecten per reis dat hier getoont worden
-00:41:04,107 --&gt; 00:41:05,107
+
+00:41:04,107 --> 00:41:05,107
 oke
-00:41:06,140 --&gt; 00:41:06,720
+
+00:41:06,140 --> 00:41:06,720
 goed
-00:41:07,037 --&gt; 00:41:10,590
+
+00:41:07,037 --> 00:41:10,590
 Dus ter vergelijking, we gaan eens die opzoeken.
-00:41:11,050 --&gt; 00:41:13,009
+
+00:41:11,050 --> 00:41:13,009
 Dit was lijn 32.
-00:41:13,456 --&gt; 00:41:18,256
+
+00:41:13,456 --> 00:41:18,256
 Had ik reis nummer 32, had ik een object van diameter 7 en 14.
-00:41:18,586 --&gt; 00:41:21,199
+
+00:41:18,586 --> 00:41:21,199
 Dus als ik alles bijvoorbeeld eens opzoek van 32
-00:41:22,294 --&gt; 00:41:26,420
+
+00:41:22,294 --> 00:41:26,420
 vind ik daar inderdaad dus van 7, 14 en al die ander zijn groter.
-00:41:26,680 --&gt; 00:41:30,787
+
+00:41:26,680 --> 00:41:30,787
 Dus ik krijg effectief de 2 kleinse objecten wat op die reis bezocht worden.
-00:41:33,834 --&gt; 00:41:34,834
+
+00:41:33,834 --> 00:41:34,834
 oke
-00:41:35,240 --&gt; 00:41:42,180
+
+00:41:35,240 --> 00:41:42,180
 Dus meestal kan je inderdaad zonder die lateral werken, maar sommige problemen kun je iderdaad moeilijk oplossen zonder die lateral.
-00:41:42,247 --&gt; 00:41:44,780
+
+00:41:42,247 --> 00:41:44,780
 Dus als je met zo een voorbeeld zit...
-00:41:46,413 --&gt; 00:41:47,613
+
+00:41:46,413 --> 00:41:47,613
 Zoals dit hier.
-00:41:48,720 --&gt; 00:41:52,933
+
+00:41:48,720 --> 00:41:52,933
 Wanneer dat je eigenlijk een... het staat hier... moment...
-00:41:53,370 --&gt; 00:41:56,603
+
+00:41:53,370 --> 00:41:56,603
 Als je moet vergelijken met een beperkt afhankelijk resultaat.
-00:41:56,756 --&gt; 00:41:59,902
+
+00:41:56,756 --> 00:41:59,902
 Dus dat je eigenlijk bijvoorbeeld denkt, ik heb een subquery nodig.
-00:42:00,143 --&gt; 00:42:03,136
+
+00:42:00,143 --> 00:42:03,136
 Waardat ik die fetch first nodig heb terwijl ik in een efhankelijkheid zit.
-00:42:03,707 --&gt; 00:42:06,823
+
+00:42:03,707 --> 00:42:06,823
 Dan ga je 9/10 die lateral toch nodig hebben.
-00:42:07,184 --&gt; 00:42:11,919
+
+00:42:07,184 --> 00:42:11,919
 Of je zit met dat voorbeeldje van daarstraks met die rij die je wilt gaan denormaliseren.
-00:42:12,034 --&gt; 00:42:14,434
+
+00:42:12,034 --> 00:42:14,434
 Die je wilt gaan normaliseren sorry.
-00:42:14,560 --&gt; 00:42:19,799
+
+00:42:14,560 --> 00:42:19,799
 Dan ga je 9/10 ook zo een lateral nodig hebben alhoewel dat daar soms wel alternatieven voor nodig zijn.
-00:42:20,113 --&gt; 00:42:23,802
+
+00:42:20,113 --> 00:42:23,802
 Voor de rest kan je eigenlijk vaak alternatieve queries schrijven.
-00:42:24,603 --&gt; 00:42:27,186
+
+00:42:24,603 --> 00:42:27,186
 Dan is alleen de vraag, als je die queries schrijft...
-00:42:28,626 --&gt; 00:42:31,293
+
+00:42:28,626 --> 00:42:31,293
 Als je weet hoe dat je dat dan kan doen.
-00:42:31,886 --&gt; 00:42:39,062
+
+00:42:31,886 --> 00:42:39,062
 Ik heb die manier met lateral, ik heb die manier zonder lateral , we gaan die kostprijzen vergelijken om tezien van, welke query kies ik hier nu natuurlijk?
-00:42:39,090 --&gt; 00:42:40,090
+
+00:42:39,090 --> 00:42:40,090
 Dat proberen we jullie..
-00:42:40,413 --&gt; 00:42:45,786
+
+00:42:40,413 --> 00:42:45,786
 dus perfomantie is iets, eenkeer dat je databanken beheerst, dan kom je echt wel in dat gebied van performantie.
-00:42:46,530 --&gt; 00:42:47,530
+
+00:42:46,530 --> 00:42:47,530
 oke
-00:42:47,710 --&gt; 00:42:50,177
+
+00:42:47,710 --> 00:42:50,177
 Zijn er nog vragen over die lateral?
-00:42:51,526 --&gt; 00:42:52,646
+
+00:42:51,526 --> 00:42:52,646
 Lateral joins.
-00:43:04,480 --&gt; 00:43:05,480
+
+00:43:04,480 --> 00:43:05,480
 oke
