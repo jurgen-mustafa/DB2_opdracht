@@ -1,4 +1,4 @@
-﻿WEBVT
+﻿WEBVTT
 
 00:00:00.000 --> 00:00:01.722
 Lateral joins, ok
@@ -619,11 +619,396 @@ Does anyone see the difference?
 00:09:53.014 --> 00:09:55.914
 Where that the difference is made
 
+00:10:13.200 --> 00:10:16.283
+I said, if we work with cross join or inner join
+
+00:10:16.550 --> 00:10:18.550
+That is actually the same as the comma
+
+00:10:19.200 --> 00:10:20.800
+But here something else is going on
+
+00:10:20.800 --> 00:10:22.800
+And if sometimes people think, I can
+
+00:10:22.800 --> 00:10:24.400
+then why are they different
+
+00:10:24.600 --> 00:10:25.960
+These two queries
+
+00:10:46.900 --> 00:10:48.900
+You're sitting there with an on condition
+
+00:10:49.267 --> 00:10:51.767
+So in the second one, another on condition is added
+
+00:10:51.767 --> 00:10:52.967
+Which is not about an equality
+
+00:10:52.980 --> 00:10:56.730
+If you think about the relationship that is being calculated here
+
+00:10:56.800 --> 00:10:58.200
+So then we refer to that table here, k
+
+00:10:58.783 --> 00:11:00.317
+So those things have to match
+
+00:11:00.350 --> 00:11:05.584
+So it must be about that name and that birth date coming from k
+
+00:11:05.600 --> 00:11:08.450
+Here it is, but you get that filter as well
+
+00:11:16.767 --> 00:11:18.834
+So, what you get is from
+
+00:11:20.030 --> 00:11:21.030
+Avoid this
+
+00:11:22.600 --> 00:11:26.717
+Every right join can be written as a left join
+
+00:11:26.720 --> 00:11:31.300
+There are even databases, mysql has not had a right outer join for a long time
+
+00:11:33.570 --> 00:11:36.033
+Of course, you can always try to rewrite that as a left outer join
+
+00:11:36.330 --> 00:11:38.167
+So the same with that FULL there
+
+00:11:38.217 --> 00:11:41.609
+Because the behaviour is indeed not well defined
+
+00:11:42.500 --> 00:11:44.200
+So basically you can say
+
+00:11:44.250 --> 00:11:49.667
+I have here either a cross join which behaves
+like an inner join with an equality
+
+00:11:49.833 --> 00:11:51.867
+Like the relationship that is established
+
+00:11:53.017 --> 00:11:57.033
+I could possibly specify an additional join condition
+that is not about equality
+
+00:11:57.817 --> 00:12:01.067
+Then I get a different kind of behaviour,
+or I could possibly work with an outer join
+
+00:12:01.170 --> 00:12:07.717
+A left outer join with any data that is not present
+is present in my dependent part
+
+00:12:08.967 --> 00:12:13.367
+To add, from my original
+first set table
+
+00:12:18.017 --> 00:12:21.217
+Again this should go pretty fast now
+
+00:12:22.000 --> 00:12:30.100
+I can simplify this quickly without needing the lateral there join
+I can make it more performant
+
+00:12:36.700 --> 00:12:43.633
+What does lateral do? Lateral takes care of that k that is there
+select age k, birth date that I can get that k
+
+00:12:43.770 --> 00:12:48.283
+That one is from customers, so I can get the birth date from it
+
+00:12:48.550 --> 00:12:51.767
+Without the word lateral the query is not executed.
+
+00:12:52.500 --> 00:12:57.317
+That k birth date, I can see that comes from customers
+but I cannot refer to it
+
+00:12:58.150 --> 00:13:01.967
+Because the sql standard is defined there
+
+0:13:03.900 --> 00:13:08.650
+So that actually makes you analogous to the corralled subqueries
+but they are on a lower level
+
+00:13:09.267 --> 00:13:12.851
+And here you can refer to something that is on the same level
+
+00:13:14.000 --> 00:13:17.300
+So how could this be simpler? I think that was said earlier
+
+00:13:22.700 --> 00:13:24.933
+I'm trying to see if everybody is awake
+
+00:13:36.300 --> 00:13:38.967
+They actually just calculate the date of birth for each customer.
+
+00:13:39.650 --> 00:13:42.433
+The age of the birth date, so just the age actually
+
+00:13:45.117 --> 00:13:47.217
+But how to do it more simply?
+
+00:13:52.033 --> 00:13:54.400
+Maybe Adam, what do you think?
+
+00:14:05.000 --> 00:14:07.717
+Indeed Kevin, no subquery, but just put in the select
+
+00:14:08.100 --> 00:14:11.350
+So star, age k birth date
+
+00:14:15.230 --> 00:14:19.283
+Indeed Milan, so this piece of age k point birth date you put in the select
+
+00:14:19.883 --> 00:14:22.967
+And then delete the rest of what comes after the word lateral
+
+00:14:23.867 --> 00:14:25.333
+So yes, fine
+
+00:14:27.967 --> 00:14:35.867
+Okay, there are a couple of cases where you say how can we use these lateral joins now
+
+00:14:36.267 --> 00:14:41.083
+Because in practice you're going to see, that you're trying to answer questions,
+query questions
+
+00:14:41.400 --> 00:14:44.350
+When am I going to need it, and if you have problems having
+to solve something
+
+00:14:45.533 --> 00:14:48.083
+When are you going to think about that lateral
+
+00:14:48.317 --> 00:14:53.783
+So it's about normalisation, so it's about a join
+ condition that needs to be calculated
+
+00:14:54.000 --> 00:14:56.300
+Based on a column that is referred to
+
+00:14:56.517 --> 00:15:02.500
+Normalisation means an equalisation of the total sum of something
+ from something that is calculated for that
+
+00:15:02.733 --> 00:15:08.667
+So, when you actually have subqueries that are dependent
+
+00:15:09.450 --> 00:15:13.800
+Subqueries that you want to use the result of
+with dependencies
+
+00:15:14.683 --> 00:15:18.033
+So an example of normalisation for example
+
+00:15:19.517 --> 00:15:22.667
+So, suppose we have a table that is denormalized
+
+00:15:23.067 --> 00:15:26.050
+You've all had data modelling techniques
+
+00:15:26.430 --> 00:15:31.183
+So that's where we taught you normalisation the reverse way when 
+we're going to merge tables
+
+00:15:31.417 --> 00:15:36.533
+So add together all possible combinations that are correct 
+according to the dependencies
+
+00:15:36.817 --> 00:15:41.900
+So just a join between two tables actually,
+is a de-normalisation you could say.
+
+00:15:44.317 --> 00:15:47.467
+Then we can use that for example
+
+00:15:47.950 --> 00:15:56.283
+So, let's say we have for example a denormalized
+table, namely saying these are my ids
+
+00:15:56.517 --> 00:15:59.317
+They all correspond to other ids
+
+00:16:00.030 --> 00:16:06.083
+For example, I have here the row 1, 2, 3,
+4, 5, 6 and this row
+
+00:16:09.070 --> 00:16:13.517
+So what does that mean if you think about how does this one look,
+I don't know it by heart, yeah
+
+00:16:13.800 --> 00:16:19.333
+So this is denormalized, because normally what do you expect
+in a normalized table, if for instance
+
+00:16:19.567 --> 00:16:24.733
+Intermediate table as you popularly call it,
+what would it look like?
+
+00:16:25.367 --> 00:16:35.833
+So to say that id 1, player 1 for example refers to position 1,
+player 1 refers to position 2 and player 1 also refers to position 3
+
+00:16:35.983 --> 00:16:37.850
+There is a link, there we know something of position and player
+
+00:16:39.070 --> 00:16:42.967
+Player 2 refers to position 4, player 2 also refers to position 5
+
+00:16:43.383 --> 00:16:47.283
+So how was this normally stored as you saw it
+
+00:16:50.070 --> 00:16:54.350
+If we have a table of players and a table of positions with
+between them a many on many
+
+00:16:57.000 --> 00:17:00.533
+Then instead of 3 rows here, how many rows?
+
+00:17:08.030 --> 00:17:12.200
+To keep track, it is an abstract example here,
+indeed Lucas, nine
+
+00:17:12.500 --> 00:17:17.033
+1 combined with 1, 1 with 2, 1 with 3,
+that's the first 3 rows
+
+00:17:17.200 --> 00:17:19.367
+So this is denormalised
+
+00:17:19.967 --> 00:17:23.650
+So it's also annoying to have a, you can't say here:
+it is an equal to
+
+00:17:24.200 --> 00:17:26.167
+It is an embarrassing join condition there
+
+00:17:26.500 --> 00:17:32.517
+So, what we're going to do is look euhmmm,
+we're going to create a table parent
+
+00:17:32.670 --> 00:17:36.133
+So there will be that value 1, 2, 3
+
+00:17:36.133 --> 00:17:42.200
+Okay, and we're going to say, we refer to that,
+we're sitting with eventual children
+
+00:17:43.430 --> 00:17:47.033
+A function that I can use now for example
+to break this down
+
+00:17:47.383 --> 00:17:54.217
+Is unnest, so that means that when we have denormalized data,
+you're going to run into them at some point
+
+00:17:54.367 --> 00:17:58.917
+But you will find that it is difficult to work with,
+then you can normalise it again.
+
+00:17:59.267 --> 00:18:06.067
+And then attach it again, and take it apart with that function, unnest,
+so we can convert a row like that
+
+00:18:06.317 --> 00:18:08.233
+So that it's all separate values again.
+
+00:18:08.950 --> 00:18:10.800
+So, what do I get?
+
+00:18:11.183 --> 00:18:13.683
+I had that denormalised table
+
+00:18:14.317 --> 00:18:17.267
+And in it were those 1 with 1, 2, 3
+
+00:18:17.700 --> 00:18:20.550
+that 2 with, I don't know, 2, 4, 5
+
+00:18:22.230 --> 00:18:26.550
+So those other ids that was that 1, 2, 3, that row of 1, 2, 3,
+I'm going to unnest them here.
+
+00:18:27.030 --> 00:18:29.133
+So that would be 1, 2, 3 in a row.
+
+00:18:29.417 --> 00:18:33.350
+So if I join that, I'll get these
+these results
+
+00:18:33.750 --> 00:18:38.200
+So basically, I get my normalized data back here
+
+00:18:41.200 --> 00:18:44.350
+Those 9 rows that Lucas predicted there as well
+
+00:18:46.450 --> 00:18:48.067
+So that is 1 possibility
+
+00:18:48.170 --> 00:18:53.467
+What does that mean, I did that query,
+that's this query, to test whether this is working properly.
+
+00:18:53.600 --> 00:18:59.400
+I've got the data here, so I can actually go ahead and suggest to him a way
+that they are normalised
+
+00:18:59.500 --> 00:19:04.550
+Instead of in a way that they are denormalised,
+this is how they are stored now
+
+00:19:04.867 --> 00:19:08.750
+For me it's much more interesting that I store them this way
+
+00:19:09.283 --> 00:19:13.783
+So all I have to do is, this is a query,
+I turn that query into an insert statement.
+
+00:19:14.167 --> 00:19:18.450
+By just putting insert in front of it, so insert into the table
+that we've created
+
+00:19:19.050 --> 00:19:22.733
+So we put it in there
+
+00:19:22.800 --> 00:19:25.367
+So that's also something that you can do, which I think you've already figured out
+
+00:19:25.750 --> 00:19:29.633
+Insert you can use the values, insert into table, x values
+
+00:19:30.017 --> 00:19:33.517
+And then you sum up values, but you can just as well use a select statement there
+
+00:19:33.767 --> 00:19:35.850
+For example, to do an insert
+
+00:19:38.050 --> 00:19:45.033
+Okay, another case, so we've seen there the case of
+normalization, denormalization
+
+00:19:45.383 --> 00:19:50.783
+A join condition that has to be calculated based on a
+referenced column
+
+00:19:52.270 --> 00:19:55.300
+There are other ways to do this but this was about 1 example
+
+00:19:55.667 --> 00:20:00.683
+Imagine, you want to know all the people who have a common
+ letters in their first name
+
 00:20:00.710 --> 00:20:01.570
 example
 
 00:20:01.909 --> 00:20:05.770
- my colleague, amie and i, wim there is the letter "m" in it
+my colleague, amie and i, wim there is the letter "m" in it
 
 00:20:06.056 --> 00:20:08.703
 so we have common letters in our first names.
@@ -644,7 +1029,7 @@ lucas and milan do
 lucas and kevin don't either, for example
 
 00:20:23.406 --> 00:20:26.713
-  I want to show people who have common letters in their first name
+I want to show people who have common letters in their first name
 
 00:20:29.487 --> 00:20:31.587
 We can use this for example.
@@ -888,7 +1273,6 @@ so what could you start using as
 
 00:24:12.347 --> 00:24:15.087
 being a . . condition
-
 
 00:24:38.843 --> 00:24:42.070
 so the first time you guys have worked with that letter already
@@ -1252,541 +1636,362 @@ so I get the same query as before.
 
 00:29:58.270 --> 00:29:59.357
 but I'm going to do all those things
-
-00:29:59,721 --> 00:30:02,248
+00:29:59,721 --&gt; 00:30:02,248
 so put it here in my front. I'm going to put those
-
-00:30:02,267 --> 00:30:05,506
+00:30:02,267 --&gt; 00:30:05,506
 take a look, so I calculated those here separately actually.
-
-00:30:05,540 --> 00:30:09,120
+00:30:05,540 --&gt; 00:30:09,120
 So this is also an option I just wanted to show.
-
-00:30:09,180 --> 00:30:11,280
+00:30:09,180 --&gt; 00:30:11,280
 all, let's see. I was thinking.
-
-00:30:11,523 --> 00:30:14,410
+00:30:11,523 --&gt; 00:30:14,410
 we'll..., it's true what you guys say hey, the GROUP BY and the COUNT.
-
-00:30:14,435 --> 00:30:17,576
+00:30:14,435 --&gt; 00:30:17,576
 I expected the solution after that, I don't have my preview on.
-
-00:30:18,137 --> 00:30:19,137
+00:30:18,137 --&gt; 00:30:19,137
 okay
-
-00:30:20,000 --> 00:30:23,509
+00:30:20,000 --&gt; 00:30:23,509
 So if we just adjust this query
-
-00:30:23,534 --> 00:30:26,821
+00:30:23,534 --&gt; 00:30:26,821
 To finalize it because apparently that slide is missing.
-
-00:30:28,367 --> 00:30:30,917
+00:30:28,367 --&gt; 00:30:30,917
 Indeed, we're going to group those by customer number.
-
-00:30:32,013 --> 00:30:35,506
- That name is functionally dependent so you can put that in your GROUP BY as well.
-
-00:30:35,526 --> 00:30:38,787
+00:30:32,013 --&gt; 00:30:35,506
+That name is functionally dependent so you can put that in your GROUP BY as well.
+00:30:35,526 --&gt; 00:30:38,787
 Indeed, you just get a COUNT that you can put in there.
-
-00:30:38,814 --> 00:30:41,980
+00:30:38,814 --&gt; 00:30:41,980
 So you can say GROUP BY customer number and first name.
-
-00:30:42,007 --> 00:30:44,693
+00:30:42,007 --&gt; 00:30:44,693
 and you should leave out the k2 name
-
-00:30:44,793 --> 00:30:47,586
+00:30:44,793 --&gt; 00:30:47,586
 or you're going to do count of k2 name by.
-
-00:30:47,713 --> 00:30:50,066
+00:30:47,713 --&gt; 00:30:50,066
 So you can do that perfectly then.
-
-00:30:50,213 --> 00:30:54,233
+00:30:50,213 --&gt; 00:30:54,233
 We don't need that L1 anymore to see what the common initial is.
-
-00:30:54,258 --> 00:30:56,316
+00:30:54,258 --&gt; 00:30:56,316
 um, the common letter.
-
-00:30:56,363 --> 00:30:58,663
+00:30:56,363 --&gt; 00:30:58,663
 So that's just here for your information.
-
-00:30:59,930 --> 00:31:07,453
+00:30:59,930 --&gt; 00:31:07,453
 And then the other little example I just said hey, so without a letter we can also possibly work if we calculate those things separately.
-
-00:31:08,360 --> 00:31:09,360
+00:31:08,360 --&gt; 00:31:09,360
 okay.
-
-00:31:10,536 --> 00:31:14,130
+00:31:10,536 --&gt; 00:31:14,130
 Then we have another little example.
-
-00:31:14,397 --> 00:31:16,290
+00:31:14,397 --&gt; 00:31:16,290
 Non-scalar subqueries
-
-00:31:16,943 --> 00:31:20,129
+00:31:16,943 --&gt; 00:31:20,129
 What do we mean by a scalar subquery?
-
-00:31:24,740 --> 00:31:27,913
+00:31:24,740 --&gt; 00:31:27,913
 Remember? We had 4 types of subqueries.
-
-00:31:28,167 --> 00:31:30,186
+00:31:28,167 --&gt; 00:31:30,186
 We had table subqueries,
-
-00:31:30,353 --> 00:31:31,393
+00:31:30,353 --&gt; 00:31:31,393
 we had...
-
-00:31:34,317 --> 00:31:36,592
+00:31:34,317 --&gt; 00:31:36,592
 Abstractly, it's always a table of course,
-
-00:31:36,617 --> 00:31:39,721
+00:31:36,617 --&gt; 00:31:39,721
 but for certain dimentions we give it a different name.
-
-00:31:40,047 --> 00:31:44,340
+00:31:40,047 --&gt; 00:31:44,340
 So what do we mean by a scalar subquery?
-
-00:31:46,246 --> 00:31:51,570
+00:31:46,246 --&gt; 00:31:51,570
 Multiple rows and columns? Then we talk about a table subquery Lucas.
-
-00:31:51,667 --> 00:31:57,407
+00:31:51,667 --&gt; 00:31:57,407
 NIet-scalar, then we mean by that it is more than 1 row and 1 column.
-
-00:31:57,503 --> 00:31:59,803
+00:31:57,503 --&gt; 00:31:59,803
 So that's not scalar there.
-
-00:32:00,263 --> 00:32:02,529
+00:32:00,263 --&gt; 00:32:02,529
 So scalar subquery is just 1 times 1.
-
-00:32:02,897 --> 00:32:03,269
+00:32:02,897 --&gt; 00:32:03,269
 yes.
-
-00:32:03,460 --> 00:32:06,532
+00:32:03,460 --&gt; 00:32:06,532
 but we're talking about
 non scalar subqueries
-
-00:32:06,563 --> 00:32:11,519
+00:32:06,563 --&gt; 00:32:11,519
 Subqueries that we know of that are not scalar.
-
-00:32:11,560 --> 00:32:14,093
- You guys also know that if we put a subquery in the SELECT...
-
-00:32:14,706 --> 00:32:17,763
+00:32:11,560 --&gt; 00:32:14,093
+You guys also know that if we put a subquery in the SELECT...
+00:32:14,706 --&gt; 00:32:17,763
 In the Select, yes then there should only be 1 value there.
-
-00:32:18,137 --> 00:32:23,570
+00:32:18,137 --&gt; 00:32:23,570
 If it says "SELECT customer number comma" there and then a subquery, only 1 value should come out of that.
-
-00:32:23,684 --> 00:32:28,990
+00:32:23,684 --&gt; 00:32:28,990
 that should be there, that's the only way you can add that in the SELECT, but what if it's not...
-
-00:32:29,430 --> 00:32:32,273
+00:32:29,430 --&gt; 00:32:32,273
 That then more than 1 value, how do we solve that?
-
-00:32:33,830 --> 00:32:34,830
+00:32:33,830 --&gt; 00:32:34,830
 Okay
-
-00:32:34,896 --> 00:32:35,896
+00:32:34,896 --&gt; 00:32:35,896
 So
-
-00:32:36,296 --> 00:32:37,296
+00:32:36,296 --&gt; 00:32:37,296
 This Here.
-
-00:32:37,883 --> 00:32:39,163
+00:32:37,883 --&gt; 00:32:39,163
 Is not a problem.
-
-00:32:39,713 --> 00:32:41,646
+00:32:39,713 --&gt; 00:32:41,646
 This is a Scalar subquery.
-
-00:32:41,833 --> 00:32:45,023
+00:32:41,833 --&gt; 00:32:45,023
 Hey, I'm looking up stuff here from travel,...
-
-00:32:45,544 --> 00:32:49,563
+00:32:45,544 --&gt; 00:32:49,563
 And I write a subquery in my SELECT and da maximum is 1 value.
-
-00:32:49,820 --> 00:32:52,053
+00:32:49,820 --&gt; 00:32:52,053
 And it's a correlated subquery.
-
-00:32:52,120 --> 00:32:53,253
+00:32:52,120 --&gt; 00:32:53,253
 By itself, no problem.
-
-00:32:53,293 --> 00:32:58,366
+00:32:53,293 --&gt; 00:32:58,366
 is it correlated or not, the important thing is that there is only one value here, so it executes perfectly.
-
-00:32:58,399 --> 00:33:03,773
+00:32:58,399 --&gt; 00:33:03,773
 You always have to keep in mind, does that take the form of a table, does that make sense?
-
-00:33:04,460 --> 00:33:05,980
+00:33:04,460 --&gt; 00:33:05,980
 So this is not a problem, but....
-
-00:33:07,313 --> 00:33:08,806
+00:33:07,313 --&gt; 00:33:08,806
 What if I put this now?
-
-00:33:09,313 --> 00:33:11,666
+00:33:09,313 --&gt; 00:33:11,666
 Then you will indeed get that error message.
-
-00:33:13,910 --> 00:33:17,090
+00:33:13,910 --&gt; 00:33:17,090
 That length of stay, that could be multiple lengths of stay here.
-
-00:33:17,160 --> 00:33:21,460
+00:33:17,160 --&gt; 00:33:21,460
 For the same trip they are probably multiple visits so also multiple lengths of stay.
-
-00:33:21,970 --> 00:33:22,443
+00:33:21,970 --&gt; 00:33:22,443
 so
-
-00:33:22,896 --> 00:33:26,676
+00:33:22,896 --&gt; 00:33:26,676
 Here comes trip 1 with 7 different verbiage.
-
-00:33:26,693 --> 00:33:32,209
+00:33:26,693 --&gt; 00:33:32,209
 Now you can think of yes, to me that makes sense. I can go back and supplement that like that latteral. But that's not how that works.
-
-00:33:32,393 --> 00:33:35,061
+00:33:32,393 --&gt; 00:33:35,061
 The standard is not so defined.
-
-00:33:35,086 --> 00:33:37,539
+00:33:35,086 --&gt; 00:33:37,539
 So it always expects 1 value there.
-
-00:33:38,367 --> 00:33:40,100
+00:33:38,367 --&gt; 00:33:40,100
 So then you get that error.
-
-00:33:40,780 --> 00:33:43,593
+00:33:40,780 --&gt; 00:33:43,593
 So how can we solve that? also with that latteral again.
-
-00:33:43,967 --> 00:33:44,967
+00:33:43,967 --&gt; 00:33:44,967
 so euh...
-
-00:33:46,324 --> 00:33:48,223
+00:33:46,324 --&gt; 00:33:48,223
 Aja this little example I can also give.
-
-00:33:54,700 --> 00:34:00,520
+00:33:54,700 --&gt; 00:34:00,520
 It should really be 1 times 1 for subquery, because here only 1 comes out, they are also agregation functions, comes out 1 row
-
-00:34:00,620 --> 00:34:02,300
+00:34:00,620 --&gt; 00:34:02,300
 but with 2 columns
-
-00:34:02,327 --> 00:34:07,050
+00:34:02,327 --&gt; 00:34:07,050
 You could of course solve this by splitting that into 2 correlated subqueries. 1 for sum,
-
-00:34:07,144 --> 00:34:08,744
+00:34:07,144 --&gt; 00:34:08,744
 1note for variance.
-
-00:34:09,494 --> 00:34:10,494
+00:34:09,494 --&gt; 00:34:10,494
 but okay.
-
-00:34:11,767 --> 00:34:14,026
+00:34:11,767 --&gt; 00:34:14,026
 Just show it for the sake of completeness for the people who...
-
-00:34:14,133 --> 00:34:16,667
+00:34:14,133 --&gt; 00:34:16,667
 That's a question I get sometimes.
-
-00:34:16,680 --> 00:34:18,986
+00:34:16,680 --&gt; 00:34:18,986
 So the solution here is lateral eh.
-
-00:34:19,056 --> 00:34:20,576
+00:34:19,056 --&gt; 00:34:20,576
 Yes, we're going to have our...
-
-00:34:20,616 --> 00:34:24,904
+00:34:20,616 --&gt; 00:34:24,904
 The thing that was in our SELECT we're going to move to our FROM.
-
-00:34:25,103 --> 00:34:26,936
+00:34:25,103 --&gt; 00:34:26,936
 We say we want all those trips.
-
-00:34:27,170 --> 00:34:33,042
+00:34:27,170 --&gt; 00:34:33,042
 But in addition to those trips, we want to take a look at each trip, what about the length of stay here, both the sum and the variance.
-
-00:34:33,174 --> 00:34:35,113
+00:34:33,174 --&gt; 00:34:35,113
 For that trip, and I'll add that.
-
-00:34:35,247 --> 00:34:37,120
+00:34:35,247 --&gt; 00:34:37,120
 And I'm going to show that then.
-
-00:34:37,480 --> 00:34:41,430
+00:34:37,480 --&gt; 00:34:41,430
 The word lateral is needed here because length of stay comes from travel.
-
-00:34:42,484 --> 00:34:45,150
+00:34:42,484 --&gt; 00:34:45,150
 From the table travel at one level higher.
-
-00:34:45,587 --> 00:34:46,587
+00:34:45,587 --&gt; 00:34:46,587
 okay
-
-00:34:48,360 --> 00:34:51,027
+00:34:48,360 --&gt; 00:34:51,027
 So then we get this here for example.
-
-00:34:51,150 --> 00:34:52,950
+00:34:51,150 --&gt; 00:34:52,950
 We get here variance 0
-
-00:34:53,060 --> 00:34:59,040
+00:34:53,060 --&gt; 00:34:59,040
 Yes, that means there is only 1 visit for that trip. 31
-
-00:34:59,746 --> 00:35:00,746
+00:34:59,746 --&gt; 00:35:00,746
 okay
-
-00:35:06,947 --> 00:35:12,176
+00:35:06,947 --&gt; 00:35:12,176
 We could also write that query just now, the first one I gave there without those aggregation functions.
-
-00:35:12,206 --> 00:35:14,690
+00:35:12,206 --&gt; 00:35:14,690
 If we have more than one value, we can do that too.
-
-00:35:15,813 --> 00:35:16,279
+00:35:15,813 --&gt; 00:35:16,279
 yes
-
-00:35:16,787 --> 00:35:21,730
+00:35:16,787 --&gt; 00:35:21,730
 Now these are a little bit of artificial examples. because of course we can also start doing this by....
-
-00:35:21,990 --> 00:35:24,934
+00:35:21,990 --&gt; 00:35:24,934
 visits moving up a level.
-
-00:35:24,964 --> 00:35:27,097
+00:35:24,964 --&gt; 00:35:27,097
 And start calculating those things.
-
-00:35:27,980 --> 00:35:28,980
+00:35:27,980 --&gt; 00:35:28,980
 okay
-
-00:35:29,374 --> 00:35:32,174
+00:35:29,374 --&gt; 00:35:32,174
 We can make combinations of those things.
-
-00:35:32,323 --> 00:35:34,956
+00:35:32,323 --&gt; 00:35:34,956
 That is, you can both...
-
-00:35:36,050 --> 00:35:38,450
+00:35:36,050 --&gt; 00:35:38,450
 Work with either that latteral.
-
-00:35:38,504 --> 00:35:44,333
+00:35:38,504 --&gt; 00:35:44,333
 We can start working with even agregation functions combined with an ordinary value, so that GROUP BY.
-
-00:35:44,460 --> 00:35:46,713
+00:35:44,460 --&gt; 00:35:46,713
 So you can actually start doing a fair amount of those things.
-
-00:35:48,307 --> 00:35:48,846
+00:35:48,307 --&gt; 00:35:48,846
 okay
-
-00:35:52,437 --> 00:35:54,237
+00:35:52,437 --&gt; 00:35:54,237
 This might be another one.
-
-00:35:54,577 --> 00:35:56,177
+00:35:54,577 --&gt; 00:35:56,177
 That I can show then.
-
-00:35:56,540 --> 00:35:59,868
+00:35:56,540 --&gt; 00:35:59,868
 So, you guys have already seen different agregation functions,
-
-00:36:01,290 --> 00:36:03,243
+00:36:01,290 --&gt; 00:36:03,243
 let's go back, yeah.
-
-00:36:07,340 --> 00:36:08,340
+00:36:07,340 --&gt; 00:36:08,340
 moment
-
-00:36:08,647 --> 00:36:11,247
+00:36:08,647 --&gt; 00:36:11,247
 Now that example is no longer there, that's okay.
-
-00:36:11,540 --> 00:36:14,659
+00:36:11,540 --&gt; 00:36:14,659
 So the COUNT you all know.
-
-00:36:14,913 --> 00:36:19,150
+00:36:14,913 --&gt; 00:36:19,150
 but what we just did with that UN NEST
-
-00:36:19,470 --> 00:36:20,856
+00:36:19,470 --&gt; 00:36:20,856
 so from a row
-
-00:36:21,360 --> 00:36:25,313
+00:36:21,360 --&gt; 00:36:25,313
 flat hey, back to normalizing the original value.
-
-00:36:25,493 --> 00:36:31,099
+00:36:25,493 --&gt; 00:36:31,099
 Can you also reverse denormalize with an agregation cucntion like array agregate, so then we put those together
-
-00:36:31,260 --> 00:36:34,160
+00:36:31,260 --&gt; 00:36:34,160
 So das also a way that you can work.
-
-00:36:34,760 --> 00:36:38,408
+00:36:34,760 --&gt; 00:36:38,408
 So then you get something like that, the reverse effect actually.
-
-00:36:39,980 --> 00:36:45,046
+00:36:39,980 --&gt; 00:36:45,046
 Then the most common case I think, so all the previous cases we've seen so far
-
-00:36:45,167 --> 00:36:49,136
+00:36:45,167 --&gt; 00:36:49,136
 Unless you're really with such a normlization/denormalization problem.
-
-00:36:49,690 --> 00:36:54,329
+00:36:49,690 --&gt; 00:36:54,329
 So that it's denormalized data that you have to go and normalize.
-
-00:36:56,250 --> 00:37:00,826
+00:36:56,250 --&gt; 00:37:00,826
 Most of the queries that we've seen so far you can probably find another alternative.
-
-00:37:00,860 --> 00:37:02,873
+00:37:00,860 --&gt; 00:37:02,873
 That you don't need that lateral, yes.
-
-00:37:03,254 --> 00:37:09,250
+00:37:03,254 --&gt; 00:37:09,250
 This is one where that lateral usually, yeah,...you're not going to be able to get around it usually.
-
-00:37:09,706 --> 00:37:12,606
+00:37:09,706 --&gt; 00:37:12,606
 So, we just saw the presentation of fetch first.
-
-00:37:12,653 --> 00:37:15,753
+00:37:12,653 --&gt; 00:37:15,753
 So we want to start comparing that to a limited dependent result.
-
-00:37:16,100 --> 00:37:17,780
+00:37:16,100 --&gt; 00:37:17,780
 So what does that mean?
-
-00:37:18,366 --> 00:37:19,366
+00:37:18,366 --&gt; 00:37:19,366
 okay
-
-00:37:20,460 --> 00:37:23,646
+00:37:20,460 --&gt; 00:37:23,646
 So,this is such an example? we have travel....
-
-00:37:24,616 --> 00:37:29,339
+00:37:24,616 --&gt; 00:37:29,339
 And we're going to join that with this subquery but there's a dependency there with that leteral.
-
-00:37:29,687 --> 00:37:32,887
+00:37:29,687 --&gt; 00:37:32,887
 So try to see once, what does this query do?
-
-00:39:41,290 --> 00:39:45,106
+00:39:41,290 --&gt; 00:39:45,106
 Ah sorry, I had turned my sound off for a moment with the drinking.
-
-00:39:45,233 --> 00:39:47,373
+00:39:45,233 --&gt; 00:39:47,373
 Good that Sasha reports that.
-
-00:39:48,000 --> 00:39:52,076
+00:39:48,000 --&gt; 00:39:52,076
 So, the hint from Rik indeed,
-
-00:39:52,636 --> 00:39:57,796
+00:39:52,636 --&gt; 00:39:57,796
 or the thing that Arthuur says there or Rik, it's about the 2 smallest or the 2 largest indeed.
-
-00:39:58,506 --> 00:40:02,410
+00:39:58,506 --&gt; 00:40:02,410
 So if we go through it step by step, we have the table travel here in the FROM.
-
-00:40:02,970 --> 00:40:06,022
+00:40:02,970 --&gt; 00:40:06,022
 All the trips are shown anyway, here, LEFT.
-
-00:40:06,800 --> 00:40:09,516
+00:40:06,800 --&gt; 00:40:09,516
 Then that's combined with any visits.
-
-00:40:09,656 --> 00:40:12,262
+00:40:09,656 --&gt; 00:40:12,262
 I see that in visits B2
-
-00:40:13,016 --> 00:40:15,516
+00:40:13,016 --&gt; 00:40:15,516
 And the WHERE condition here, it goes for this trip.
-
-00:40:16,647 --> 00:40:18,187
+00:40:16,647 --&gt; 00:40:18,187
 So the visitor of that trip.
-
-00:40:19,173 --> 00:40:22,673
+00:40:19,173 --&gt; 00:40:22,673
 And for visiting I'm going to look up, what sky objects are actually visited here?
-
-00:40:22,737 --> 00:40:26,310
+00:40:22,737 --&gt; 00:40:26,310
 And then I'm going to sort them by diameter, just the first 2....
-
-00:40:27,170 --> 00:40:29,076
+00:40:27,170 --&gt; 00:40:29,076
 show and retrieve.
-
-00:40:29,204 --> 00:40:33,702
+00:40:29,204 --&gt; 00:40:33,702
 So that basically means, I'm going to per trip only the first 2 objects....
-
-00:40:34,410 --> 00:40:36,433
+00:40:34,410 --&gt; 00:40:36,433
 Which are visited according to the diameter.
-
-00:40:36,526 --> 00:40:40,066
+00:40:36,526 --&gt; 00:40:40,066
 Now the question is of course how is this sorted? ORDER BY diameter.
-
-00:40:40,296 --> 00:40:42,469
+00:40:40,296 --&gt; 00:40:42,469
 Is that from small to large or from large to small?
-
-00:40:42,836 --> 00:40:49,770
+00:40:42,836 --&gt; 00:40:49,770
 If you don't remember that, is not a problem, I don't always do that either but that is indeed the system that is applied here, we will have a look.
-
-00:40:51,330 --> 00:40:51,830
+00:40:51,330 --&gt; 00:40:51,830
 okay
-
-00:40:52,110 --> 00:40:55,770
+00:40:52,110 --&gt; 00:40:55,770
 So what you see here I think when you see those diameters going up.
-
-00:40:55,943 --> 00:40:58,682
+00:40:55,943 --&gt; 00:40:58,682
 You see here, after a 32 it does indeed go over.
-
-00:40:58,956 --> 00:41:02,969
+00:40:58,956 --&gt; 00:41:02,969
 So the 2 smallest celestial objects per trip that are shown here
-
-00:41:04,107 --> 00:41:05,107
+00:41:04,107 --&gt; 00:41:05,107
 okay
-
-00:41:06,140 --> 00:41:06,720
+00:41:06,140 --&gt; 00:41:06,720
 good
-
-00:41:07,037 --> 00:41:10,590
+00:41:07,037 --&gt; 00:41:10,590
 So by comparison, we'll look that one up.
-
-00:41:11,050 --> 00:41:13,009
+00:41:11,050 --&gt; 00:41:13,009
 This was line 32.
-
-00:41:13,456 --> 00:41:18,256
+00:41:13,456 --&gt; 00:41:18,256
 Did I have trip number 32, I had an object of diameter 7 and 14.
-
-00:41:18,586 --> 00:41:21,199
+00:41:18,586 --&gt; 00:41:21,199
 So if I look up everything for example from 32
-
-00:41:22,294 --> 00:41:26,420
+00:41:22,294 --&gt; 00:41:26,420
 I find there indeed so from 7, 14 and all those other are bigger.
-
-00:41:26,680 --> 00:41:30,787
+00:41:26,680 --&gt; 00:41:30,787
 So I effectively get the 2 smallest objects what are visited on that trip.
-
-00:41:33,834 --> 00:41:34,834
+00:41:33,834 --&gt; 00:41:34,834
 okay
-
-00:41:35,240 --> 00:41:42,180
+00:41:35,240 --&gt; 00:41:42,180
 So most of the time you can indeed work without that lateral, but some problems you can idly solve without that lateral.
-
-00:41:42,247 --> 00:41:44,780
+00:41:42,247 --&gt; 00:41:44,780
 So when you're sitting with an example like that....
-
-00:41:46,413 --> 00:41:47,613
+00:41:46,413 --&gt; 00:41:47,613
 Like this right here.
-
-00:41:48,720 --> 00:41:52,933
+00:41:48,720 --&gt; 00:41:52,933
 When that you actually have a... it stands here... moment...
-
-00:41:53,370 --> 00:41:56,603
+00:41:53,370 --&gt; 00:41:56,603
 When you have to compare to a limited dependent outcome.
-
-00:41:56,756 --> 00:41:59,902
+00:41:56,756 --&gt; 00:41:59,902
 So that you actually think for example, I need a subquery.
-
-00:42:00,143 --> 00:42:03,136
+00:42:00,143 --&gt; 00:42:03,136
 Where I need that fetch first while I'm in an edependency.
-
-00:42:03,707 --> 00:42:06,823
+00:42:03,707 --&gt; 00:42:06,823
 Then 9/10 you're going to need that lateral anyway.
-
-00:42:07,184 --> 00:42:11,919
+00:42:07,184 --&gt; 00:42:11,919
 Or you're stuck with that little example from earlier with that row that you want to start denormalizing.
-
-00:42:12,034 --> 00:42:14,434
+00:42:12,034 --&gt; 00:42:14,434
 The one you want to go normalize sorry.
-
-00:42:14,560 --> 00:42:19,799
+00:42:14,560 --&gt; 00:42:19,799
 Then 9/10 you're going to need a lateral like that as well although sometimes that does require alternatives.
-
-00:42:20,113 --> 00:42:23,802
+00:42:20,113 --&gt; 00:42:23,802
 Other than that, you can actually write alternative queries quite often.
-
-00:42:24,603 --> 00:42:27,186
+00:42:24,603 --&gt; 00:42:27,186
 Then the only question is, if you write those queries....
-
-00:42:28,626 --> 00:42:31,293
+00:42:28,626 --&gt; 00:42:31,293
 If you know how then you can do that.
-
-00:42:31,886 --> 00:42:39,062
+00:42:31,886 --&gt; 00:42:39,062
 I have that way with lateral, I have that way without lateral , we are going to compare those cost prices to see, which query do I choose here of course?
-
-00:42:39,090 --> 00:42:40,090
+00:42:39,090 --&gt; 00:42:40,090
 That's what we're trying to do to you guys...
-
-00:42:40,413 --> 00:42:45,786
+00:42:40,413 --&gt; 00:42:45,786
 so perfomance is something, once you master databases, then you really do get into that area of performance.
-
-00:42:46,530 --> 00:42:47,530
+00:42:46,530 --&gt; 00:42:47,530
 okay
-
-00:42:47,710 --> 00:42:50,177
+00:42:47,710 --&gt; 00:42:50,177
 Are there any questions about that lateral?
-
-00:42:51,526 --> 00:42:52,646
+00:42:51,526 --&gt; 00:42:52,646
 Lateral joins.
-
-00:43:04,480 --> 00:43:05,480
+00:43:04,480 --&gt; 00:43:05,480
 okay
